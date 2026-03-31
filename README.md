@@ -38,7 +38,7 @@ vendiamonoi-knowledge/
 | NotebookLM | ✅ Completato | 31/03/2026 | API Enterprise + MCP + SDK unofficial |
 | Notion | ✅ Completato | 31/03/2026 | API REST + Webhook + MCP (hosted + local) + SDK |
 | Bitrix24 | ✅ Completato | 31/03/2026 | API REST (CRM, Tasks, Calendar, Drive, 35+ scopes) + Webhook + MCP (3 opzioni) + SDK (PHP, JS, Python) |
-| ChatGPT | ⬜ Da fare | — | |
+| ChatGPT | ✅ Completato | 31/03/2026 | API REST (Responses + Chat Completions) + Webhook + MCP (client + server + built-in) + SDK (Python, Node.js, Agents SDK, .NET, Java, Go) |
 | Claude.ai | ⬜ Da fare | — | |
 | Monday.com | ⬜ Da fare | — | |
 | SuperHuman | ⬜ Da fare | — | |
@@ -81,12 +81,13 @@ Ogni file README.md segue questa struttura standard:
 | 31/03/2026 | NotebookLM | Documentazione completa v1.0 | Claude (Cowork) |
 | 31/03/2026 | Notion | Documentazione completa v1.0 — API REST, Webhook, MCP, SDK | Claude (Cowork) |
 | 31/03/2026 | Bitrix24 | Documentazione completa v1.0 — API REST (CRM, Tasks, Calendar, Drive, 35+ scopes), Webhook, MCP (3 opzioni), SDK (PHP, JS, Python) | Claude (Cowork) |
+| 31/03/2026 | ChatGPT | Documentazione completa v1.0 — API REST (Responses + Chat Completions, 9 endpoint), Webhook (7 eventi), MCP (client + server + built-in), SDK (Python, Node.js, Agents SDK, .NET, Java, Go) | Claude (Cowork) |
 
 ---
 
 ## Prossimo Software da Documentare
 
-**ChatGPT** — Pagina Notion: da definire
+**Claude.ai** — Pagina Notion: da definire
 
 ---
 
