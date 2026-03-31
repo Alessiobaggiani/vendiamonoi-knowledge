@@ -37,7 +37,7 @@ vendiamonoi-knowledge/
 |----------|-------|--------------------|------|
 | NotebookLM | ✅ Completato | 31/03/2026 | API Enterprise + MCP + SDK unofficial |
 | Notion | ✅ Completato | 31/03/2026 | API REST + Webhook + MCP (hosted + local) + SDK |
-| Bitrix24 | ⬜ Da fare | — | |
+| Bitrix24 | ✅ Completato | 31/03/2026 | API REST (CRM, Tasks, Calendar, Drive, 35+ scopes) + Webhook + MCP (3 opzioni) + SDK (PHP, JS, Python) |
 | ChatGPT | ⬜ Da fare | — | |
 | Claude.ai | ⬜ Da fare | — | |
 | Monday.com | ⬜ Da fare | — | |
@@ -80,12 +80,13 @@ Ogni file README.md segue questa struttura standard:
 |------|----------|--------|-------------|
 | 31/03/2026 | NotebookLM | Documentazione completa v1.0 | Claude (Cowork) |
 | 31/03/2026 | Notion | Documentazione completa v1.0 — API REST, Webhook, MCP, SDK | Claude (Cowork) |
+| 31/03/2026 | Bitrix24 | Documentazione completa v1.0 — API REST (CRM, Tasks, Calendar, Drive, 35+ scopes), Webhook, MCP (3 opzioni), SDK (PHP, JS, Python) | Claude (Cowork) |
 
 ---
 
 ## Prossimo Software da Documentare
 
-**Bitrix24** — Pagina Notion: [287ab24b308680468bb2d5f8abef5867](https://www.notion.so/287ab24b308680468bb2d5f8abef5867)
+**ChatGPT** — Pagina Notion: da definire
 
 ---
 
