@@ -21,12 +21,13 @@ vendiamonoi-knowledge/
 │   ├── mirakl/
 │   ├── shopify/
 │   └── supabase/
-├── marketplace-specs/                 ← Specifiche tecniche marketplace (17)
+├── marketplace-specs/                 ← Specifiche tecniche marketplace (20)
 │   ├── amazon/
 │   ├── bolcom/
 │   ├── bricobravo/
 │   ├── carrefour/
 │   ├── cdiscount/
+│   ├── conrad/
 │   ├── ebay/
 │   ├── eprice/
 │   ├── ibs/
@@ -38,6 +39,8 @@ vendiamonoi-knowledge/
 │   ├── metro-markets/
 │   ├── mirakl-marketplaces/
 │   ├── rue-du-commerce/
+│   ├── shein/
+│   ├── temu/
 │   └── vente-unique/
 ├── integrations/                      ← Pattern di integrazione universali (1)
 │   └── api-design-patterns/
@@ -59,7 +62,7 @@ vendiamonoi-knowledge/
 | Shopify | 2.093 | Admin API REST+GraphQL, Storefront API, Markets, Plus | 01/04/2026 |
 | Supabase | 2.166 | PostgreSQL, PostgREST, GoTrue, Realtime, Edge Functions | 01/04/2026 |
 
-## marketplace-specs/ — Specifiche Marketplace (17)
+## marketplace-specs/ — Specifiche Marketplace (20)
 
 | Marketplace | Righe | Piattaforma | Focus | Paesi |
 |-------------|-------|-------------|-------|-------|
@@ -68,6 +71,7 @@ vendiamonoi-knowledge/
 | BricoBravo | 938 | Proprietaria | Bricolage, DIY, casa | IT |
 | Carrefour | 2.076 | Mirakl | FMCG, multi-categoria | FR, ES, IT, BE, RO, PL |
 | Cdiscount | 1.876 | Octopia | Multi-categoria | FR |
+| Conrad Electronic | 2.382 | Mirakl | Elettronica, componenti, B2B industriale | DE, AT, CH |
 | eBay | 1.053 | Proprietaria | Multi-categoria | EU (20+) |
 | ePrice | 1.011 | Proprietaria | Elettronica, IT | IT |
 | IBS.it | 1.549 | Proprietaria | Libri, media, general | IT |
@@ -79,6 +83,8 @@ vendiamonoi-knowledge/
 | METRO Markets | 1.630 | Mirakl | B2B HoReCa | DE |
 | Mirakl Marketplaces | 1.297 | Mirakl | Catalogo 15+ marketplace EU | Multi |
 | Rue du Commerce | 789 | Mirakl | Elettronica, IT, casa | FR |
+| Shein | 2.475 | Proprietaria | Fast fashion, beauty, lifestyle | EU (15+), Global |
+| Temu | 8.021 | Proprietaria | General merchandise, ultra-low-price | EU (20+), Global |
 | Vente-Unique | 1.048 | Proprietaria | Mobili, arredamento | FR, IT, ES, DE, BE, PT, NL |
 
 ## integrations/ + data-models/
@@ -94,11 +100,11 @@ vendiamonoi-knowledge/
 
 | Metrica | Valore |
 |---------|--------|
-| **Totale documenti** | 39 |
-| **Totale righe** | ~52.000+ |
-| **Marketplace documentati** | 17 |
-| **Marketplace Mirakl-powered** | 8 |
-| **Marketplace proprietari** | 9 |
+| **Totale documenti** | 42 |
+| **Totale righe** | ~65.000+ |
+| **Marketplace documentati** | 20 |
+| **Marketplace Mirakl-powered** | 9 |
+| **Marketplace proprietari** | 11 |
 | **Architetture piattaforme** | 7 |
 | **Software aziendali** | 14 |
 | **Pattern universali** | 2 |
@@ -120,6 +126,7 @@ vendiamonoi-knowledge/
 
 | Data | Azione |
 |------|--------|
+| 01/04/2026 | ✅ Batch 6: Conrad Electronic, Shein, Temu (12.878 righe) |
 | 01/04/2026 | ✅ Batch 5: Rue du Commerce, ePrice, IBS.it, ManoMano, BricoBravo, Vente-Unique (6.709 righe) |
 | 01/04/2026 | ✅ Batch 4: Leroy Merlin, METRO Markets, METRO Italia, MediaWorld, Carrefour (7.576 righe) |
 | 01/04/2026 | ✅ Batch 3: Shopify architettura, Bol.com, Cdiscount (6.086 righe) |
