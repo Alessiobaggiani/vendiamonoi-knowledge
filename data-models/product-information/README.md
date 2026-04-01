@@ -1,0 +1,1 @@
+$(cat /tmp/combined_content.txt)
