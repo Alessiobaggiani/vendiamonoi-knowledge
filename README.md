@@ -1,32 +1,9 @@
 # Vendiamonoi Knowledge Base
 
 > **Azienda:** Vendiamonoi.it S.R.L. Unipersonale
-> **Repository:** Documentazione tecnica software aziendali
+> **Repository:** Cervello tecnico permanente — documentazione, architettura, specifiche, pattern
 > **Responsabile:** Alessio Baggiani
-
----
-
-## Software Documentati
-
-| # | Software | Stato | Cartella | Data |
-|---|----------|-------|----------|------|
-| 1 | NotebookLM | ✅ Completato | `api-docs/notebooklm/` | 30/03/2026 |
-| 2 | Notion | ✅ Completato | `api-docs/notion/` | 30/03/2026 |
-| 3 | Bitrix24 | ✅ Completato | `api-docs/bitrix24/` | 30/03/2026 |
-| 4 | ChatGPT | ✅ Completato | `api-docs/chatgpt/` | 31/03/2026 |
-| 5 | Claude.ai | ✅ Completato | `api-docs/claude-ai/` | 31/03/2026 |
-| 6 | Superhuman | ✅ Completato | `api-docs/superhuman/` | 31/03/2026 |
-| 7 | Miro PRO | ✅ Completato | `api-docs/miro/` | 01/04/2026 |
-| 8 | Obsidian | ✅ Completato | `api-docs/obsidian/` | 01/04/2026 |
-| 9 | Supabase | ✅ Completato | `api-docs/supabase/` | 01/04/2026 |
-| 10 | Fatture in Cloud | ✅ Completato | `api-docs/fatture-in-cloud/` | 01/04/2026 |
-| 11 | Webkull | ⏭️ Saltato | — | — |
-| 12 | Qonto | ✅ Completato | `api-docs/qonto/` | 01/04/2026 |
-| 13 | eDesk | ✅ Completato | `api-docs/edesk/` | 01/04/2026 |
-| 14 | ClickUp | ✅ Completato | `api-docs/clickup/` | 01/04/2026 |
-| 15 | Base44 | ✅ Completato | `architecture/base44/` | 01/04/2026 |
-
-**✅ COMPLETATO: 14/15 documentati — 1 saltato (Webkull)**
+> **Uso primario:** Source of truth per Claude AI nelle sessioni future
 
 ---
 
@@ -35,7 +12,7 @@
 ```
 vendiamonoi-knowledge/
 ├── README.md
-├── api-docs/
+├── api-docs/                          ← Documentazione tecnica software aziendali
 │   ├── notebooklm/README.md
 │   ├── notion/README.md
 │   ├── bitrix24/README.md
@@ -49,9 +26,89 @@ vendiamonoi-knowledge/
 │   ├── qonto/README.md
 │   ├── edesk/README.md
 │   └── clickup/README.md
-└── architecture/
-    └── base44/README.md
+├── architecture/                      ← Architettura piattaforme (deep dive)
+│   ├── base44/README.md
+│   ├── channelengine/README.md
+│   └── supabase/README.md
+├── marketplace-specs/                 ← Specifiche tecniche marketplace
+│   ├── amazon/README.md
+│   └── ebay/README.md
+├── integrations/                      ← Pattern di integrazione universali
+│   └── api-design-patterns/README.md
+└── data-models/                       ← Standard dati prodotto
+    └── product-information/README.md
 ```
+
+---
+
+## Sezioni e Contenuti
+
+### api-docs/ — Software Aziendali (14 documentati)
+
+| # | Software | Righe | Sezioni | Data |
+|---|----------|-------|---------|------|
+| 1 | NotebookLM | — | — | 30/03/2026 |
+| 2 | Notion | — | — | 30/03/2026 |
+| 3 | Bitrix24 | — | — | 30/03/2026 |
+| 4 | ChatGPT | — | — | 31/03/2026 |
+| 5 | Claude.ai | — | — | 31/03/2026 |
+| 6 | Superhuman | — | — | 31/03/2026 |
+| 7 | Miro PRO | — | — | 01/04/2026 |
+| 8 | Obsidian | — | — | 01/04/2026 |
+| 9 | Supabase | 2.586 | 21 | 01/04/2026 |
+| 10 | Fatture in Cloud | 1.333 | 11 | 01/04/2026 |
+| 11 | Webkull | ⏭️ Saltato | — | — |
+| 12 | Qonto | — | 14 | 01/04/2026 |
+| 13 | eDesk | 770 | 12 | 01/04/2026 |
+| 14 | ClickUp | 948 | 16 | 01/04/2026 |
+
+### architecture/ — Architettura Piattaforme
+
+| Software | Righe | Contenuto | Data |
+|----------|-------|-----------|------|
+| Base44 | 1.138 | Stack React+Vite+Deno, Entity system, SDK, CLI, pricing, data model Vendiamonoi.it | 01/04/2026 |
+| ChannelEngine | 1.498 | Merchant API v2, Channel API, webhooks, order lifecycle, marketplace connectors, repricing | 01/04/2026 |
+| Supabase | 2.166 | PostgreSQL internals, PostgREST, GoTrue, Realtime, Edge Functions, RLS patterns, self-hosting | 01/04/2026 |
+
+### marketplace-specs/ — Specifiche Marketplace
+
+| Marketplace | Righe | Contenuto | Data |
+|-------------|-------|-----------|------|
+| Amazon | 2.396 | SP-API, product data, FBA/FBM, Buy Box, commissioni EU, VAT/OSS, GPSR, SEO A10 | 01/04/2026 |
+| eBay | 1.053 | REST API, Cassini algorithm, Managed Payments, fee structure, seller performance | 01/04/2026 |
+
+### integrations/ — Pattern Universali
+
+| Documento | Righe | Contenuto | Data |
+|-----------|-------|-----------|------|
+| API Design Patterns | 2.899 | REST, OAuth2, rate limiting, retry/backoff, pagination, webhooks, caching, CQRS, saga pattern | 01/04/2026 |
+
+### data-models/ — Standard Dati
+
+| Documento | Righe | Contenuto | Data |
+|-----------|-------|-----------|------|
+| Product Information | 2.886 | GS1/GTIN, SKU management, taxonomy, PIM, feed management, compliance EU, Schema.org | 01/04/2026 |
+
+---
+
+## Statistiche
+
+| Metrica | Valore |
+|---------|--------|
+| **Totale documenti** | 20 |
+| **Totale righe (stimate)** | 25.000+ |
+| **Sezioni repository** | 5 (api-docs, architecture, marketplace-specs, integrations, data-models) |
+| **Lingue** | Italiano |
+| **Ultimo aggiornamento** | 01/04/2026 |
+
+---
+
+## Come Usa Claude Questo Repository
+
+1. **All'inizio di ogni sessione**, Claude legge i file .md necessari via `get_file_contents`
+2. **GitHub è la source of truth** — contenuto completo, formato markdown, leggibile in un colpo
+3. **Obsidian** è il mirror locale per accesso offline di Alessio
+4. **Notion** contiene versioni operative con contenuto sostanziale incorporato
 
 ---
 
@@ -59,27 +116,10 @@ vendiamonoi-knowledge/
 
 | Data | Azione |
 |------|--------|
-| 01/04/2026 | ✅ Documentazione Base44 completata (Notion + Obsidian + GitHub) — 1138 righe, 20 sezioni, piattaforma AI-powered per sviluppo full-stack |
-| 01/04/2026 | ✅ Documentazione ClickUp completata (Notion + Obsidian + GitHub) — 948 righe, 16 sezioni, project management all-in-one |
-| 01/04/2026 | ✅ Documentazione eDesk completata (Notion + Obsidian + GitHub) — 770 righe, 12 sezioni, customer service multi-canale |
-| 01/04/2026 | ✅ Documentazione Qonto completata (Notion + Obsidian + GitHub) — 14 sezioni |
-| 01/04/2026 | ✅ Documentazione Fatture in Cloud completata (Notion + Obsidian + GitHub) — 1333 righe, 11 sezioni |
-| 01/04/2026 | ✅ Documentazione Supabase completata (Notion + Obsidian + GitHub) — 2586 righe, 21 sezioni |
-| 01/04/2026 | ✅ Documentazione Obsidian completata (Notion + Obsidian + GitHub) |
-| 01/04/2026 | ✅ Documentazione Miro PRO completata (Notion + Obsidian + GitHub) |
-| 31/03/2026 | ✅ Documentazione Superhuman completata (Notion + Obsidian + GitHub) |
-| 31/03/2026 | ✅ Documentazione Claude.ai completata (Notion + Obsidian + GitHub) |
-| 31/03/2026 | ✅ Documentazione ChatGPT completata (Notion + Obsidian + GitHub) |
-| 30/03/2026 | ✅ Documentazione Bitrix24 completata (Notion + Obsidian + GitHub) |
-| 30/03/2026 | ✅ Documentazione Notion completata (Notion + Obsidian + GitHub) |
-| 30/03/2026 | ✅ Documentazione NotebookLM completata (Notion + Obsidian + GitHub) |
+| 01/04/2026 | ✅ Aggiunte 4 nuove sezioni: architecture/, marketplace-specs/, integrations/, data-models/ |
+| 01/04/2026 | ✅ 6 nuovi documenti: ChannelEngine, Supabase arch, Amazon, eBay, API patterns, Product data (12.898 righe) |
+| 01/04/2026 | ✅ Base44 documentazione completata (1.138 righe, 20 sezioni) |
+| 01/04/2026 | ✅ ClickUp, eDesk, Qonto, FiC, Supabase, Obsidian, Miro completati |
+| 31/03/2026 | ✅ Superhuman, Claude.ai, ChatGPT completati |
+| 30/03/2026 | ✅ NotebookLM, Notion, Bitrix24 completati |
 | 30/03/2026 | 🚀 Repository creato |
-
----
-
-## 🏁 Progetto Completato
-
-Tutte le documentazioni tecniche sono state completate e pubblicate su 3 destinazioni:
-- **Notion** — Template III° Pagina Generica Singola (2 colonne)
-- **Obsidian** — Vault `📚 03 - Risorse/🔧 Tool e Software/`
-- **GitHub** — Repository `vendiamonoi-knowledge/api-docs/` + `architecture/`
