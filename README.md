@@ -24,8 +24,9 @@
 | 12 | Qonto | ✅ Completato | `api-docs/qonto/` | 01/04/2026 |
 | 13 | eDesk | ✅ Completato | `api-docs/edesk/` | 01/04/2026 |
 | 14 | ClickUp | ✅ Completato | `api-docs/clickup/` | 01/04/2026 |
+| 15 | Base44 | ✅ Completato | `architecture/base44/` | 01/04/2026 |
 
-**✅ COMPLETATO: 13/14 documentati — 1 saltato (Webkull)**
+**✅ COMPLETATO: 14/15 documentati — 1 saltato (Webkull)**
 
 ---
 
@@ -34,20 +35,22 @@
 ```
 vendiamonoi-knowledge/
 ├── README.md
-└── api-docs/
-    ├── notebooklm/README.md
-    ├── notion/README.md
-    ├── bitrix24/README.md
-    ├── chatgpt/README.md
-    ├── claude-ai/README.md
-    ├── superhuman/README.md
-    ├── miro/README.md
-    ├── obsidian/README.md
-    ├── supabase/README.md
-    ├── fatture-in-cloud/README.md
-    ├── qonto/README.md
-    ├── edesk/README.md
-    └── clickup/README.md
+├── api-docs/
+│   ├── notebooklm/README.md
+│   ├── notion/README.md
+│   ├── bitrix24/README.md
+│   ├── chatgpt/README.md
+│   ├── claude-ai/README.md
+│   ├── superhuman/README.md
+│   ├── miro/README.md
+│   ├── obsidian/README.md
+│   ├── supabase/README.md
+│   ├── fatture-in-cloud/README.md
+│   ├── qonto/README.md
+│   ├── edesk/README.md
+│   └── clickup/README.md
+└── architecture/
+    └── base44/README.md
 ```
 
 ---
@@ -56,6 +59,7 @@ vendiamonoi-knowledge/
 
 | Data | Azione |
 |------|--------|
+| 01/04/2026 | ✅ Documentazione Base44 completata (Notion + Obsidian + GitHub) — 1138 righe, 20 sezioni, piattaforma AI-powered per sviluppo full-stack |
 | 01/04/2026 | ✅ Documentazione ClickUp completata (Notion + Obsidian + GitHub) — 948 righe, 16 sezioni, project management all-in-one |
 | 01/04/2026 | ✅ Documentazione eDesk completata (Notion + Obsidian + GitHub) — 770 righe, 12 sezioni, customer service multi-canale |
 | 01/04/2026 | ✅ Documentazione Qonto completata (Notion + Obsidian + GitHub) — 14 sezioni |
@@ -78,4 +82,4 @@ vendiamonoi-knowledge/
 Tutte le documentazioni tecniche sono state completate e pubblicate su 3 destinazioni:
 - **Notion** — Template III° Pagina Generica Singola (2 colonne)
 - **Obsidian** — Vault `📚 03 - Risorse/🔧 Tool e Software/`
-- **GitHub** — Repository `vendiamonoi-knowledge/api-docs/`
+- **GitHub** — Repository `vendiamonoi-knowledge/api-docs/` + `architecture/`
