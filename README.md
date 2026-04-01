@@ -23,8 +23,9 @@
 | 11 | Webkull | ⏭️ Saltato | — | — |
 | 12 | Qonto | ✅ Completato | `api-docs/qonto/` | 01/04/2026 |
 | 13 | eDesk | ✅ Completato | `api-docs/edesk/` | 01/04/2026 |
+| 14 | ClickUp | ✅ Completato | `api-docs/clickup/` | 01/04/2026 |
 
-**✅ COMPLETATO: 12/13 documentati — 1 saltato (Webkull)**
+**✅ COMPLETATO: 13/14 documentati — 1 saltato (Webkull)**
 
 ---
 
@@ -45,7 +46,8 @@ vendiamonoi-knowledge/
     ├── supabase/README.md
     ├── fatture-in-cloud/README.md
     ├── qonto/README.md
-    └── edesk/README.md
+    ├── edesk/README.md
+    └── clickup/README.md
 ```
 
 ---
@@ -54,8 +56,9 @@ vendiamonoi-knowledge/
 
 | Data | Azione |
 |------|--------|
+| 01/04/2026 | ✅ Documentazione ClickUp completata (Notion + Obsidian + GitHub) — 948 righe, 16 sezioni, project management all-in-one |
 | 01/04/2026 | ✅ Documentazione eDesk completata (Notion + Obsidian + GitHub) — 770 righe, 12 sezioni, customer service multi-canale |
-| 01/04/2026 | ✅ Documentazione Qonto completata (Notion + Obsidian + GitHub) — 14 sezioni, ultimo software lista originale |
+| 01/04/2026 | ✅ Documentazione Qonto completata (Notion + Obsidian + GitHub) — 14 sezioni |
 | 01/04/2026 | ✅ Documentazione Fatture in Cloud completata (Notion + Obsidian + GitHub) — 1333 righe, 11 sezioni |
 | 01/04/2026 | ✅ Documentazione Supabase completata (Notion + Obsidian + GitHub) — 2586 righe, 21 sezioni |
 | 01/04/2026 | ✅ Documentazione Obsidian completata (Notion + Obsidian + GitHub) |
