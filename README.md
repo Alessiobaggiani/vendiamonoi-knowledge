@@ -37,9 +37,14 @@ vendiamonoi-knowledge/
 ├── marketplace-specs/                 ← Specifiche tecniche marketplace
 │   ├── amazon/README.md
 │   ├── bolcom/README.md
+│   ├── carrefour/README.md
 │   ├── cdiscount/README.md
 │   ├── ebay/README.md
 │   ├── kaufland/README.md
+│   ├── leroy-merlin/README.md
+│   ├── mediaworld/README.md
+│   ├── metro-italia/README.md
+│   ├── metro-markets/README.md
 │   └── mirakl-marketplaces/README.md
 ├── integrations/                      ← Pattern di integrazione universali
 │   └── api-design-patterns/README.md
@@ -74,36 +79,41 @@ vendiamonoi-knowledge/
 
 | Software | Righe | Contenuto | Data |
 |----------|-------|-----------|------|
-| Base44 | 1.138 | Stack React+Vite+Deno, Entity system, SDK, CLI, pricing, data model Vendiamonoi.it | 01/04/2026 |
-| Channable | 2.214 | Feed management, rules engine, 2500+ channels, PPC automation, API, pricing | 01/04/2026 |
-| ChannelEngine | 1.498 | Merchant API v2, Channel API, webhooks, order lifecycle, marketplace connectors, repricing | 01/04/2026 |
-| Make.com | 2.524 | Scenario architecture, bundles/operations, IML, data stores, error handling, pricing, 1700+ modules | 01/04/2026 |
-| Mirakl | 2.987 | Shop API (OF/OR/P/M/RE/IV/SH/DO), Operator API, MCM, order state machine, invoicing, Mirakl Connect | 01/04/2026 |
-| Shopify | 2.093 | Admin API REST+GraphQL, Storefront API, product data model, order lifecycle, Shopify Markets, Plus, webhooks | 01/04/2026 |
-| Supabase | 2.166 | PostgreSQL internals, PostgREST, GoTrue, Realtime, Edge Functions, RLS patterns, self-hosting | 01/04/2026 |
+| Base44 | 1.138 | Stack React+Vite+Deno, Entity system, SDK, CLI, pricing, data model | 01/04/2026 |
+| Channable | 2.214 | Feed management, rules engine, 2500+ channels, PPC automation, API | 01/04/2026 |
+| ChannelEngine | 1.498 | Merchant API v2, Channel API, webhooks, order lifecycle, connectors | 01/04/2026 |
+| Make.com | 2.524 | Scenario architecture, bundles/operations, IML, data stores, error handling | 01/04/2026 |
+| Mirakl | 2.987 | Shop API, Operator API, MCM, order state machine, invoicing, Connect | 01/04/2026 |
+| Shopify | 2.093 | Admin API REST+GraphQL, Storefront API, product model, Markets, Plus | 01/04/2026 |
+| Supabase | 2.166 | PostgreSQL internals, PostgREST, GoTrue, Realtime, Edge Functions, RLS | 01/04/2026 |
 
-### marketplace-specs/ — Specifiche Marketplace (6 documentati)
+### marketplace-specs/ — Specifiche Marketplace (11 documentati)
 
-| Marketplace | Righe | Contenuto | Data |
-|-------------|-------|-----------|------|
-| Amazon | 2.396 | SP-API, product data, FBA/FBM, Buy Box, commissioni EU, VAT/OSS, GPSR, SEO A10 | 01/04/2026 |
-| Bol.com | 2.117 | Seller API v10, offers vs products, LVB/FBR, commissioni NL+BE, performance standards, advertising | 01/04/2026 |
-| Cdiscount | 1.876 | Seller API Octopia, catalogo EAN, fulfillment FBC, commissioni Francia, performance, CNIL/GDPR | 01/04/2026 |
-| eBay | 1.053 | REST API, Cassini algorithm, Managed Payments, fee structure, seller performance | 01/04/2026 |
-| Kaufland | 2.379 | API standalone, HMAC-SHA256, Units concept, order state machine, commissioni per categoria, 7 paesi | 01/04/2026 |
-| Mirakl Marketplaces | 1.297 | Catalogo 15+ marketplace EU Mirakl-powered: Carrefour, Fnac-Darty, Leroy Merlin, MediaMarkt, Conrad, Douglas | 01/04/2026 |
+| Marketplace | Righe | Piattaforma | Contenuto | Data |
+|-------------|-------|-------------|-----------|------|
+| Amazon | 2.396 | Proprietaria | SP-API, FBA/FBM, Buy Box, commissioni EU, VAT/OSS, GPSR, SEO A10 | 01/04/2026 |
+| Bol.com | 2.117 | Proprietaria | Seller API v10, LVB/FBR, commissioni NL+BE, performance, advertising | 01/04/2026 |
+| Carrefour | 2.076 | Mirakl | Multi-country FR/ES/IT/BE/RO/PL, FMCG, CFS fulfillment, Retail Media | 01/04/2026 |
+| Cdiscount | 1.876 | Octopia | Catalogo EAN, FBC fulfillment, commissioni Francia, CNIL/GDPR | 01/04/2026 |
+| eBay | 1.053 | Proprietaria | REST API, Cassini algorithm, Managed Payments, fee structure | 01/04/2026 |
+| Kaufland | 2.379 | Proprietaria | HMAC-SHA256 auth, Units concept, order state machine, 7 paesi | 01/04/2026 |
+| Leroy Merlin | 1.055 | Mirakl | Home improvement, bricolage/bagno/giardino, multi-country, commissioni | 01/04/2026 |
+| MediaWorld | 1.527 | Mirakl | Consumer electronics, RAEE/WEEE, energy labels, EPREL, IMEI tracking | 01/04/2026 |
+| METRO Italia | 1.288 | Mirakl | B2B HoReCa Italia, fatturazione elettronica SDI, HACCP, cold chain | 01/04/2026 |
+| METRO Markets | 1.630 | Mirakl | B2B HoReCa DE, professional buyers, bulk ordering, HACCP compliance | 01/04/2026 |
+| Mirakl Marketplaces | 1.297 | Mirakl | Catalogo 15+ marketplace EU Mirakl-powered | 01/04/2026 |
 
 ### integrations/ — Pattern Universali
 
 | Documento | Righe | Contenuto | Data |
 |-----------|-------|-----------|------|
-| API Design Patterns | 2.899 | REST, OAuth2, rate limiting, retry/backoff, pagination, webhooks, caching, CQRS, saga pattern | 01/04/2026 |
+| API Design Patterns | 2.899 | REST, OAuth2, rate limiting, retry/backoff, pagination, webhooks, caching, CQRS, saga | 01/04/2026 |
 
 ### data-models/ — Standard Dati
 
 | Documento | Righe | Contenuto | Data |
 |-----------|-------|-----------|------|
-| Product Information | 2.886 | GS1/GTIN, SKU management, taxonomy, PIM, feed management, compliance EU, Schema.org | 01/04/2026 |
+| Product Information | 2.886 | GS1/GTIN, SKU management, taxonomy, PIM, feed management, compliance EU | 01/04/2026 |
 
 ---
 
@@ -111,11 +121,13 @@ vendiamonoi-knowledge/
 
 | Metrica | Valore |
 |---------|--------|
-| **Totale documenti** | 28 |
-| **Totale righe (stimate)** | 37.000+ |
+| **Totale documenti** | 33 |
+| **Totale righe (stimate)** | 45.000+ |
 | **Sezioni repository** | 5 (api-docs, architecture, marketplace-specs, integrations, data-models) |
 | **Architetture piattaforme** | 7 |
-| **Marketplace specs** | 6 |
+| **Marketplace specs** | 11 |
+| **Marketplace Mirakl-powered** | 7 (Carrefour, Leroy Merlin, MediaWorld, METRO Italia, METRO Markets, + catalogo Mirakl) |
+| **Marketplace proprietari** | 4 (Amazon, Bol.com, eBay, Kaufland) |
 | **Lingue** | Italiano |
 | **Ultimo aggiornamento** | 01/04/2026 |
 
@@ -134,7 +146,8 @@ vendiamonoi-knowledge/
 
 | Data | Azione |
 |------|--------|
-| 01/04/2026 | ✅ Batch 3: Shopify architettura, Bol.com specs, Cdiscount specs (6.086 righe) |
+| 01/04/2026 | ✅ Batch 4: Leroy Merlin, METRO Markets, METRO Italia, MediaWorld, Carrefour (7.576 righe) |
+| 01/04/2026 | ✅ Batch 3: Shopify architettura, Bol.com, Cdiscount (6.086 righe) |
 | 01/04/2026 | ✅ Batch 2: Mirakl platform + marketplaces, Kaufland, Channable, Make.com (11.401 righe) |
 | 01/04/2026 | ✅ Batch 1: ChannelEngine, Supabase arch, Amazon, eBay, API patterns, Product data (12.898 righe) |
 | 01/04/2026 | ✅ Base44 documentazione completata (1.138 righe, 20 sezioni) |
