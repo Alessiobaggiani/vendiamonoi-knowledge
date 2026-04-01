@@ -16,14 +16,14 @@
 | 4 | ChatGPT | ✅ Completato | `api-docs/chatgpt/` | 31/03/2026 |
 | 5 | Claude.ai | ✅ Completato | `api-docs/claude-ai/` | 31/03/2026 |
 | 6 | Superhuman | ✅ Completato | `api-docs/superhuman/` | 31/03/2026 |
-| 7 | Miro PRO | ⬜ Da fare | `api-docs/miro/` | — |
+| 7 | Miro PRO | ✅ Completato | `api-docs/miro/` | 01/04/2026 |
 | 8 | Obsidian | ⬜ Da fare | `api-docs/obsidian/` | — |
 | 9 | Supabase | ⬜ Da fare | `api-docs/supabase/` | — |
 | 10 | Webkull | ⬜ Da fare | `api-docs/webkull/` | — |
 | 11 | Fatture in Cloud | ⬜ Da fare | `api-docs/fatture-in-cloud/` | — |
 | 12 | Qonto | ⬜ Da fare | `api-docs/qonto/` | — |
 
-**Prossimo Software:** Miro PRO
+**Prossimo Software:** Obsidian
 
 ---
 
@@ -39,7 +39,7 @@ vendiamonoi-knowledge/
     ├── chatgpt/README.md
     ├── claude-ai/README.md
     ├── superhuman/README.md
-    ├── miro/
+    ├── miro/README.md
     ├── obsidian/
     ├── supabase/
     ├── webkull/
@@ -53,6 +53,7 @@ vendiamonoi-knowledge/
 
 | Data | Azione |
 |------|--------|
+| 01/04/2026 | ✅ Documentazione Miro PRO completata (Notion + Obsidian + GitHub) |
 | 31/03/2026 | ✅ Documentazione Superhuman completata (Notion + Obsidian + GitHub) |
 | 31/03/2026 | ✅ Documentazione Claude.ai completata (Notion + Obsidian + GitHub) |
 | 31/03/2026 | ✅ Documentazione ChatGPT completata (Notion + Obsidian + GitHub) |
