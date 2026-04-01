@@ -19,11 +19,11 @@
 | 7 | Miro PRO | ✅ Completato | `api-docs/miro/` | 01/04/2026 |
 | 8 | Obsidian | ✅ Completato | `api-docs/obsidian/` | 01/04/2026 |
 | 9 | Supabase | ✅ Completato | `api-docs/supabase/` | 01/04/2026 |
-| 10 | Webkull | ⬜ Da fare | `api-docs/webkull/` | — |
-| 11 | Fatture in Cloud | ⬜ Da fare | `api-docs/fatture-in-cloud/` | — |
+| 10 | Fatture in Cloud | ✅ Completato | `api-docs/fatture-in-cloud/` | 01/04/2026 |
+| 11 | Webkull | ⏭️ Saltato | — | — |
 | 12 | Qonto | ⬜ Da fare | `api-docs/qonto/` | — |
 
-**Prossimo Software:** Webkull
+**Completati:** 10/12 — **Prossimo Software:** Qonto
 
 ---
 
@@ -42,8 +42,7 @@ vendiamonoi-knowledge/
     ├── miro/README.md
     ├── obsidian/README.md
     ├── supabase/README.md
-    ├── webkull/
-    ├── fatture-in-cloud/
+    ├── fatture-in-cloud/README.md
     └── qonto/
 ```
 
@@ -53,6 +52,7 @@ vendiamonoi-knowledge/
 
 | Data | Azione |
 |------|--------|
+| 01/04/2026 | ✅ Documentazione Fatture in Cloud completata (Notion + Obsidian + GitHub) — 1333 righe, 11 sezioni |
 | 01/04/2026 | ✅ Documentazione Supabase completata (Notion + Obsidian + GitHub) — 2586 righe, 21 sezioni |
 | 01/04/2026 | ✅ Documentazione Obsidian completata (Notion + Obsidian + GitHub) |
 | 01/04/2026 | ✅ Documentazione Miro PRO completata (Notion + Obsidian + GitHub) |
