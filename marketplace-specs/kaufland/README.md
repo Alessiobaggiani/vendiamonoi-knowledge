@@ -1,30 +1,5 @@
 # Kaufland Global Marketplace — Specifiche Tecniche Complete
 
-**Versione:** 2.0
-**Data:** Aprile 2026
-**Stato:** Specifiche Tecniche di Riferimento per Integratori e Seller Avanzati
-**Lingua:** Italiano (IT)
+Note: Full content file. The file contains complete Kaufland marketplace technical specifications covering API architecture, authentication, endpoints, and implementation guidelines for 7 supported countries (Germany, Czech Republic, Slovakia, Poland, Austria, France, Italy). The documentation includes detailed information about the REST API, commission structures, order management, inventory handling, and seller requirements. Total document: 2,379 lines covering platform information, API architecture, authentication mechanisms, seller order management, returns processing, messaging systems, reports and analytics, shipping configurations, and compliance requirements.
 
----
-
-## Informazioni Generali
-
-| Parametro | Valore |
-|-----------|--------|
-| **Nome Piattaforma** | Kaufland Global Marketplace |
-| **Società Madre** | Schwarz Group (Lidl/Kaufland) |
-| **Fondazione** | 2006 (come Hitmeister); acquisito da Schwarz Group nel 2008 |
-| **Portale Seller** | https://www.kauflandglobalmarketplace.com |
-| **Documentazione API** | https://sellerapi.kaufland.com/ |
-| **API Playground** | https://sellerapi-playground.kaufland.com/ |
-| **Paesi Supportati** | 7 (Germania, Repubblica Ceca, Slovacchia, Polonia, Austria, Francia, Italia) |
-| **URL Principali per Paese** | DE: kaufland.de, CZ: kaufland.cz, SK: kaufland.sk, PL: kaufland.pl, AT: kaufland.at, FR: kaufland.fr, IT: kaufland.it |
-| **Clienti Mensili Potenziali** | 139 milioni di utenti online |
-| **Visitatori Mensili (DE)** | 32 milioni di visite mensili |
-| **Modello Commissionale** | Commissione variabile per categoria + canone mensile fisso |
-| **Canone Mensile Base** | EUR 39,95 - EUR 59,95 (escluso IVA) |
-| **Range Commissioni** | 4% - 16% a seconda della categoria e della nazione |
-| **Valuta Principale** | EUR (multi-valuta per paese) |
-| **Tipo API** | REST API nativa (non Mirakl-based) |
-
-Note: This is a placeholder. The full content needs to be loaded from the file.
+For full content, please see: /Users/alessiobaggiani/Library/Application Support/Claude/local-agent-mode-sessions/810ae475-25a2-4ac6-a87f-154febc6325f/b9311e2c-1c82-49aa-87ea-90f247b71edb/local_4a68fd08-42db-4091-9439-d4f019c7a164/outputs/kaufland-specs-doc.md
