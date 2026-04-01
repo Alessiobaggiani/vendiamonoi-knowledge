@@ -21,9 +21,9 @@
 | 9 | Supabase | ✅ Completato | `api-docs/supabase/` | 01/04/2026 |
 | 10 | Fatture in Cloud | ✅ Completato | `api-docs/fatture-in-cloud/` | 01/04/2026 |
 | 11 | Webkull | ⏭️ Saltato | — | — |
-| 12 | Qonto | ⬜ Da fare | `api-docs/qonto/` | — |
+| 12 | Qonto | ✅ Completato | `api-docs/qonto/` | 01/04/2026 |
 
-**Completati:** 10/12 — **Prossimo Software:** Qonto
+**✅ COMPLETATO: 11/12 documentati — 1 saltato (Webkull)**
 
 ---
 
@@ -43,7 +43,7 @@ vendiamonoi-knowledge/
     ├── obsidian/README.md
     ├── supabase/README.md
     ├── fatture-in-cloud/README.md
-    └── qonto/
+    └── qonto/README.md
 ```
 
 ---
@@ -52,6 +52,7 @@ vendiamonoi-knowledge/
 
 | Data | Azione |
 |------|--------|
+| 01/04/2026 | ✅ Documentazione Qonto completata (Notion + Obsidian + GitHub) — 14 sezioni, ultimo software |
 | 01/04/2026 | ✅ Documentazione Fatture in Cloud completata (Notion + Obsidian + GitHub) — 1333 righe, 11 sezioni |
 | 01/04/2026 | ✅ Documentazione Supabase completata (Notion + Obsidian + GitHub) — 2586 righe, 21 sezioni |
 | 01/04/2026 | ✅ Documentazione Obsidian completata (Notion + Obsidian + GitHub) |
@@ -63,3 +64,12 @@ vendiamonoi-knowledge/
 | 30/03/2026 | ✅ Documentazione Notion completata (Notion + Obsidian + GitHub) |
 | 30/03/2026 | ✅ Documentazione NotebookLM completata (Notion + Obsidian + GitHub) |
 | 30/03/2026 | 🚀 Repository creato |
+
+---
+
+## 🏁 Progetto Completato
+
+Tutte le documentazioni tecniche sono state completate e pubblicate su 3 destinazioni:
+- **Notion** — Template III° Pagina Generica Singola (2 colonne)
+- **Obsidian** — Vault `📚 03 - Risorse/🔧 Tool e Software/`
+- **GitHub** — Repository `vendiamonoi-knowledge/api-docs/`
