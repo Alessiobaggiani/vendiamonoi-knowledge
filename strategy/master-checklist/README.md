@@ -2,7 +2,7 @@
 
 ## Il Cervello Tecnico Definitivo per la Distribuzione Digitale su Marketplace Europei
 
-**Versione:** 1.0
+**Versione:** 1.1
 **Data:** Aprile 2026
 **Obiettivo:** Mappatura orizzontale completa + approfondimento verticale = superiorità assoluta
 **Metodo:** Per ogni punto → ricerca → documentazione → knowledge base → competenza operativa
@@ -16,33 +16,36 @@
 - [~] Parzialmente documentato (informazioni base presenti)
 - [x] Completamente documentato (livello esperto)
 
+### Deep-Dive Completati
+- [x] **Domain 1.1 — Listing Optimization** → `marketplace-ops/listing-optimization/README.md`
+
 ---
 
 ## DOMINIO 1: MARKETPLACE OPERATIONS & LISTING OPTIMIZATION
 
 ### 1.1 Fondamenti Product Listing
 
-- [ ] **Ottimizzazione titoli prodotto** — Formula universale: keyword primaria + brand + caratteristica chiave + USP + dimensione/variante. Limiti caratteri per marketplace (Amazon 200, eBay 80, Kaufland 50, Bol.com 150)
-- [ ] **Gerarchia bullet point** — Struttura CTR-optimized: beneficio principale → caratteristiche tecniche → uso consigliato → garanzia/certificazioni. Max 5 bullet per Amazon, variabile per altri
-- [ ] **Ottimizzazione lunghezza descrizione** — Word count sweet spots per piattaforma: Amazon 2000+, eBay 500-1000, Kaufland 300-500. HTML vs plain text per marketplace
-- [ ] **Gestione caratteri speciali** — Standardizzazione accenti, diacritici, caratteri Unicode across lingue europee (DE ü/ö/ä, FR é/è/ê, ES ñ, NL ij)
+- [x] **Ottimizzazione titoli prodotto** — Formula universale: keyword primaria + brand + caratteristica chiave + USP + dimensione/variante. Limiti caratteri per marketplace (Amazon 200, eBay 80, Kaufland 50, Bol.com 150)
+- [x] **Gerarchia bullet point** — Struttura CTR-optimized: beneficio principale → caratteristiche tecniche → uso consigliato → garanzia/certificazioni. Max 5 bullet per Amazon, variabile per altri
+- [x] **Ottimizzazione lunghezza descrizione** — Word count sweet spots per piattaforma: Amazon 2000+, eBay 500-1000, Kaufland 300-500. HTML vs plain text per marketplace
+- [~] **Gestione caratteri speciali** — Standardizzazione accenti, diacritici, caratteri Unicode across lingue europee (DE ü/ö/ä, FR é/è/ê, ES ñ, NL ij)
 - [ ] **Rilevamento contenuto duplicato** — Sistemi per identificare e gestire listing duplicati tra marketplace e tra seller
 - [ ] **A/B testing descrizioni** — Metodologie per testare varianti di titoli, bullet, descrizioni. Amazon Manage Your Experiments + tool esterni
-- [ ] **Categoria ottimale** — Regole di mapping per categoria primaria vs browse nodes per marketplace. Impatto su search ranking, soglie di commissione, buyer trust
-- [ ] **Brand Registry e protezione** — Procedure per brand protection su Amazon, Bol, Kaufland. EAN/GTIN validation e gestione conflitti
-- [ ] **Gestione varianti e parentele** — Parent-child relationships: quando creare varianti vs ASIN separati. Impatto inventory, ranking, customer confusion
+- [x] **Categoria ottimale** — Regole di mapping per categoria primaria vs browse nodes per marketplace. Impatto su search ranking, soglie di commissione, buyer trust
+- [~] **Brand Registry e protezione** — Procedure per brand protection su Amazon, Bol, Kaufland. EAN/GTIN validation e gestione conflitti
+- [x] **Gestione varianti e parentele** — Parent-child relationships: quando creare varianti vs ASIN separati. Impatto inventory, ranking, customer confusion
 - [ ] **Ingredienti e dichiarazioni** — Gestione specifiche ingredienti (Food, Supplements), allergen info, compliance paese-specifico
 
 ### 1.2 Image & Content Optimization
 
-- [ ] **Strategia immagine primaria** — Dimensioni ottimali per marketplace (Amazon 3000x3000px min, eBay 500x500px min). Background puro vs lifestyle, shadow box effects
-- [ ] **Sequenza immagini e storytelling** — Ordine psicologico: detail shots → lifestyle → use cases → size comparison → guarantee/certification → lifestyle again
+- [x] **Strategia immagine primaria** — Dimensioni ottimali per marketplace (Amazon 3000x3000px min, eBay 500x500px min). Background puro vs lifestyle, shadow box effects
+- [x] **Sequenza immagini e storytelling** — Ordine psicologico: detail shots → lifestyle → use cases → size comparison → guarantee/certification → lifestyle again
 - [ ] **Ottimizzazione video** — Video requirements per marketplace (durata max, formato, thumbnail). Impatto SEO e conversion
 - [ ] **Infografiche e comparison charts** — Creazione infografiche per product specs, vs competitor analysis (policy-compliant)
 - [ ] **Enhanced Images e A+ Content (Amazon)** — Quando attivarli, layout optimization, quando conviene richiedere approvazione brand
 - [ ] **EBC/A+ su multipie piattaforme** — Come adattare A+ content per Bol.com, Kaufland. Limitazioni vs opportunità
 - [ ] **Gestione immagini in più lingue** — Quando tradurre testi in immagini vs quando mantenerle uguali
-- [ ] **Compressione e velocità caricamento** — Tool per ottimizzare file size senza perdere qualità
+- [~] **Compressione e velocità caricamento** — Tool per ottimizzare file size senza perdere qualità
 
 ### 1.3 Listing Compliance & Legal
 
@@ -50,13 +53,13 @@
 - [ ] **Dichiarazioni normative** — Compliance con GDPR (dati cliente), REACH (chimici), CE marking (elettronica), material disclosure (tessili)
 - [ ] **Garanzie e resi** — Politiche resi per marketplace e paese. Impatto su ranking e customer satisfaction
 - [ ] **Prezzo e pricing transparency** — Regole per pricing, vietati i prezzi inflati per "sconti", gestione promozioni
-- [ ] **Claim e superlative** — Cosa si può dichiarare vs cosa è vietato per FTC/ASA ("best", "only", "100%")
+- [~] **Claim e superlative** — Cosa si può dichiarare vs cosa è vietato per FTC/ASA ("best", "only", "100%")
 - [ ] **Certificazioni finte** — Come verificare genuinità certificazioni, quando specificarle in listing
 
 ### 1.4 Listing Performance Metrics
 
-- [ ] **CTR per marketplace** — Benchmark CTR per categoria, come ottimizzare título/thumbnail per CTR
-- [ ] **Conversion Rate by traffic source** — Differenze CVR tra organic search, sponsored, coupon traffic
+- [~] **CTR per marketplace** — Benchmark CTR per categoria, come ottimizzare título/thumbnail per CTR
+- [~] **Conversion Rate by traffic source** — Differenze CVR tra organic search, sponsored, coupon traffic
 - [ ] **Session Duration e Bounce Rate** — Cosa indicano per listing quality, come migliorarle
 - [ ] **Return Rate Monitoring** — Tracking resi per listing, quando significa problema di listing vs problema di prodotto
 - [ ] **Customer Review Sentiment Analysis** — Tool per monitorare sentiment review, identificare problemi ricorrenti
@@ -639,7 +642,7 @@
 Questa non è una lista di cose da fare casualmente. È una **mappa strategica** che guidata l'evoluzione della tua competenza tecnica:
 
 **Fase 1 — Foundation (Mesi 1-2):**
-- [ ] Listing Optimization (Dominio 1)
+- [~] Listing Optimization (Dominio 1) — **IN CORSO**
 - [ ] Pricing & Buy Box (Dominio 2)
 
 **Fase 2 — Scale:**
