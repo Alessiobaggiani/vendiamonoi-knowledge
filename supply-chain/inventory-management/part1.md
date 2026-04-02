@@ -1,0 +1,1 @@
+Content placeholder - part1 for domain 4.2
