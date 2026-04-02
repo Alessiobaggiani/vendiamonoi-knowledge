@@ -2,7 +2,7 @@
 
 ## Il Cervello Tecnico Definitivo per la Distribuzione Digitale su Marketplace Europei
 
-**Versione:** 1.2
+**Versione:** 1.3
 **Data:** Aprile 2026
 **Obiettivo:** Mappatura orizzontale completa + approfondimento verticale = superiorità assoluta
 **Metodo:** Per ogni punto → ricerca → documentazione → knowledge base → competenza operativa
@@ -17,13 +17,14 @@
 - [x] Completamente documentato (livello esperto)
 
 ### Deep-Dive Completati
-- [x] **Domain 1.1 — Listing Optimization** → `marketplace-ops/listing-optimization/README.md`
-- [x] **Domain 1.2 — A+ Content & Enhanced Brand Content** → `marketplace-ops/enhanced-content/README.md`
-- [x] **Domain 1.3 — Listing Compliance & Legal** → `marketplace-ops/listing-compliance/README.md`
+- [x] **Domain 1.1 — Listing Optimization** → `marketplace-ops/listing-optimization/README.md` (512 righe)
+- [x] **Domain 1.2 — A+ Content & Enhanced Brand Content** → `marketplace-ops/enhanced-content/README.md` (1,379 righe)
+- [x] **Domain 1.3 — Listing Compliance & Legal** → `marketplace-ops/listing-compliance/` (2,513 righe — 3 parti: CE, REACH, RoHS, WEEE, GPSR, VAT, EPR)
+- [x] **Domain 1.4 — Listing Performance Metrics** → `marketplace-ops/listing-performance-metrics/` (3,015 righe — 3 parti: CTR, CR, SOV, Buy Box, Profitability, KPI)
 
 ---
 
-## DOMINIO 1: MARKETPLACE OPERATIONS & LISTING OPTIMIZATION
+## ✅ DOMINIO 1: MARKETPLACE OPERATIONS & LISTING OPTIMIZATION — COMPLETATO
 
 ### 1.1 Fondamenti Product Listing
 
@@ -52,20 +53,28 @@
 ### 1.3 Listing Compliance & Legal
 
 - [x] **Policy per categoria** — Categorie gated Amazon (alimentari, baby, medical, cosmetici, automotive). eBay VeRO. Kaufland WEEE/VerpackG
-- [x] **Dichiarazioni normative** — CE Marking, REACH (SVHC <0.1%), RoHS, WEEE registrazione per paese, GPSR 2024 (Persona Responsabile EU), tessili (1007/2011), cosmetici (CPNP)
-- [~] **Garanzie e resi** — Base coperta in compliance. Da approfondire: policy specifiche per marketplace e impatto ranking
-- [x] **Prezzo e pricing transparency** — Omnibus Directive (2019/2161): prezzo più basso 30gg obbligatorio per sconti. No prezzi in listing
-- [x] **Claim e superlative** — Direttiva Pratiche Commerciali Sleali. Health Claims Regulation. Green Claims Directive. Vietato: "migliore", "n°1" senza prove
-- [~] **Certificazioni finte** — Base coperta (CE, REACH verification). Da approfondire: verifica certificati specifici per categoria
+- [x] **Dichiarazioni normative** — CE Marking (25+ direttive), REACH (SVHC <0.1%, database SCIP), RoHS (10 sostanze con limiti esatti), WEEE (registrazione per tutti 27 paesi EU con portali e costi), GPSR 2024 (Persona Responsabile EU, obblighi marketplace Art.22)
+- [x] **Garanzie e resi** — Policy specifiche per marketplace, impatto ranking, normativa europea su garanzia legale 2 anni
+- [x] **Prezzo e pricing transparency** — Omnibus Directive (2019/2161): prezzo più basso 30gg obbligatorio per sconti. Enforcement per paese
+- [x] **Claim e superlative** — Direttiva Pratiche Commerciali Sleali (31 pratiche vietate blacklist). Health Claims Regulation. Green Claims Directive. Vietato: "migliore", "n°1" senza prove
+- [x] **Certificazioni e verifica** — CE marking procedures complete, Notified Body requirements, DoC exact format, technical file retention 10 anni
+- [x] **Regolamenti prodotto-specifici** — Batterie (EU 2023/1542), Tessili (1007/2011), Giocattoli (2024/1688), Alimentari (1169/2011), Cosmetici (1223/2009), Dispositivi Medici (MDR 2017/745), DPI (2016/425)
+- [x] **VAT & Tax compliance** — Aliquote IVA tutti 27 paesi EU + UK + Norvegia + Svizzera. OSS, IOSS, DAC7 reporting
+- [x] **EPR (Extended Producer Responsibility)** — Registrazioni paese per paese con portali, costi, scadenze. Germania (VerpackG/LUCID), Francia (CITEO), Spagna, Italia, Paesi Bassi
+- [x] **Packaging & Labeling** — PPWR compliance, requisiti linguistici, simboli riciclo, peso netto, country of origin
 
 ### 1.4 Listing Performance Metrics
 
-- [~] **CTR per marketplace** — Benchmark CTR per categoria, come ottimizzare título/thumbnail per CTR
-- [~] **Conversion Rate by traffic source** — Differenze CVR tra organic search, sponsored, coupon traffic
-- [ ] **Session Duration e Bounce Rate** — Cosa indicano per listing quality, come migliorarle
-- [ ] **Return Rate Monitoring** — Tracking resi per listing, quando significa problema di listing vs problema di prodotto
-- [ ] **Customer Review Sentiment Analysis** — Tool per monitorare sentiment review, identificare problemi ricorrenti
-- [ ] **Share of Voice per keyword** — Tracking della posizione media per keyword principali vs competitor
+- [x] **CTR per marketplace** — 7 tabelle benchmark per 13+ marketplace EU, per posizione (1-32), per categoria (15+), per device, per campagna PPC. Elasticità posizione 1.8-2.5. Quality scoring framework
+- [x] **Conversion Rate by traffic source** — 8 tabelle benchmark, 3 metodologie di misurazione (USP/OSP/platform-native), analisi coorte, funnel per marketplace, differenze organic vs sponsored vs coupon
+- [x] **Session Duration e Bounce Rate** — Benchmark per marketplace (bounce 35-60%), analisi profondità sessione, correlazione con conversion, metriche engagement per categoria
+- [x] **Return Rate Monitoring** — Benchmark per categoria (fashion 15-35%, electronics 3-7%), per geografia, per prezzo, per fulfillment method. Root cause analysis framework, impatto su profitability
+- [x] **Customer Review Sentiment Analysis** — Framework analisi sentiment, scoring composito, correlazione review-conversion (+8.5% per mezza stella), benchmark per categoria, tool di monitoraggio
+- [x] **Share of Voice per keyword** — Modelli elasticità SOV, analisi saturazione, keyword ranking methodology, tracking posizione media vs competitor
+- [x] **Buy Box Metrics** — Win rate benchmark (60-90%), recovery timelines, fattori impatto, formula competitiva, analisi per fulfillment method
+- [x] **Profitability & Unit Economics** — Contribution margin, TACoS, CAC payback, formule complete con implementazione Excel, variazioni regionali, fattori stagionali Q1-Q4
+- [x] **KPI Dashboard Framework** — Template settimanale/mensile, alert triggers Green/Yellow/Red, executive reporting
+- [x] **Formule Complete** — 26+ formule con definizioni variabili, implementazione Excel, benchmark per categoria
 
 ---
 
@@ -87,7 +96,7 @@
 - [ ] **Shipping cost estimation** — Calcolo real-time shipping costs con DHL, GLS, PostNL basato su peso/dimensioni
 - [ ] **Weight and dimensional weight** — Come marketplaces calcolano dimensional weight, impatto su shipping profitability
 - [ ] **Payment processing fees** — Costi PayPal, Stripe, marketplace payment methods per paese
-- [~] **VAT e tax handling** — Base coperta in Compliance deep-dive: OSS, IOSS, aliquote per paese
+- [x] **VAT e tax handling** — Coperto in Compliance deep-dive 1.3: OSS, IOSS, aliquote per tutti i paesi EU + UK + EEA
 - [ ] **Hidden costs identification** — Tool per identificare costi nascosti (restock, compliance, storage)
 - [ ] **Margin guardrails** — Quando un prodotto diventa non-profitable, threshold di scarico
 
@@ -134,7 +143,7 @@
 
 > I Domini 3-10 restano invariati rispetto alla versione 1.1.
 > Vedere la versione completa nel commit precedente per il contenuto completo.
-> Prossimi deep-dive: Domain 1.4 (Performance Metrics), poi Domain 2 (Pricing & Buy Box).
+> **Prossimo deep-dive: Domain 2 (Pricing Strategy & Buy Box Optimization)**
 
 ---
 
@@ -145,8 +154,8 @@
 Questa non è una lista di cose da fare casualmente. È una **mappa strategica** che guida l'evoluzione della competenza tecnica:
 
 **Fase 1 — Foundation (Mesi 1-2):**
-- [~] Listing Optimization (Dominio 1) — **3/4 sezioni completate** (1.1 ✓, 1.2 ✓, 1.3 ✓, 1.4 in corso)
-- [ ] Pricing & Buy Box (Dominio 2)
+- [x] Listing Optimization (Dominio 1) — **✅ COMPLETATO — 4/4 sezioni, 7,400+ righe di knowledge dogmatica**
+- [ ] Pricing & Buy Box (Dominio 2) — **⏳ PROSSIMO**
 
 **Fase 2 — Scale:**
 - [ ] Advertising & PPC (Dominio 3)
