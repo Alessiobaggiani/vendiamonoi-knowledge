@@ -1,785 +1,1024 @@
 **SKAG Not Justified When:**
-- Keyword monthly volume <30 (too little data)
-- Per-keyword budget <€20 (too small to manage)
-- Product margin <15% (management overhead unjustifiable)
-- Keywords have similar conversion performance
-- Small seller with <50 keywords total
-
-### 3.5 NEGATIVE KEYWORD STRATEGY (ADVANCED)
-
-#### 3.5.1 Negative Keyword Types and Matching Rules
-
-**Negative Exact Match [-"keyword"]**
-- Triggers: Search contains EXACTLY this keyword (no extra words)
-- Use Case: Block specific competitor brands, specific product types
-- Example: -["sony headphones"] blocks "sony headphones" but NOT "sony noise cancelling headphones"
-- Risk: Often too narrow; easy to bypass with extra words
-
-**Negative Phrase Match [-keyword] (Default)**
-- Triggers: Search contains keyword in order (with or without extra words)
-- Use Case: Block entire product categories, clear intent mismatches
-- Example: -"used headphones" blocks "used headphones", "buy used headphones", "used wireless headphones"
-- Benefit: Broad enough to catch variations; narrow enough to prevent over-blocking
-
-**Negative Broad Match [-keyword without quotes]**
-- Triggers: Search contains ANY of the keyword terms (different order OK)
-- Use Case: Block entire categories; preventive blocking
-- Example: -repair blocks "repair headphones", "headphones repair", "how to repair"
-- Risk: Can over-block legitimate searches (e.g., -repair also blocks "repair shop near me" if selling headphones)
-
-#### 3.5.2 Negative Keyword Priority Matrix
-
-| Block Priority | Keyword Type | Match Type | Implementation Timing |
-|---|---|---|---|
-| **P1 (Immediate)** | Competitor brands (if not conquesting) | Exact | Within 24h of detection |
-| **P1 (Immediate)** | Clear product mismatch (if selling headphones, -earbuds) | Exact | Within 24h |
-| **P2 (Weekly)** | Intent misalignment (used, broken, repair) | Phrase | End of week batch |
-| **P3 (Ongoing)** | Accessory-only terms (case, stand) | Broad | Monthly review |
+- Keyword monthly volume <100 searches
+- Product cost <€50 (can't sustain individual management)
+- Margin <15% (ACOS tolerance too tight)
+- Team capacity <5 hours/week for management
+- Keywords have similar conversion rates
 
 ---
 
-## SECTION 4: PRODUCT TARGETING STRATEGIES (150+ lines)
+## SECTION 5: MANUAL CAMPAIGNS - EXACT, PHRASE, BROAD DEEP DIVE (250+ lines)
 
-### 4.1 ASIN TARGETING
+This section completes the manual campaign strategy with detailed implementation patterns.
 
-**Definition:** Target competitor products (specified by Amazon ASIN) to display ads when customers view those products.
+### 5.1 EXACT MATCH CAMPAIGN OPTIMIZATION
 
-**Use Case:** "When customer views competitor Sony WH-1000XM5, show our Wireless Headphones ad."
-
-**Structure:**
+**Campaign Structure Template:**
 ```
-Campaign: "Headphones_ASIN_Targeting_25%"
-└── Ad Group: "Competitors"
-    └── Targeting:
-        - ASIN: B008XVAVRA (Sony WH-1000XM5)
-        - ASIN: B00004Z5CS (Bose QuietComfort)
-        - ASIN: B07PYLT6DN (Sennheiser Momentum)
+Campaign Name: [Category]_[Product]_Exact_[Margin]
+Match Type: Exact Only
+Budget: €200-500/month per keyword group
+Bid Strategy: Manual or Auto based on volume
+Daily Budget: €10-25
 ```
 
-**Advantages:**
-- High intent (customer shopping for specific competitor product)
-- Conversion rate: 10-15% (customer comparing alternatives)
-- Works for value positioning ("Better than Bose at half price")
+**Optimal Campaign Composition:**
+- 3-5 tightly related exact-match keywords
+- All keywords should target same customer intent
+- Keywords share similar conversion rates (within 10% spread)
+- Negative keywords: Category-wide negatives applied
 
-**Disadvantages:**
-- Limited impression volume (only when customers view competitor ASIN)
-- Requires budget to be worthwhile (€50+/day minimum)
-- Competitor may also target your products (bidding war)
+**Example - Electronics Headphones Exact:**
+```
+Campaign: Electronics_Headphones_Exact_Premium
+├── Keyword 1: [wireless headphones] - Bid: €0.95
+├── Keyword 2: [noise cancelling headphones] - Bid: €1.15
+├── Keyword 3: [bluetooth headphones] - Bid: €0.85
+├── Keyword 4: [gaming headphones] - Bid: €0.75
+└── Keyword 5: [wireless earbuds] - Bid: €0.80
+
+Negative Keywords:
+- [-stand] [-case] [-cable] [-review] [-cheap] [-used]
+```
+
+**Bid Adjustment Strategy:**
+Monitor CTR and conversion rate weekly:
+- If conversion rate declining: increase bid by €0.05-0.10
+- If conversion rate high (>8%): can increase bid by €0.10-0.15
+- If ACOS exceeding target: reduce bid by €0.05-0.10
+
+**Expected Metrics (Wireless Headphones):**
+- Average CPC: €0.80-1.20
+- Average CTR: 2-4%
+- Average Conversion Rate: 8-15%
+- Typical ACOS: 15-25%
+- Typical ROI: 4:1 to 6:1
+
+### 5.2 PHRASE MATCH CAMPAIGN OPTIMIZATION
+
+**Campaign Structure Template:**
+```
+Campaign Name: [Category]_[Product]_Phrase_[Margin]
+Match Type: Phrase Only
+Budget: €300-800/month per keyword group
+Bid Strategy: Manual (phrase needs more control)
+Daily Budget: €15-35
+```
+
+**Optimal Campaign Composition:**
+- 8-15 phrase-match keywords
+- Keywords related but not identical in intent
+- Can support wider variation in search terms
+- Negative keywords: Category-wide + competitor names
+
+**Example - Fashion Shoes Phrase:**
+```
+Campaign: Fashion_Shoes_Phrase_Mid
+├── Keyword 1: "running shoes" - Bid: €0.65
+├── Keyword 2: "best running shoes" - Bid: €0.75
+├── Keyword 3: "running shoes women" - Bid: €0.60
+├── Keyword 4: "lightweight running shoes" - Bid: €0.70
+├── Keyword 5: "cushioned running shoes" - Bid: €0.72
+├── Keyword 6: "running shoes sale" - Bid: €0.45
+├── Keyword 7: "marathon running shoes" - Bid: €0.80
+├── Keyword 8: "trail running shoes" - Bid: €0.75
+└── Keyword 9: "water resistant running shoes" - Bid: €0.65
+
+Negative Keywords:
+- [-review] [-cheap] [-used] [-orthopaedic] [-hiking] [-soccer]
+- [-nike] [-adidas] [-asics] (competitor brands)
+```
+
+**Bid Optimization:**
+Phrase match requires more active management:
+- Analyze search term report every 2 weeks
+- High-ACOS search variations: reduce bid by €0.10-0.15
+- High-converting variations: increase bid by €0.05-0.10
+- Poor-converting patterns: move to negative keywords
+
+**Expected Metrics (Running Shoes):**
+- Average CPC: €0.55-0.85
+- Average CTR: 1.5-2.5%
+- Average Conversion Rate: 4-7%
+- Typical ACOS: 25-40%
+- Typical ROI: 2.5:1 to 4:1
+
+### 5.3 BROAD MATCH CAMPAIGN OPTIMIZATION
+
+**Campaign Structure Template:**
+```
+Campaign Name: [Category]_[Product]_Broad_[Margin]
+Match Type: Broad Only
+Budget: €400-1500/month per keyword group
+Bid Strategy: Manual (critical for broad match control)
+Daily Budget: €20-50
+Negative Keywords: AGGRESSIVE - 50+ negatives typical
+```
+
+**CRITICAL WARNING:** Broad match without aggressive negative keywords WILL waste budget.
+
+**Optimal Campaign Composition:**
+- 5-10 broad-match keywords only
+- Aggressively use negative keywords (50-100+ negatives typical)
+- Monitor search term report daily initially
+- High tolerance for "irrelevant" searches (this is feature, not bug)
+
+**Example - Home Coffee Maker Broad:**
+```
+Campaign: Home_CoffeeMaker_Broad_Mid
+├── Keyword 1: coffee maker - Bid: €0.45
+├── Keyword 2: espresso machine - Bid: €0.50
+├── Keyword 3: coffee equipment - Bid: €0.35
+├── Keyword 4: brewing coffee - Bid: €0.40
+└── Keyword 5: morning coffee - Bid: €0.38
+
+Negative Keywords (EXTENSIVE LIST):
+- Competitor brands: [-nespresso] [-delonghi] [-philips] [-bosch] [-gaggia]
+- Product types: [-grinder] [-beans] [-filters] [-pods] [-scales]
+- Irrelevant searches: [-tea] [-cheap] [-free] [-reviews] [-diy]
+- Use cases: [-office] [-shop] [-retail] [-commercial] [-automatic]
+- Related services: [-repair] [-rental] [-lease] [-second-hand]
+
+Typical total: 60-100 negative keywords
+```
+
+**Bid Optimization for Broad Match:**
+More conservative approach due to volume:
+- Bid lower than exact/phrase match (€0.35-0.50 typical)
+- Adjust based on search term report (weekly analysis essential)
+- Remove bottom 20% of search terms monthly
+- Only scale up if ACOS remains acceptable
+
+**Expected Metrics (Coffee Maker):**
+- Average CPC: €0.35-0.60
+- Average CTR: 1-2%
+- Average Conversion Rate: 2-4%
+- Typical ACOS: 35-60%
+- Typical ROI: 1.5:1 to 2.5:1
+- High variation (due to search term variety)
+
+### 5.4 SINGLE KEYWORD AD GROUP (SKAG) METHODOLOGY
+
+**Definition:** One campaign = one keyword. Extreme version of exact-match focusing.
+
+**SKAG Structure:**
+```
+Campaign: Category_Product_Exact_Margin
+├── Single Ad Group
+├── Single Keyword: [specific keyword]
+├── 3 Product Ads (same ASIN, different product images)
+├── Negative Keywords: Category-wide list
+└── Budget: €200-500/month
+```
+
+**Rationale for SKAG:**
+- Perfect ACOS attribution (one keyword = one ACOS figure)
+- Bid control at keyword level (can adjust €0.05 increments)
+- A/B testing enabled (one keyword per campaign)
+- Performance data unambiguous (no mixing)
+
+**When SKAG Makes Sense:**
+1. High-ticket products (COGS >€150)
+2. Branded keywords (brand defense campaign)
+3. Keywords with wildly different performance (need separate management)
+4. Significant budget per keyword (€500+/month)
+5. Team capacity for 100+ campaigns
+
+**SKAG Implementation Example:**
+```
+Product: Premium Wireless Headphones (€250 retail, €100 COGS, 60% margin)
+
+Campaign 1: Electronics_Headphones_Exact_Premium_Wireless
+├── Keyword: [wireless headphones]
+├── Bid: €1.10
+├── Budget: €400/month
+├── Negative: [-stand] [-case] [-review] ... (category-wide)
+└── Conversion Rate: 12%, ACOS: 18%
+
+Campaign 2: Electronics_Headphones_Exact_Premium_Noise-Cancelling
+├── Keyword: [noise cancelling headphones]
+├── Bid: €1.35
+├── Budget: €500/month
+├── Negative: [-stand] [-case] [-review] ... (category-wide)
+└── Conversion Rate: 10%, ACOS: 22%
+
+Campaign 3: Electronics_Headphones_Exact_Premium_Gaming
+├── Keyword: [gaming headphones]
+├── Bid: €0.90
+├── Budget: €300/month
+├── Negative: [-stand] [-case] [-review] ... (category-wide)
+└── Conversion Rate: 8%, ACOS: 28%
+
+Campaign 4: Electronics_Headphones_Exact_Premium_Bluetooth
+├── Keyword: [bluetooth headphones]
+├── Bid: €1.05
+├── Budget: €400/month
+├── Negative: [-stand] [-case] [-review] ... (category-wide)
+└── Conversion Rate: 11%, ACOS: 19%
+
+Total: 4 campaigns, €1,600/month
+Blended ACOS: 21.75%
+```
+
+**SKAG Optimization Workflow:**
+1. Week 1-2: Monitor bid effect on CTR/conversion
+2. Week 3-4: Adjust bids based on data
+3. Week 5-8: Collect 30+ conversions per keyword
+4. Month 2: Evaluate performance vs. baseline
+5. Month 3: Pause underperforming keywords
+6. Month 4+: Scale winners, keep baseline performers
+
+**Disadvantage of SKAG:**
+- Requires 100+ campaigns to manage 100 keywords
+- Management overhead: 1-2 hours per day
+- Difficult to scale to 500+ keywords
+- Only justified for very high-budget accounts
 
 ---
 
-### 4.2 CATEGORY TARGETING
+## SECTION 6: CAMPAIGN LIFECYCLE & SEASONAL MANAGEMENT (200+ lines)
 
-**Definition:** Target product categories (e.g., "Headphones", "Wireless Audio") to display ads on category pages and search results.
+### 6.1 CAMPAIGN LIFECYCLE PHASES
 
-**Structure:**
+Every successful campaign passes through distinct phases:
+
+#### 6.1.1 Launch Phase (Weeks 1-4)
+
+**Objectives:**
+1. Collect first conversion data
+2. Identify search term patterns
+3. Validate keyword quality
+4. Establish baseline metrics
+
+**Activities:**
+- Set initial bids at €0.50-0.80 range (conservative)
+- Run daily budget €10-20 to stay visible
+- Review search term report daily
+- Identify "accidental" high-ACOS searches for negating
+- DO NOT optimize yet (need data)
+
+**Success Metrics for Launch:**
+- 20-30 clicks within first week
+- At least 5-10 conversions by day 21
+- ACOS <50% (acceptable for launch phase)
+
+**Common Mistakes:**
+- Setting bids too high initially (burns budget on unknown keywords)
+- Pausing keywords after 0-2 clicks (need data)
+- Adding 100+ keywords (should start with 5-10)
+- Changing bids daily (need 7-10 days minimum between changes)
+
+#### 6.1.2 Growth Phase (Weeks 4-12)
+
+**Objectives:**
+1. Increase volume while controlling ACOS
+2. Identify top-performing keywords
+3. Build negative keyword list
+4. Scale budget
+
+**Activities:**
+- Increase bids on high-converting keywords (>5% conversion rate) by €0.10-0.20
+- Add strong negative keywords from search term report
+- Increase daily budget 10-20% weekly
+- Test slight keyword variations (phrase match variations)
+- Begin A/B testing (if resources available)
+
+**Expected Growth Phase Metrics:**
+- Conversions increasing 15-25% weekly
+- ACOS trending toward 20-30% target
+- 15+ conversions per keyword minimum
+- Search term patterns becoming clear
+
+**Success Criteria for Growth Phase:**
+- ACOS within 30% of target
+- Conversion volume doubling from launch
+- Clear winners and losers identified
+
+#### 6.1.3 Maturity Phase (Months 3-6)
+
+**Objectives:**
+1. Stabilize ACOS at target level
+2. Maximize conversion volume
+3. Harvest top keywords for expansion
+4. Maintain profitability
+
+**Activities:**
+- Fine-tune bids monthly (€0.05 adjustments)
+- Expand winning keyword themes into new campaigns
+- Consolidate underperformers
+- Review competitive landscape monthly
+- Build lookalike campaigns from best performers
+
+**Expected Maturity Phase Metrics:**
+- ACOS stable month-to-month (±2%)
+- Conversion volume stable
+- 50-100+ conversions per keyword minimum
+- Reliable ROI predictable
+
+#### 6.1.4 Decline Phase (Months 6+)
+
+**Warning Signs of Decline:**
+- ACOS increasing month-over-month (>3% increase)
+- Conversion volume declining 10%+ monthly
+- CPC increasing faster than conversion rate
+- Market saturation (all available customers reached)
+
+**Typical Decline Causes:**
+1. Keyword saturation (market fully penetrated)
+2. Increased competition (competitors raising bids)
+3. Seasonal decline (product demand drops)
+4. Algorithm shifts (Amazon changes matching)
+5. External factors (economic recession, supply issues)
+
+**Actions During Decline:**
+- Reduce bids by 10-15%
+- Pause bottom-performing keywords
+- Evaluate product positioning (price, reviews, competitors)
+- Consider pause/restart vs. continued operation
+- Test new keywords and audiences
+
+**Decision Points:**
+- If ACOS >40% and declining further: Consider pausing
+- If volume dropped 50%+: Restructure campaign
+- If profitable even at low volume: Maintain baseline spend
+- If seasonal decline expected: Plan for return
+
+### 6.2 SEASONAL CAMPAIGN MANAGEMENT
+
+**Seasonal Adjustment Timeline:**
 ```
-Campaign: "Headphones_Category_Targeting_25%"
-└── Ad Group: "Audio Category"
-    └── Targeting:
-        - Category: Headphones
-        - Category: Wireless Audio Equipment
-        - Category: Audio Accessories
+October:
+- Pre-season: Prepare 2-3 months advance
+- Create seasonal variants of campaigns
+- Expand keyword list (30-50% more keywords)
+- Build budget reserves
+
+November-December:
+- Peak season: 2-4x normal budget
+- Daily monitoring essential
+- Aggressive bidding on proven keywords
+- Accept higher ACOS (volume compensates)
+
+January:
+- Decline phase: Volume drops 30-50%
+- Reduce bids by 20-30%
+- Consolidate underperformers
+- Plan for off-season
+
+February-September:
+- Off-season: Baseline operations
+- Maintain 1-2 core campaigns
+- Low budget (€100-300/month)
+- Focus on optimization, not volume
 ```
 
-**Advantages:**
-- Broad reach (every search in "Headphones" category)
-- Cost-effective (less competitive than specific ASINs)
-- Discovery focus (reach customers early in consideration)
+**Example: Holiday Season Campaign**
+```
+Base Campaign (Year-Round):
+├── Electronics_Headphones_Exact_Premium
+├── Budget: €200/month
+├── 5 keywords
+├── Bid: €0.90 average
+└── Conversions: 50/month
 
-**Disadvantages:**
-- Lower conversion rate (5-8%, less intent specificity)
-- Volume-driven (requires €100+/day budget)
-- Less profitable than ASIN targeting
+Holiday Expansion (November-December):
+├── Electronics_Headphones_Exact_Premium_Holiday
+├── Budget: €600/month (3x base)
+├── 15 keywords (includes gift-related)
+├── Bid: €1.20 average (+30%)
+└── Expected Conversions: 200/month (4x base)
+
+Holiday Keywords (Added):
+- [holiday gifts] - Bid: €1.50
+- [christmas presents] - Bid: €1.45
+- [stocking stuffers] - Bid: €1.00
+- [wireless gifts] - Bid: €1.35
+- [tech gifts] - Bid: €1.25
+
+Off-Season (February-September):
+├── Electronics_Headphones_Exact_Premium_Baseline
+├── Budget: €100/month (1/2 base)
+├── 3 core keywords only
+├── Bid: €0.75 average (-20%)
+└── Conversions: 25/month (1/2 base)
+```
+
+**Expected ACOS During Seasons:**
+- Peak Season: 30-40% ACOS acceptable (volume high)
+- Normal Season: 20-30% ACOS target
+- Off-Season: 15-25% ACOS (lower volume acceptable)
 
 ---
 
-### 4.3 BRAND TARGETING
+## SECTION 7: A/B TESTING & OPTIMIZATION FRAMEWORKS (250+ lines)
 
-**Definition:** Target specific brand names (e.g., "Sony", "Bose") to display ads on brand pages and searches.
+### 7.1 A/B TESTING CAMPAIGN STRUCTURE
 
-**Structure:**
+**Testing Principle:** Only change ONE variable at a time. Changing multiple variables simultaneously makes results ambiguous.
+
+**Variables Available for Testing:**
+1. Bid amount (€0.80 vs €1.00)
+2. Bid strategy (Manual vs Auto)
+3. Match type (Exact vs Phrase)
+4. Product images/creative
+5. Campaign name structure
+6. Negative keyword set
+7. Time scheduling
+8. Geographic targeting
+
+### 7.2 BID STRATEGY A/B TEST
+
+**Test Structure:**
 ```
-Campaign: "Headphones_Brand_Conquesting_25%"
-└── Ad Group: "Competitor Brands"
-    └── Targeting:
-        - Brand: Sony
-        - Brand: Bose
-        - Brand: Sennheiser
+Campaign A (Control): Electronics_Headphones_Exact_Premium_Manual
+├── Bid Strategy: Manual
+├── Average Bid: €0.95
+├── Budget: €500/month
+├── Duration: 30 days
+└── Keyword: [wireless headphones]
+
+Campaign B (Test): Electronics_Headphones_Exact_Premium_Auto
+├── Bid Strategy: Automatic (Target ACOS: 25%)
+├── Initial Bid: €0.95
+├── Budget: €500/month
+├── Duration: 30 days
+└── Keyword: [wireless headphones] (same)
+
+Key: IDENTICAL except bid strategy
 ```
 
-**Advantages:**
-- Clear competitor positioning ("Switch from Bose to us")
-- High intent (customer committed to brand category)
-- Conversion rate: 6-10% (brand-conscious customer, may stay with brand)
+**Data Collection (30 days):**
+| Metric | Manual | Auto | Winner |
+|--------|--------|------|---------|
+| Spend | €500 | €500 | Tie |
+| Conversions | 45 | 48 | Auto |
+| ACOS | 22.2% | 20.8% | Auto |
+| CPC | €0.88 | €0.92 | Manual |
+| CTR | 2.8% | 3.1% | Auto |
+| Conv Rate | 9.2% | 10.1% | Auto |
 
-**Disadvantages:**
-- Ethical considerations (conquesting competitor brand)
-- Higher CPC (competitive term)
-- May violate platform policies (depends on Amazon's rules for your region)
+**Result:** Auto bid strategy outperformed manual on ACOS and conversion rate.
 
-**Platform Variations:**
-- Amazon Advertising: Brand conquesting allowed (common tactic)
-- Kaufland: Brand conquesting may be restricted (check regional policies)
-- Bol.com: Generally allowed
-- eBay: Generally allowed
+**Action:**
+1. Pause manual campaign
+2. Increase budget on auto campaign to €700/month
+3. Expand auto strategy to other keywords
+4. Document finding in test results log
+
+### 7.3 MATCH TYPE A/B TEST
+
+**Test Structure:**
+```
+Campaign A (Control): Electronics_Headphones_Exact_Premium
+├── Match Type: Exact
+├── Keywords: [wireless headphones], [bluetooth headphones], [noise cancelling]
+├── Budget: €400/month
+├── Duration: 30 days
+└── Target: [exact variations only]
+
+Campaign B (Test): Electronics_Headphones_Phrase_Premium
+├── Match Type: Phrase
+├── Keywords: "wireless headphones", "bluetooth headphones", "noise cancelling"
+├── Budget: €400/month
+├── Duration: 30 days
+└── Target: [variations + related phrases]
+
+Key: IDENTICAL budget, similar keywords, different match type
+```
+
+**Data Collection (30 days):**
+| Metric | Exact | Phrase | Winner |
+|--------|--------|--------|----------|
+| Spend | €400 | €400 | Tie |
+| Conversions | 35 | 52 | Phrase |
+| ACOS | 22.8% | 18.3% | Phrase |
+| Clicks | 180 | 420 | Phrase |
+| CPC | €2.20 | €0.95 | Phrase |
+| Conv Rate | 19.4% | 12.4% | Exact |
+
+**Analysis:**
+- Phrase match gets 2.3x more clicks (good for volume)
+- Phrase match has 1.5x more conversions (good for ROI)
+- Phrase match has 20% lower ACOS (20% cost savings)
+- Exact match has higher conversion rate (but fewer opportunities)
+
+**Conclusion:** Phrase match delivers better overall value for this keyword group.
+
+**Action:**
+1. Increase phrase match budget to €600/month
+2. Reduce exact match budget to €200/month
+3. Use exact match for brand defense only
+4. Monitor phrase conversion rate for quality
+
+### 7.4 NEGATIVE KEYWORD A/B TEST
+
+**Test Structure:**
+```
+Campaign A (Control): Fashion_Shoes_Phrase_Mid_Standard
+├── Negative Keywords: Category-wide set (30 negatives)
+│   [-review] [-cheap] [-rental] [-repair] [-fake]
+├── Budget: €500/month
+├── Duration: 30 days
+└── Phrase keywords: [running shoes], [dress shoes], [walking shoes]
+
+Campaign B (Test): Fashion_Shoes_Phrase_Mid_Aggressive
+├── Negative Keywords: Category-wide + competitor brands (50+ negatives)
+│   [-review] [-cheap] [-rental] [-repair] [-fake]
+│   [-nike] [-adidas] [-asics] [-new balance] [-reebok]
+│   [-children] [-kids] [-baby] [-infant]
+├── Budget: €500/month
+├── Duration: 30 days
+└── Phrase keywords: [running shoes], [dress shoes], [walking shoes]
+
+Key: IDENTICAL except negative keyword count
+```
+
+**Data Collection (30 days):**
+| Metric | Standard | Aggressive | Winner |
+|--------|----------|-----------|--------|
+| Spend | €500 | €475 | Aggressive |
+| Impressions | 8,500 | 7,200 | Standard |
+| Clicks | 320 | 240 | Standard |
+| Conversions | 28 | 24 | Standard |
+| ACOS | 17.9% | 19.8% | Standard |
+| CPC | €1.56 | €1.98 | Standard |
+
+**Analysis:**
+- Aggressive negatives reduce clicks by 25% (fewer irrelevant clicks)
+- Aggressive negatives reduce conversions by 14% (losing some good traffic)
+- Standard negative set has 18% lower ACOS
+- Standard negative set is more cost-effective
+
+**Conclusion:** Adding competitor negatives reduces volume without commensurate ACOS improvement. Standard negative set is better for this market.
+
+**Action:**
+1. Use standard negative set (30 negatives)
+2. Skip competitor brand negatives
+3. Keep cost-per-conversion low by accepting broader traffic
+
+### 7.5 CREATIVE/PRODUCT IMAGE A/B TEST
+
+**Test Structure:**
+```
+Campaign A (Control): Electronics_Headphones_Exact_Premium_Image1
+├── Primary Product Image: Hero shot (clean background)
+├── Ad Group Image: Main image with logo
+├── Keywords: [wireless headphones], [noise cancelling headphones]
+├── Budget: €400/month
+└── Duration: 30 days
+
+Campaign B (Test): Electronics_Headphones_Exact_Premium_Image2
+├── Primary Product Image: Lifestyle photo (in-use scenario)
+├── Ad Group Image: Lifestyle image with person using product
+├── Keywords: [wireless headphones], [noise cancelling headphones] (same)
+├── Budget: €400/month
+└── Duration: 30 days
+
+Key: IDENTICAL keywords, different creative
+```
+
+**Data Collection (30 days):**
+| Metric | Hero Shot | Lifestyle | Winner |
+|--------|----------|-----------|--------|
+| Spend | €400 | €400 | Tie |
+| Impressions | 2,100 | 2,850 | Lifestyle |
+| Clicks | 95 | 157 | Lifestyle |
+| CTR | 4.5% | 5.5% | Lifestyle |
+| Conversions | 8 | 13 | Lifestyle |
+| Conv Rate | 8.4% | 8.3% | Tie |
+| ACOS | 50% | 30.8% | Lifestyle |
+
+**Analysis:**
+- Lifestyle image gets 35% more impressions (better visibility)
+- Lifestyle image gets 65% more clicks (higher CTR)
+- Lifestyle image converts at similar rate (both ~8%)
+- Lifestyle image generates 38% better ACOS (20% cheaper)
+
+**Conclusion:** Lifestyle creative outperforms hero shot significantly.
+
+**Action:**
+1. Use lifestyle images as primary creative
+2. Update all hero shot campaigns with lifestyle alternatives
+3. Test lifestyle variants (different scenarios, different people)
+
+### 7.6 TESTING BEST PRACTICES
+
+**Sample Size Requirements:**
+- Minimum conversions per variant: 50 (for reliable data)
+- Minimum duration: 14 days (captures weekly patterns)
+- Minimum budget per variant: €300 (enough volume)
+- Confidence level: 95% (standard for business decisions)
+
+**Common Testing Mistakes:**
+1. Ending test too early (before 50 conversions)
+2. Changing variables mid-test (introduces confounds)
+3. Testing during seasonal shifts (masks true effect)
+4. Testing without budget parity (unfair comparison)
+5. Overfitting to single test (ignoring other markets)
+
+**Testing Prioritization:**
+```
+High Priority (Test First):
+1. Bid strategy (Manual vs Auto) - 15-30% ACOS impact
+2. Match type (Exact vs Phrase) - 20-40% volume impact
+3. Negative keywords - 10-25% ACOS impact
+
+Medium Priority (Test If Budget Available):
+4. Creative/images - 5-20% CTR impact
+5. Keyword variations - 10-30% volume impact
+
+Low Priority (Test Only If Optimized):
+6. Time scheduling - 3-8% ROI impact
+7. Geographic targeting - 2-5% ACOS impact
+```
 
 ---
 
-### 4.4 MARKETPLACE-SPECIFIC IMPLEMENTATION (100+ lines)
+## SECTION 8: MARKETPLACE-SPECIFIC IMPLEMENTATION (200+ lines)
 
-#### 4.4.1 Amazon EU Implementation
+### 8.1 AMAZON EU SPECIFIC TACTICS
 
-**Campaign Structure for 10-Product Portfolio:**
+Amazon EU (UK, DE, FR, IT, ES) has specific features and constraints:
+
+#### 8.1.1 Multi-Country Campaign Strategy
+
+**Approach 1: Unified EU Campaign**
 ```
-Portfolio: "Headphones_Amazon_EU_2026"
-├── Campaign: "Auto_Broad_Discovery_25%"
-│   └── Targeting Type: Automatic → Loose Match
-│   └── Budget: €50/day
-│   └── Purpose: Keyword discovery
-│
-├── Campaign: "Broad_Match_25%"
-│   └── Keywords: [wireless headphones, bluetooth headphones, noise cancelling headphones]
-│   └── Match Type: Broad
-│   └── Budget: €40/day
-│
-├── Campaign: "Exact_Match_Premium_40%"
-│   └── Keywords: ["wireless headphones", "noise cancelling headphones"]
-│   └── Match Type: Exact
-│   └── Budget: €30/day
-│
-└── Campaign: "ASIN_Targeting_25%"
-    └── Targets: [B008XVAVRA (Sony), B00004Z5CS (Bose)]
-    └── Budget: €20/day
+Campaign: Electronics_Headphones_Exact_Premium_EU_All
+├── Target Markets: UK, Germany, France, Italy, Spain
+├── Language: English keywords (translated per country)
+├── Budget: €1,000/month across all
+├── Keywords: [wireless headphones] etc. (auto-translated)
+└── Advantage: Single campaign to manage
+   Disadvantage: Can't optimize per country
 ```
 
-**Amazon-Specific Notes:**
-- Sponsor Brand Ads available (text + multiple products, higher CTR)
-- Sponsor Display Ads available (retargeting previous site visitors)
-- Video Ads available (€0.50-2.00 CPC, high CTR)
-- Search Term Report available (weekly, detailed)
+**Approach 2: Country-Specific Campaigns (RECOMMENDED)**
+```
+Campaign: Electronics_Headphones_Exact_Premium_UK
+├── Target: UK only
+├── Language: English (UK spelling)
+├── Budget: €250/month
+├── Keywords: [wireless headphones]
+└── ACOS Target: 20%
 
-#### 4.4.2 Kaufland Implementation
+Campaign: Electronics_Headphones_Exact_Premium_DE
+├── Target: Germany only
+├── Language: German
+├── Budget: €400/month (larger market)
+├── Keywords: [kabellose Kopfhörer] (German keyword)
+└── ACOS Target: 22% (slightly different)
+
+Campaign: Electronics_Headphones_Exact_Premium_FR
+├── Target: France only
+├── Language: French
+├── Budget: €250/month
+├── Keywords: [casques sans fil] (French keyword)
+└── ACOS Target: 25% (lower conversion market)
+
+[Similar for IT and ES...]
+
+Total: 5 campaigns, €1,200/month
+```
+
+**Rationale for Country-Specific:**
+- Conversion rates vary 30-40% between countries
+- Search intent differs ("sale" vs "promotion" terms)
+- CPC varies significantly (DE highest, ES lowest typically)
+- Allows country-level optimization
+
+#### 8.1.2 EU-Specific Keyword Adaptations
+
+**UK Keywords:**
+- Use British spelling: "colour", "favourite", "centre"
+- Incorporate UK brands: "John Lewis", "Currys", "Amazon Fresh"
+- Include "UK delivery", "Next day delivery" variations
+
+**German Keywords:**
+- Longer compound keywords: "hochwertige kabellose Kopfhörer"
+- Quality indicators: "Premium", "Markenprodukt"
+- Price terms: "unter€100", "günstig"
+
+**French Keywords:**
+- Formal language preferred: "écouteurs sans fil" vs "casques bluetooth"
+- Luxury positioning: "haut de gamme", "prestige"
+- Regional terms: "Livraison rapide", "Service client"
+
+### 8.2 KAUFLAND SPECIFIC TACTICS
+
+Kaufland (Germany, Czech Republic, Romania, Slovakia) has different algorithm:
+
+#### 8.2.1 Kaufland Campaign Structure
 
 **Key Differences from Amazon:**
-- No Sponsor Brand format (text ads only)
-- Limited targeting options (mainly keyword-based)
-- Higher ACOS baseline (25-35% typical, vs Amazon's 18-22%)
-- Smaller audience (1/10 Amazon size)
+- Keyword matching is broader (no exact match equivalent)
+- Quality Score heavily weighted (review rating critical)
+- CTR less important than conversion rate
+- Daily budget management more volatile
 
-**Campaign Structure for 10-Product Portfolio:**
+**Recommended Structure:**
 ```
-Portfolio: "Headphones_Kaufland_2026"
-├── Campaign: "Keyword_Exact_Match_25%"
-│   └── Keywords: ["wireless headphones", "noise cancelling headphones"]
-│   └── Budget: €30/day (lower audience = lower budget needed)
-│
-├── Campaign: "Keyword_Broad_Match_25%"
-│   └── Keywords: [wireless headphones, bluetooth headphones]
-│   └── Budget: €20/day
-│
-└── Campaign: "Keyword_Phrase_Match_25%"
-    └── Keywords: ["wireless audio", "professional headphones"]
-    └── Budget: €15/day
+Campaign: Kaufland_Headphones_Standard
+├── Keywords: Mix of 20-30 related terms
+│   (Kaufland treats these as "medium intent")
+├── Budget: Daily €10-15
+├── Bid Strategy: Manual (Auto unreliable on Kaufland)
+├── Focus: High-quality product (reviews essential)
+└── Conversion Rate Target: 3-5%
 ```
 
-**Kaufland Strategy Differences:**
-- Emphasis on exact match (higher ACOS, lower waste)
-- Fewer campaigns (no auto, no product targeting)
-- Negative keywords more critical (reduce waste)
-- Portfolio approach: Focus on 5-10 top SKUs, not full portfolio
+#### 8.2.2 Kaufland Optimization Tips
 
-#### 4.4.3 Bol.com Implementation
+1. **Product Reviews Critical:**
+   - Don't advertise products with <4.0 average rating
+   - Review count >30 essential (builds trust)
+   - Negative reviews kill CTR
+
+2. **Pricing Strategy:**
+   - Kaufland customers price-sensitive
+   - Competitive pricing essential (1-2% of Amazon)  
+   - Bundle deals work well (can add 15-20% volume)
+
+3. **Keyword Strategy:**
+   - Broader keyword approach (50+ keywords per campaign)
+   - Negative keywords less effective (system ignores some)
+   - Test variations heavily
+
+### 8.3 BOL.COM SPECIFIC TACTICS
+
+Bol.com (Netherlands, Belgium) has marketplace-specific features:
+
+#### 8.3.1 Bol.com Campaign Structure
 
 **Key Differences:**
-- Auction system (competitive CPC)
-- No product targeting (keywords only)
-- Daily budget caps per campaign (€20-100/day max)
-- Search term data limited (no detailed report)
+- Sponsored Products only (no brand campaigns)
+- ACOS calculation includes VAT (20% in NL, 21% in BE)
+- Attribution window only 14 days (vs 30 on Amazon)
+- Algorithm heavily rewards shipping speed
 
-**Campaign Structure:**
+**Recommended Structure:**
 ```
-Portfolio: "Headphones_Bol_2026"
-├── Campaign: "Exact_Match_Best_Sellers_25%"
-│   └── Keywords: ["wireless headphones"]
-│   └── Daily Budget: €40 (max for Bol)
-│   └── Focus: Best-selling SKUs only
-│
-├── Campaign: "Broad_Match_Growth_25%"
-│   └── Keywords: [wireless headphones, noise cancelling]
-│   └── Daily Budget: €30
-│   └── Focus: New SKUs, growth phase
+Campaign: Bolcom_Headphones_Standard
+├── Keywords: 10-15 exact/phrase combinations
+├── Budget: Daily €5-10 (smaller market)
+├── Focus: Same-day shipping if possible
+├── ACOS Target: 25% (adjusted for VAT)
+└── Fulfillment: Fulfilment by Bol preferred
 ```
 
-**Bol Strategy:**
-- Limited budget (cap at €100/day per campaign)
-- Fewer campaigns (max 10-15 for small portfolio)
-- Heavy reliance on organic search (PPC supplements, not primary channel)
-- Focus on SKUs with established demand
+#### 8.3.2 Bol.com Specifics
 
-#### 4.4.4 eBay Implementation
+1. **Fulfilment Strategy:**
+   - FBB (Fulfilment by Bol) gets bid boost
+   - Same-day option shows in search
+   - Impacts CTR by 15-20%
 
-**Platform Characteristics:**
-- Sponsored Products (similar to Amazon)
-- Audience selection available (interests, demographics)
-- Daily budget caps (€10-200/day per campaign)
-- Limited search term reporting
+2. **Pricing (Include VAT in ACOS Calculation):**
+   - Netherlands: 21% VAT
+   - Belgium: 21% VAT
+   - When calculating ACOS: ACOS = (Ad Spend / (Sales × 0.79))
+   - This adjusts for VAT removed from sales
 
-**Campaign Structure:**
+3. **Shipping Terms:**
+   - Express shipping (1-2 day) highly valued
+   - Standard shipping (3-5 day) much lower CTR
+   - International shipping limited impact
+
+### 8.4 EBAY SPECIFIC TACTICS
+
+eBay (global, varies by region) has different paid search platform (Promoted Listings):
+
+#### 8.4.1 eBay Promoted Listings Strategy
+
+**Key Differences:**
+- Auction vs. Fixed Price (different strategy)
+- Campaign level only (no keyword level)
+- Percentage-based bidding (e.g., "1.5% of sale price")
+- No negative keywords (system ignores)
+
+**Recommended Structure:**
 ```
-Portfolio: "Headphones_eBay_2026"
-├── Campaign: "Keyword_Auto_Discovery_25%"
-│   └── Settings: Automatic matching
-│   └── Audiences: Interests: "Audio Equipment", "Wireless Tech"
-│   └── Budget: €25/day
-│
-├── Campaign: "Keyword_Manual_Exact_25%"
-│   └── Keywords: ["wireless headphones"]
-│   └── Audiences: Interests: "Headphones"
-│   └── Budget: €20/day
+Campaign: eBay_Headphones_Electronics_Fixed
+├── Listings: 20-50 fixed-price listings
+├── Bid Rate: 1.5-2.5% of sale price
+├── Budget: Daily €5-15
+├── Focus: New and Trending category
+└── ACOS Target: 8-12% (percentage-based)
 ```
 
-**eBay Strategy:**
-- Audience targeting combined with keyword targeting
-- Lower CPC than Amazon (less competitive)
-- Seasonal peaks (holiday shopping)
-- Account age matters (new accounts get limited budget)
+#### 8.4.2 eBay Auction vs Fixed Price
+
+**Auctions:**
+- Bid lower (0.5-1%) - buyers already engaged
+- Shorter campaign windows (7-10 days before auction ends)
+- Higher competition near end-date
+
+**Fixed Price:**
+- Bid higher (1.5-3%) - need buyer attention
+- Longer windows (campaigns run 30-90 days)
+- More predictable volume
 
 ---
 
-## SECTION 5: CAMPAIGN LIFECYCLE MANAGEMENT (200+ lines)
+## SECTION 9: IMPLEMENTATION CHECKLIST & QUICK REFERENCE (150+ lines)
 
-### 5.1 LIFECYCLE PHASES
+### 9.1 CAMPAIGN SETUP CHECKLIST
 
-#### 5.1.1 Launch Phase (Weeks 1-4)
+**Pre-Launch (Week -1):**
+- [ ] Define target ACOS (profit margin / ideal ROI)
+- [ ] Gather keyword list (start with 5-20 keywords)
+- [ ] Collect negative keywords (start with category-wide list)
+- [ ] Determine daily budget (ACOS target × expected conversions)
+- [ ] Create naming convention (apply to all campaigns)
+- [ ] Review product listing quality (title, images, description)
+- [ ] Verify product review count (minimum 10 reviews)
 
-**Objective:** Gather initial performance data, test market responsiveness.
+**Campaign Creation (Week 0):**
+- [ ] Create campaign with proper name format
+- [ ] Set match type (select one: Exact/Phrase/Broad/Auto)
+- [ ] Add keywords (start with 5-10 related keywords)
+- [ ] Set initial bids (€0.50-1.00 depending on category)
+- [ ] Apply category-wide negative keywords
+- [ ] Set daily budget
+- [ ] Enable automatic bid adjustment (if using Auto)
+- [ ] Review all settings before launch
 
-**Campaign Settings:**
-- Budget: Conservative (€20-30/day)
-- Bid: Market-rate (don't underbid, avoid showing in poor placements)
-- Match Type: Broad (gather data on various searches)
-- Negative Keywords: Minimal (still learning what doesn't work)
+**Post-Launch Monitoring (Weeks 1-4):**
+- [ ] Day 1: Check campaign is receiving impressions
+- [ ] Day 3: Verify at least 10 clicks received
+- [ ] Day 7: Review search term report for negatives
+- [ ] Day 14: Collect first conversion data (target: 5-10)
+- [ ] Day 21: Analyze ACOS vs. target
+- [ ] Day 28: Make first bid adjustments based on data
 
-**Optimization Actions:**
-- Monitor daily ACOS (should stabilize by day 14)
-- Add 3-5 negative keywords per week
-- No bid adjustments (insufficient data)
-- Don't pause campaign (still gathering data)
+### 9.2 QUICK REFERENCE: MATCH TYPES BY USE CASE
 
-**Success Criteria:**
-- Stabilized ACOS (variance <5% day-to-day by week 4)
-- ≥20 conversions (sufficient data for reliability)
-- CTR >0.8% (indicates relevance)
+**Use EXACT MATCH if:**
+- ✓ Budget limited (<€500/month)
+- ✓ Keyword has proven conversion history
+- ✓ High-value products (>€100)
+- ✓ Brand keywords
+- ✓ Want maximum ACOS control
+- ✗ Don't use if you want high volume
 
-**Failure Scenarios:**
-- ACOS consistently >30%: Product positioning issue, consider repositioning
-- CTR <0.3%: Keyword mismatch, add more negative keywords
-- 0 conversions after €200 spend: Market may not want product at this price/positioning
+**Use PHRASE MATCH if:**
+- ✓ Budget moderate (€500-2000/month)
+- ✓ Want to balance volume and ACOS
+- ✓ Testing keyword variations
+- ✓ Building awareness phase
+- ✗ Don't use if ACOS tolerance is <15%
 
-#### 5.1.2 Growth Phase (Weeks 5-12)
+**Use BROAD MATCH if:**
+- ✓ Budget high (>€1500/month)
+- ✓ Accept higher ACOS (>35%) for volume
+- ✓ Product low-cost (<€50)
+- ✓ Discovery phase
+- ✗ Never use without 50+ negative keywords
 
-**Objective:** Scale successful campaigns, establish profitability floor.
+**Use AUTO CAMPAIGNS if:**
+- ✓ Product new (need keyword discovery)
+- ✓ Category unfamiliar (don't know search terms)
+- ✓ Want to harvest keywords for manual campaigns
+- ✓ Budget limited (auto more efficient initially)
+- ✗ Don't use as primary profit driver
 
-**Campaign Settings:**
-- Budget: Increase 20-30% weekly (if ACOS <18%)
-- Bid: Increase gradually (€0.05 increments) for high-performing keywords
-- Match Type: Differentiate (move proven keywords to exact, test new keywords in broad)
-- Negative Keywords: Aggressive (add 5-10 weekly)
+### 9.3 QUICK REFERENCE: ACOS TARGETS BY CATEGORY
 
-**Optimization Actions:**
-- Harvest keywords from auto campaign search term report
-- Create exact-match campaigns for top 5 keywords
-- Reduce bid on low-performing keywords (20%+ ACOS)
-- Weekly performance reviews (ACOS trend, not daily volatility)
+**Premium Electronics (COGS €100+, Margin 40%+):**
+- Exact Match Target: 15-20% ACOS
+- Phrase Target: 25-30% ACOS  
+- Broad Target: 35-45% ACOS
+- Auto Target: 30-40% ACOS
 
-**Success Criteria:**
-- ACOS trending down (was 20%, now 16%)
-- Budget growth without ACOS increase (scaling profitably)
-- ≥100 conversions (strong statistical confidence)
+**Mid-Tier Products (COGS €30-100, Margin 25-40%):**
+- Exact Match Target: 20-25% ACOS
+- Phrase Target: 30-40% ACOS
+- Broad Target: 40-50% ACOS
+- Auto Target: 35-45% ACOS
 
-**Failure Scenarios:**
-- ACOS increases as budget increases (market saturation, reduce budget)
-- New keywords fail to harvest (market saturation, pivot to different keywords)
+**Budget Products (COGS <€30, Margin <25%):**
+- Exact Match Target: 25-35% ACOS
+- Phrase Target: 35-45% ACOS
+- Broad Target: 50-70% ACOS
+- Auto Target: 45-60% ACOS
 
-#### 5.1.3 Maturity Phase (Weeks 13-26)
+**Notes:**
+- Add 5-10% to targets for new/unproven keywords
+- Reduce targets by 5% for proven high-performers
+- Seasonal peaks allow 10-15% higher ACOS
+- Off-season requires 10% lower ACOS
 
-**Objective:** Optimize for maximum profitability, maintain market position.
+### 9.4 CAMPAIGN OPTIMIZATION CHECKLIST (MONTHLY)
 
-**Campaign Settings:**
-- Budget: Stable (no growth unless seasonality pending)
-- Bid: Fine-tune (€0.01-0.05 increments based on keyword performance)
-- Match Type: Mature (mostly exact, minimal broad)
-- Negative Keywords: Maintenance (5-10 per month)
+**Week 1 of Month:**
+- [ ] Review monthly ACOS vs. target
+- [ ] Identify top 3 converting keywords
+- [ ] Identify bottom 3 performing keywords
+- [ ] Analyze search term report
+- [ ] Add 5-10 new negative keywords
 
-**Optimization Actions:**
-- A/B testing (new keywords vs proven keywords)
-- Bid optimization by keyword (highest-converting keywords, highest bids)
-- Portfolio analysis (which SKUs are profitable, which are marginal)
-- Creative testing (if platform supports ad copy variations)
+**Week 2 of Month:**
+- [ ] Increase bids on top performers by €0.10-0.20
+- [ ] Reduce bids on underperformers by €0.05-0.15
+- [ ] Pause keywords with 0 conversions after 100+ clicks
+- [ ] Review budget allocation vs. performance
+- [ ] Check for new competitor keywords
 
-**Success Criteria:**
-- ACOS stable <15% (profitability achieved)
-- Budget allocation optimized (high-performers receive most budget)
-- Year-over-year growth (if comparing to prior year)
+**Week 3 of Month:**
+- [ ] Analyze conversion rate trends
+- [ ] Test new keyword variations (5-10 new)
+- [ ] Review negative keyword effectiveness
+- [ ] Plan next month's budget based on ROI
+- [ ] Document wins/losses in testing log
 
-**Failure Scenarios:**
-- ACOS creeping up (market saturation, increase negative keywords)
-- Competitor activity increasing (new competitors, price wars)
+**Week 4 of Month:**
+- [ ] Prepare monthly report (ACOS, ROI, volume)
+- [ ] Schedule campaigns for next month
+- [ ] Plan seasonal adjustments if needed
+- [ ] Brief team on key findings
+- [ ] Set targets for next month
 
-#### 5.1.4 Decline Phase (Weeks 27-52)
+### 9.5 TROUBLESHOOTING COMMON ISSUES
 
-**Objective:** Identify declining performance, decide continuation vs sunset.
+**Problem: High ACOS (>50%)**
+- Check: Are bids too high? Reduce by €0.15-0.25
+- Check: Wrong match type? Test exact match instead
+- Check: Poor product quality? Improve reviews/images
+- Check: Weak negative keywords? Add 20+ more
+- Check: Seasonal decline? Reduce budget or pause
 
-**Campaign Settings:**
-- Budget: Reduce if ACOS >20%
-- Bid: Reduce (€0.05-0.10 per keyword)
-- Match Type: Consolidate (pause low-performers, focus on exact)
-- Negative Keywords: Aggressive (block marginal searches)
+**Problem: Low conversion rate (<2%)**
+- Check: Product image quality? Use lifestyle photos
+- Check: Product title clarity? Add relevant keywords to title
+- Check: Product reviews? Need minimum 20 positive
+- Check: Price competitive? Check competitor pricing
+- Check: Wrong keywords? Analyze search intent match
 
-**Optimization Actions:**
-- Pause underperforming keywords (ACOS >20%, low volume)
-- Consolidate budgets (combine multiple low-performing campaigns)
-- Consider sunsetting (if ACOS >25% and no recovery trend)
+**Problem: Very high CPC (>€2.00)**
+- Check: Competitive category? Use phrase/broad match
+- Check: Branded keywords? Expect higher CPC
+- Check: Peak season? Reduce bid, accept lower volume
+- Check: Bid too aggressive? Reduce by €0.25-0.50
+- Check: Poor CTR? Improve ad appeal
 
-**Success Criteria:**
-- ACOS stabilized (no further deterioration)
-- Campaign still marginally profitable (ACOS <20%)
-- Seasonal recovery expected (if applicable)
-
-**Failure Scenarios:**
-- Continued ACOS increase (competitor market share, technology change)
-- Zero conversions for 2 weeks (market demand ended)
-
-**Sunset Decision:**
-- Pause campaign if ACOS >25% for 4 consecutive weeks
-- Or if product is end-of-life (discontinuing)
-- Archive campaign for reference (may relaunch similar product)
-
-#### 5.1.5 Seasonal Phases
-
-**Pre-Season Phase (4-6 weeks before peak):**
-- Increase budget 30-50% (prepare for volume)
-- Broaden keyword matching (capture exploratory searches)
-- Test new creative/keywords
-
-**Peak Season (2-4 weeks at peak):**
-- Maximum budget (capitalize on high-volume opportunity)
-- Aggressive bid adjustments (competition intense)
-- Daily optimization (volume creates frequent changes)
-
-**Post-Season Phase (4-6 weeks after peak):**
-- Reduce budget gradually (avoid sudden cutoff)
-- Consolidate campaigns (eliminate seasonal variations)
-- Analyze seasonal learnings (which keywords peaked, when)
+**Problem: No conversions (30+ days)**
+- Check: Keyword intent match? Review search terms
+- Check: Product new? Seed reviews (10-20 initial)
+- Check: Wrong category? Verify product categorization
+- Check: Budget too low? Increase to €15-20/day
+- Check: Seasonal? Check category trends
 
 ---
 
-### 5.2 SEASONAL MANAGEMENT
+## QUICK REFERENCE TABLES
 
-#### 5.2.1 Seasonal Pattern Recognition
+### Campaign Types Summary
 
-**Common Seasonal Peaks:**
-| Product Category | Peak Season | Duration | ACOS Impact |
-|---|---|---|---|
-| Headphones | Holiday (Nov-Dec) | 8 weeks | ACOS +5-10% (higher competition) |
-| Summer Electronics | Summer (May-Aug) | 16 weeks | ACOS +3-7% |
-| Winter Sports | Winter (Oct-Feb) | 16 weeks | ACOS +5-8% |
-| Outdoor Gear | Spring-Summer | 20 weeks | ACOS +3-5% |
+| Type | Keywords | Campaigns Needed | ACOS | Volume | Effort |
+|------|----------|------------------|------|--------|--------|
+| Exact Match | 1-5 | 20-100 | 15-25% | Low | High |
+| Phrase Match | 5-15 | 7-20 | 25-40% | Medium | Medium |
+| Broad Match | 5-10 | 2-10 | 35-60% | High | Low |
+| SKAG | 1 | 100+ | 18-28% | Low | Very High |
+| Auto (Close) | N/A | 1 | 20-35% | Medium | Low |
+| Auto (Loose) | N/A | 1 | 30-50% | High | Low |
 
-**Implementation:**
-- Create seasonal campaigns (separate budgets, isolated optimization)
-- Example: "Headphones_Holiday_2026" campaign launches Nov 1, ends Dec 31
-- Seasonal campaign has dedicated budget (€100+/day during peak)
-- Evergreen campaigns continue year-round (€30/day baseline)
+### Performance Benchmarks (Electronics)
 
-#### 5.2.2 Seasonal Budget Allocation
+| Metric | Excellent | Good | Acceptable | Poor |
+|--------|-----------|------|-----------|------|
+| ACOS | <15% | 15-25% | 25-35% | >35% |
+| CTR | >5% | 3-5% | 2-3% | <2% |
+| Conv Rate | >10% | 5-10% | 3-5% | <3% |
+| CPC | <€0.80 | €0.80-1.20 | €1.20-1.50 | >€1.50 |
+| ROI | >5:1 | 3:1-5:1 | 2:1-3:1 | <2:1 |
 
-**Annual Budget Distribution (€50,000 total):**
+### Profit Calculation Reference
+
+**Formula:**
 ```
-Baseline Year-Round Budget: €25,000 (€68/day)
-├── Q1 (Jan-Mar): €6,000 (post-holiday, lower demand)
-├── Q2 (Apr-Jun): €6,500 (increasing spring demand)
-├── Q3 (Jul-Sep): €6,000 (lower demand, heat/humidity)
-└── Q4 (Oct-Dec): €6,500 (increasing holiday demand)
-
-Seasonal Budget Addition: €25,000 (concentrated in peaks)
-├── Holiday (Nov-Dec): €15,000 (€250/day)
-├── Summer (May-Aug): €10,000 (€75/day)
-└── Shoulder Seasons (Mar-Apr, Sep-Oct): €0 (covered by baseline)
-```
-
----
-
-### 5.3 PERFORMANCE REVIEW CADENCES
-
-#### 5.3.1 Daily Review (5 minutes)
-
-**Metrics to Monitor:**
-- Today's ACOS vs target (€spend / €revenue)
-- Current CPC vs yesterday (bid changes needed?)
-- Impressions/clicks ratio (ad relevance check)
-
-**Actions:**
-- If ACOS >30% by 2pm, investigate (bid too high? negative keywords needed?)
-- If impressions drop 50%+ vs yesterday, check if campaign paused accidentally
-
-#### 5.3.2 Weekly Review (30 minutes)
-
-**Metrics to Monitor:**
-- Week ACOS vs target (trend indicator)
-- Top 5 highest-ACOS keywords (candidates for pausing)
-- Top 5 lowest-ACOS keywords (candidates for scaling)
-- Search term report analysis (new harvests? unwanted searches?)
-
-**Actions:**
-- Add 3-5 negative keywords from low-conversion searches
-- Harvest 1-2 high-performing keywords for dedicated campaigns
-- Adjust bid on top 3 keywords (±€0.05)
-
-#### 5.3.3 Monthly Review (2 hours)
-
-**Metrics to Monitor:**
-- Month ACOS vs prior month (trending up/down/stable)
-- Campaign ACOS vs portfolio target
-- Budget utilization (spending as intended?)
-- Top 20 keywords (revenue contribution, ACOS)
-
-**Actions:**
-- Pause keywords with >€50 spend and ACOS >25%
-- Increase bid on keywords with <10% ACOS
-- Consolidate similar keywords (reduce campaign count)
-- Budget reallocation (shift from underperforming to high-performing campaigns)
-
-#### 5.3.4 Quarterly Review (4 hours)
-
-**Metrics to Monitor:**
-- Quarter ACOS vs prior quarter (seasonal adjustment needed?)
-- Portfolio ACOS (all campaigns aggregated)
-- Campaign count vs initial target (creep?)
-- SKU-level performance (which products are profitable?)
-
-**Actions:**
-- Evaluate campaign structure (still appropriate for portfolio size?)
-- Plan next quarter budget (increase/decrease/rebalance)
-- Review new product launches (ACOS trending as expected?)
-- Archive underperforming campaigns
-
----
-
-## SECTION 6: A/B TESTING & CREATIVE OPTIMIZATION (200+ lines)
-
-### 6.1 A/B TESTING FRAMEWORKS
-
-#### 6.1.1 What to Test
-
-**High-Priority Tests (Likely to Improve ACOS >15%):**
-1. Keyword match type (broad vs exact on same keyword)
-2. Bid level (€0.30 vs €0.50 vs €0.70)
-3. Product targeting (ASIN vs category vs brand)
-4. Campaign structure (single-keyword vs multi-keyword)
-
-**Medium-Priority Tests (Likely to Improve ACOS 5-15%):**
-1. Negative keyword list (broad vs restrictive)
-2. Product selection (which SKU variant converts best)
-3. Ad copy (if platform supports variations)
-4. Budget allocation (high vs low budget campaigns)
-
-**Low-Priority Tests (Likely to Improve ACOS <5%):**
-1. Bid increment size (€0.01 vs €0.05 changes)
-2. Campaign naming convention (doesn't affect performance)
-3. Reporting frequency (daily vs weekly review)
-
-#### 6.1.2 A/B Testing Design
-
-**Control Group:**
-- Existing campaign with proven performance
-- Example: "Headphones_Exact_Match_25%" (current ACOS: 14%)
-
-**Test Group:**
-- New campaign with one variable changed
-- Example: "Headphones_Exact_Match_25%_Test" (new variable: higher bid €0.60 vs €0.45)
-
-**Test Duration:**
-- Minimum 2 weeks (to gather >20 conversions)
-- Maximum 4 weeks (market conditions may change)
-- Budget: Control and test should be similar (ensure comparable volume)
-
-**Statistical Significance:**
-- Control: 50 conversions, 14% ACOS
-- Test: 50 conversions, 12% ACOS
-- Confidence: 95% (this is real improvement, not luck)
-
-**Calculation:**
-Improvement = (14% - 12%) / 14% = 14% improvement
-Monthly Savings (if test group at €1,000/month):
-€1,000 × 2% improvement = €20 saved monthly
-Annually: €240 saved (modest but multiplicable across keywords)
-
-#### 6.1.3 A/B Test Implementation Examples
-
-**Example 1: Keyword Match Type Test**
-
-Control Campaign: "Headphones_Phrase_Match_Test_Control"
-- Keywords: ["wireless headphones", "noise cancelling headphones"]
-- Match Type: Phrase
-- Budget: €30/day
-- Bid: €0.45
-- Duration: 2 weeks
-- Results: 40 clicks, 6 conversions (15% CTR, 15% conversion rate, 15% ACOS)
-
-Test Campaign: "Headphones_Broad_Match_Test"
-- Keywords: [wireless headphones, noise cancelling headphones]
-- Match Type: Broad
-- Budget: €30/day
-- Bid: €0.45 (same bid, isolated variable)
-- Duration: 2 weeks
-- Results: 120 clicks, 12 conversions (1.5% CTR, 10% conversion rate, 22% ACOS)
-
-Conclusion:
-- Broad match gets 3x more impressions (captures more searches)
-- Conversion rate drops to 10% (more marginal searches matched)
-- ACOS increases to 22% (less profitable)
-- **Decision:** Phrase match is better for this portfolio; abandon broad test
-
-**Example 2: Bid Level Test**
-
-Control Campaign: "Headphones_Bid_€0.45_Control"
-- Keywords: ["wireless headphones"]
-- Bid: €0.45
-- Budget: €30/day
-- Duration: 2 weeks
-- Results: 40 clicks, 6 conversions (15% conversion rate, 15% ACOS)
-
-Test Campaign A: "Headphones_Bid_€0.30_Test"
-- Keywords: ["wireless headphones"]
-- Bid: €0.30
-- Budget: €30/day
-- Results: 20 clicks, 3 conversions (15% conversion rate, 10% ACOS)
-
-Test Campaign B: "Headphones_Bid_€0.60_Test"
-- Keywords: ["wireless headphones"]
-- Bid: €0.60
-- Budget: €30/day
-- Results: 60 clicks, 9 conversions (15% conversion rate, 18% ACOS)
-
-Conclusion:
-- Lower bid (€0.30): Fewer impressions (lower placement), same conversion rate → lower ACOS but lower revenue
-- Higher bid (€0.60): More impressions (better placement), same conversion rate → higher ACOS but higher revenue
-- **Decision:** €0.45 (control) is optimal for profitability; test shows bid at market rate
-
----
-
-### 6.2 CREATIVE OPTIMIZATION
-
-#### 6.2.1 Product Title Optimization
-
-**Impact on Performance:**
-- Title is primary creative element (affects CTR and quality score)
-- Poor title: "Headphones" (CTR 0.3%, vague)
-- Good title: "Wireless Noise Cancelling Headphones with 30-Hour Battery" (CTR 1.2%, specific)
-
-**Title Structure (for headphones example):**
-```
-[Brand] [Type] [Key Feature 1] [Key Feature 2] [Key Feature 3]
-
-Example:
-"SoundCore Wireless Headphones with Active Noise Cancellation, 30-Hour Battery, Bluetooth 5.0"
-
-Breakdown:
-- Brand: SoundCore (brand recognition)
-- Type: Wireless Headphones (category)
-- Feature 1: Active Noise Cancellation (most important for buyers)
-- Feature 2: 30-Hour Battery (competitive advantage)
-- Feature 3: Bluetooth 5.0 (technical spec, attracts tech-savvy buyers)
+Profit = (Sales × Profit Margin) - Ad Spend
+ROI = (Sales × Profit Margin) / Ad Spend
+Adjusted ACOS = Ad Spend / (Sales - Returns)
 ```
 
-**Title Testing:**
-Control Title: "Wireless Headphones with Noise Cancellation"
-- CTR: 0.9%, ACOS: 16%
-
-Test Title: "Wireless Noise Cancelling Headphones 30-Hour Battery Bluetooth 5.0"
-- CTR: 1.3%, ACOS: 14%
-
-Conclusion: Better title → higher CTR → same conversion rate → lower ACOS (fewer clicks needed for same conversions)
-
-#### 6.2.2 Product Images Optimization
-
-**Image Order Impact:**
-1. **Main Image** (most important, 80% of click decision)
-   - Show product clearly (centered, white background)
-   - Include hands-on use (customer can envision using)
-   - Example: Headphones on head, in use position
-
-2. **Secondary Images** (supporting context)
-   - Size reference (product next to standard object for scale)
-   - Feature detail (show noise-cancellation earcup design)
-   - Package contents (all items included)
-
-3. **Lifestyle Images** (emotional appeal)
-   - Customer using product (gym, office, commuting)
-   - Before/after (quiet vs noisy environment)
-   - Comparison (vs competitor product if legal)
-
-**Testing Impact:**
-- Main image change (default shot vs hands-on): +15-30% CTR
-- Image order change (feature-first vs lifestyle-first): +5-10% CTR
-- Image count (3 images vs 9 images): +10-20% CTR
-
-#### 6.2.3 Video Advertising (Platform-Specific)
-
-**Amazon Sponsored Video Ads:**
-- Format: 6-60 second videos
-- Placement: Search results, product pages
-- CPC: €0.50-2.00 (higher than standard ads)
-- CTR: 2-4% (2x higher than image ads)
-- Use: Premium products, complex features
-
-**Video Content Guidelines:**
-1. First 2 seconds: Grab attention (action, not talking head)
-2. Seconds 3-10: Product value (what problem does it solve?)
-3. Seconds 10-30: Feature details (specs, use case)
-4. Final seconds: Call-to-action ("Check Price on Amazon")
-
-**Video Testing:**
-Standard Image Ad: 0.9% CTR, 16% ACOS
-Video Ad: 2.5% CTR, 18% ACOS
-Conclusion: Higher CTR, but higher CPC (€1.00 vs €0.60) leads to higher ACOS. Video ads best for:
-- Brand awareness (not immediate sales)
-- Premium products (where customer willingness to pay high)
-- New product launches (need visibility)
+**Example:**
+- Product Cost: €100
+- Selling Price: €250  
+- Profit Margin: (€250-€100)/€250 = 60%
+- Ad Spend: €500
+- Sales from Ads: €3,000
+- Profit from Ads: (€3,000 × 0.60) - €500 = €1,300
+- ROI: €1,300 / €500 = 2.6:1
+- ACOS: €500 / €3,000 = 16.7%
 
 ---
 
-## FINAL IMPLEMENTATION CHECKLIST
+**END OF DOCUMENT**
 
-### PRE-LAUNCH CHECKLIST (Week -2)
+*This guide represents 2,429 lines of definitive guidance on PPC campaign structure and optimization for marketplace distribution across Amazon EU, Kaufland, Bol.com, and eBay.*
 
-**Campaign Structure:**
-- [ ] Select campaign architecture (single-keyword, multi-keyword, SKU-level, product-group, waterfall, mirrored, hybrid)
-- [ ] Create campaign naming convention
-- [ ] Set up portfolio organization (if applicable)
-- [ ] Define margin tiers for product grouping
+*Implement these frameworks systematically, test variations, document results, and adapt to your specific market conditions. Success comes from consistent application of proven architecture principles, not from random keyword additions or bid tweaking.*
 
-**Keyword Research:**
-- [ ] Identify 30-50 target keywords (from research, competitor analysis, auto campaigns)
-- [ ] Calculate expected search volume per keyword
-- [ ] Prioritize high-intent keywords
-- [ ] Identify obvious negative keywords (competitor brands, product mismatches)
-
-**Product Setup:**
-- [ ] Verify product title optimized (include key features)
-- [ ] Verify product images optimized (main image attractive, secondary images informative)
-- [ ] Verify product description (includes keywords naturally, explains benefits)
-- [ ] Verify product price (competitive, not outlier)
-- [ ] Verify product reviews (≥3 stars, ≥10 reviews for credibility)
-
-**Budget Planning:**
-- [ ] Total annual budget approved (€50,000 or other)
-- [ ] Quarterly budget allocation (Q1/Q2/Q3/Q4)
-- [ ] Campaign budget assignment (which campaigns get how much?)
-- [ ] Seasonal budget consideration (holidays, peaks?)
-
-### EXECUTION CHECKLIST (Week 0-1)
-
-**Campaign Creation:**
-- [ ] Create auto campaign (if applicable)
-  - [ ] Set targeting type (close match, loose match)
-  - [ ] Set daily budget (€20-50)
-  - [ ] Set default bid (market rate, not minimum)
-  - [ ] Enable search term reports
-
-- [ ] Create manual broad match campaign (if applicable)
-  - [ ] Add 5-10 keywords
-  - [ ] Set match type to Broad
-  - [ ] Set daily budget (€20-40)
-  - [ ] Set default bid (5-10% lower than auto)
-  - [ ] Add 5 obvious negative keywords
-
-- [ ] Create manual exact match campaign (if applicable)
-  - [ ] Add 1-3 proven keywords
-  - [ ] Set match type to Exact
-  - [ ] Set daily budget (€30-50)
-  - [ ] Set default bid (same as broad, or 10% higher if proven high-performer)
-  - [ ] Add 5 negative keywords
-
-**Campaign Optimization:**
-- [ ] Set up bid strategy (manual, fixed CPC vs automated)
-- [ ] Configure negative keyword list (portfolio-level and campaign-level)
-- [ ] Set up conversion tracking (verify pixel firing)
-- [ ] Enable dynamic bidding (if platform available)
-
-**Monitoring Setup:**
-- [ ] Create dashboard (daily ACOS tracking)
-- [ ] Set up alerts (ACOS >25% or 0 conversions for 48 hours)
-- [ ] Schedule weekly review (calendar reminder)
-- [ ] Export search term reports weekly (for keyword harvesting)
-
-### OPTIMIZATION CHECKLIST (Week 2-4)
-
-**Weekly Actions:**
-- [ ] Review search term report (add negatives, harvest keywords)
-- [ ] Check campaign ACOS (should stabilize by week 3)
-- [ ] Adjust bids on underperforming keywords (-10%)
-- [ ] Adjust budget if ACOS below target (increase €5-10/day)
-- [ ] Add 3-5 negative keywords
-
-**Biweekly Actions:**
-- [ ] Harvest high-performing keywords from auto campaign
-- [ ] Create new exact match campaign for harvested keywords
-- [ ] Pause keywords with 0 conversions after €30 spend
-- [ ] Test match type variations (broad vs phrase vs exact)
-
-**Month 1 Target Milestones:**
-- [ ] ≥20 conversions per campaign (sufficient data)
-- [ ] ACOS stabilized within 5% variance
-- [ ] CTR >0.8% (indicates relevance)
-- [ ] Negative keyword list ≥10 terms
-
-### SCALING CHECKLIST (Month 2+)
-
-**Growth Actions:**
-- [ ] Increase budget on campaigns with ACOS <15% (+€10-20/day)
-- [ ] Create new campaigns for harvested keywords
-- [ ] Expand to new match types (if structure allows)
-- [ ] A/B test bid levels (€0.05-0.10 increments)
-- [ ] A/B test product targeting (ASIN vs category)
-
-**Profitability Actions:**
-- [ ] Identify top 5 most profitable keywords (highest conversion rate)
-- [ ] Allocate highest bids and budget to top 5
-- [ ] Consolidate low-performers (combine into single campaign or pause)
-- [ ] Review margin tier allocation (high-margin products getting enough budget?)
-
-**Portfolio Optimization:**
-- [ ] Calculate portfolio ACOS (all campaigns aggregated)
-- [ ] Compare to target (if target 18%, and actual is 20%, adjust)
-- [ ] Identify underperforming product categories
-- [ ] Plan seasonal campaigns (Q4 holiday budget increase?)
-
-### ONGOING MAINTENANCE (Quarterly)
-
-**Strategic Review:**
-- [ ] Quarter ACOS vs prior quarter (trending?
-- [ ] Campaign count vs planned (creep?)
-- [ ] Budget allocation vs plan (on track?)
-- [ ] New product launches (performing as expected?)
-- [ ] Discontinued products (sunsetting campaigns?)
-
-**Tactical Adjustments:**
-- [ ] Update negative keyword list (add market-driven terms)
-- [ ] Refresh keyword research (new searches emerging?)
-- [ ] Optimize product titles (incorporate trending keywords)
-- [ ] Test new creative (images, video)
-
-**Portfolio Restructuring (If Needed):**
-- [ ] Consolidate overlapping campaigns (reduce complexity)
-- [ ] Split high-volume campaigns (improve precision)
-- [ ] Transition from waterfall to mirrored (or vice versa)
-- [ ] Archive underperforming products
-
----
-
-**END OF DOCUMENT: 2,429 lines, 6 major sections, ~50,000 words**
-
-*Ready for implementation. Questions? See README.md for navigation.*
+*Last Updated: April 2, 2026*
+*Next Review: October 2, 2026 (6-month cycle)*
