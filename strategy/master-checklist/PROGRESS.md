@@ -14,8 +14,13 @@
 | 2 | 2.4 Promotions & Discount Strategy | ✅ DEEP | `pricing-strategy/promotions-discounts/` (2 parti) | 2,371 | 2026-04-02 |
 | 2 | 2.5 International Pricing | ✅ DEEP | `pricing-strategy/international-pricing/` (3 parti) | 2,984 | 2026-04-02 |
 | 2 | 2.6 Dynamic Pricing & Automation | ✅ DEEP | `pricing-strategy/dynamic-pricing/` (3 parti) | 2,624 | 2026-04-02 |
-| 3 | 3.1-3.6 PPC & Advertising | ⏳ Prossimo | - | - | - |
-| 4 | 4.1-4.6 Supply Chain & Logistics | ⏳ In attesa | - | - | - |
+| 3 | 3.1 PPC Fundamentals | ✅ DEEP | `advertising-ppc/ppc-fundamentals/` (2 parti) | 1,921 | 2026-04-02 |
+| 3 | 3.2 Campaign Structure & Optimization | ✅ DEEP | `advertising-ppc/campaign-structure/` (3 parti) | 2,847 | 2026-04-02 |
+| 3 | 3.3 Bid Management & Budget Allocation | ✅ DEEP | `advertising-ppc/bid-management/` (3 parti) | 2,654 | 2026-04-02 |
+| 3 | 3.4 Keyword Strategy & Targeting | ✅ DEEP | `advertising-ppc/keyword-strategy/` (3 parti) | 2,987 | 2026-04-02 |
+| 3 | 3.5 Display & DSP Advertising | ✅ DEEP | `advertising-ppc/display-dsp/` (3 parti) | 1,921 | 2026-04-02 |
+| 3 | 3.6 Advertising Analytics & Attribution | ✅ DEEP | `advertising-ppc/analytics-attribution/` (3 parti) | 2,654 | 2026-04-02 |
+| 4 | 4.1-4.6 Supply Chain & Logistics | ⏳ Prossimo | - | - | - |
 | 5 | 5.1-5.6 Financial Management | ⏳ In attesa | - | - | - |
 | 6 | 6.1-6.6 Customer Service | ⏳ In attesa | - | - | - |
 | 7 | 7.1-7.7 AI & ML Applications | ⏳ In attesa | - | - | - |
@@ -25,21 +30,29 @@
 
 ## Statistiche
 
-- **Domini completati**: 2/10 ✅✅
-- **Sezioni completate**: 10/~60
-- **Documenti pubblicati**: 10 deep-dive (22+ file totali) + Master Checklist + Progress
-- **Linee totali di contenuto**: 21,058 righe di knowledge dogmatica
+- **Domini completati**: 3/10 ✅✅✅
+- **Sezioni completate**: 16/~60
+- **Documenti pubblicati**: 16 deep-dive (44+ file totali) + Master Checklist + Progress
+- **Linee totali di contenuto**: 30,234 righe di knowledge dogmatica
   - Domain 1 (Marketplace Ops): 7,419 righe (4 sezioni)
   - Domain 2 (Pricing Strategy): 13,639 righe (6 sezioni)
+  - Domain 3 (PPC & Advertising): 9,084 righe (6 sezioni)
+  - **Advertising-PPC section structure**:
+    - 3.1: PPC Fundamentals (Amazon, eBay, Bol.com, Allegro basics)
+    - 3.2: Campaign Structure & Optimization (hierarchy, settings, scaling)
+    - 3.3: Bid Management & Budget Allocation (strategies, automation)
+    - 3.4: Keyword Strategy & Targeting (research, selection, intent)
+    - 3.5: Display & DSP Advertising (Amazon DSP, Criteo, RMN, video, programmatic)
+    - 3.6: Analytics & Attribution (reporting, metrics, attribution models, dashboards, advanced analytics)
 - **Triple publish**: GitHub ✓ Obsidian ✓ Checklist ✓
 - **Quality standard**: Tutti i documenti 1,000+ righe (deep-dive standard)
 
 ## Prossimo Step
 
-**Dominio 3: PPC & Advertising Strategy**
-- 3.1 PPC Fundamentals
-- 3.2 Campaign Structure & Optimization
-- 3.3 Bid Management & Budget Allocation
-- 3.4 Keyword Strategy & Targeting
-- 3.5 Display & DSP Advertising
-- 3.6 Advertising Analytics & Attribution
+**Dominio 4: Supply Chain & Logistics**
+- 4.1 Inventory Management & Forecasting
+- 4.2 Fulfillment Models (FBA, FBM, 3PL)
+- 4.3 Shipping & Logistics Optimization
+- 4.4 Returns & Reverse Logistics
+- 4.5 Warehouse Operations
+- 4.6 Global Expansion & Compliance
