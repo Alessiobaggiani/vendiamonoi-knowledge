@@ -18,6 +18,69 @@
 
 ### Deep-Dive Completati
 - [x] **Domain 1.1 — Listing Optimization** → `marketplace-ops/listing-optimization/README.md`
+- [x] **Compliance & Legal Requirements** → `marketplace-ops/compliance/README.md`
+
+---
+
+## DOMINIO 0: COMPLIANCE & LEGAL REQUIREMENTS
+
+### 0.1 EU Product Compliance Regulations
+
+- [x] **CE Marking** — Definition, applicable product categories, conformity assessment procedure, documentation retention
+- [x] **REACH Regulation (EC 1907/2006)** — SVHC candidate list (253+ substances), 0.1% w/w threshold, SCIP database, seller obligations
+- [x] **RoHS Directive (2011/65/EU)** — 10 restricted hazardous substances, concentration limits, testing requirements
+- [x] **WEEE Directive (2012/19/EU)** — Producer registration by country (Germany EAR, France ADEME, Italy ERICA, Spain, Belgium, Netherlands), annual fees, collection targets 65% (2024) → 80% (2030)
+- [x] **Textile Regulation (EU 1007/2011)** — Official fiber nomenclature only, 80% minimum textile content, composition percentage declaration
+- [x] **Food Information Regulation (1169/2011)** — Mandatory nutrition label (energy, fat, saturated fat, carbs, sugars, protein, salt), 14 major allergen highlighting, country of origin rules
+- [x] **Cosmetics Regulation (1223/2009)** — Responsible person (RP) requirement, CPNP notification, 1,800+ banned substances, restricted substance limits
+- [x] **Toy Safety Directive (2009/48/EC)** — CE marking, EN 71 standards, age warnings, chemical limits (ppm migration), small parts ban for <3 years
+- [x] **GPSR 2024 (Regulation 2023/988)** — Effective Dec 13, 2024; EU-based responsible person requirement (non-EU sellers), risk assessment, compliance documentation, RAPEX monitoring
+
+### 0.2 Marketplace-Specific Compliance
+
+- [x] **Amazon Compliance** — Project Zero anti-counterfeiting, CE/RoHS/REACH documentation, WEEE registration proof, toy safety certification, hazmat classification
+- [x] **eBay Compliance** — GPSR 2024 enforcement, responsible person info, restricted categories (electronics, cosmetics, food)
+- [x] **Kaufland Compliance** — Product quality standards, GTIN/EAN codes, origin information, allergen info, compliance documentation
+- [x] **Bol.com Compliance** — Fulfillment pre-vetting, CPNP notification (cosmetics), CE/RoHS (electronics), EN 71 (toys), FIR (food)
+
+### 0.3 Product Claims & Advertising
+
+- [x] **Unfair Commercial Practices Directive (2005/29/EC)** — Misleading actions (false origin, exaggerated certifications, fake reviews), misleading omissions (material facts, price terms, warranty)
+- [x] **Health Claims (Regulation 1924/2006)** — Approved claims only, substantiation requirements, prohibited claims (cures, prevents, treats disease)
+- [x] **Environmental Claims (Green Claims Directive 2024/2867)** — Effective 2027; prohibited absolute claims, scientific substantiation required (ISO 14024, LCA)
+- [x] **Origin Claims & Made-In Labels** — 45%+ production cost rule, regional claims requirements (70%+ value added)
+
+### 0.4 Intellectual Property
+
+- [x] **EU Trademark & Exhaustion Principle** — EUTM coverage (27 MS + UK + EEA), trademark exhaustion for parallel imports, selective distribution agreements
+- [x] **Counterfeit Detection & Penalties** — Red flags (suspicious pricing, unboxing variations, serial numbers), immediate removal, 30-90 day suspension, permanent ban on repeat
+- [x] **Brand Authenticity Programs** — Amazon Brand Registry benefits, eBay Authenticity Guarantee (watches, handbags, jewelry, collectibles)
+
+### 0.5 VAT & Tax Compliance
+
+- [x] **Destination VAT Principle (July 1, 2021)** — VAT charged in buyer's country, country-specific rates (Germany 19%, France 20%, Italy 22%, Sweden 25%, etc.)
+- [x] **Marketplace Deemed Supplier Rule** — Using FBA/fulfillment services = apply own country VAT, marketplace deducts at source
+- [x] **One-Stop-Shop (OSS)** — Single registration for multi-country VAT (non-EU sellers or >€10K threshold), single monthly return, free registration
+- [x] **Import One-Stop-Shop (IOSS)** — VAT for <€150 imports from non-EU, VAT collected at import time
+- [x] **Extended Producer Responsibility (EPR)** — Annual packaging waste fees by country (Germany €500-5000+, France €200-3000, Italy €200-2000, Spain €300-2500)
+
+### 0.6 Data Protection (GDPR)
+
+- [x] **Lawfulness of Data Processing** — Six legal bases (consent, contract, legal obligation, vital interests, public task, legitimate interests)
+- [x] **Customer Rights** — Right of access (30 days), right to erasure (30 days), right to data portability (30 days), right to restrict (during dispute)
+- [x] **Data Retention** — Tax records 10 years, invoices 10 years, payment records 10 years, customer disputes 1-3 years, marketing opt-in duration of consent
+- [x] **Privacy Policy Requirements** — Identity, purpose, legal basis, data categories, recipients, retention, customer rights, complaints, profiling
+- [x] **Data Breach Notification** — DPA within 72 hours, customers without delay, document 3 years, penalties €5K-10K per day + €20M or 4% turnover
+
+### 0.7 Packaging & Labeling
+
+- [x] **Mandatory Packaging Information** — Product name/identity, net quantity, manufacturer/seller info (including EU contact for GPSR 2024), expiration date, batch code, instructions, warnings, language
+- [x] **Restricted Materials** — Single-use plastic ban, lead >90 ppm, cadmium >75 ppm, phthalates (toys/childcare), microbeads (cosmetics)
+- [x] **EPR Labeling by Country** — Germany (LUCID + dual system logo), France (Triman + Info-Tri QR), Italy (CONAI + material symbols), Spain, Belgium, Netherlands, Sweden
+- [x] **Germany VerpackG (Strictest)** — LUCID registration number (DE + 8 digits), dual system logo (Der Grüne Punkt), material identification, €50K+ fines
+- [x] **France Citeo** — Triman logo (5mm), Info-Tri (French or QR), no pre-registration threshold
+- [x] **Language Requirements by Country** — Germany (German mandatory), France (French mandatory; Toubon Law), Italy (Italian preferred), Spain (Spanish mandatory), Belgium/Netherlands (flexible), UK (English)
+- [x] **Age Warnings** — <3 toys "not suitable", balloons "choking hazard <8", plastic films "suffocation hazard", electronic toys with small parts
 
 ---
 
@@ -49,11 +112,11 @@
 
 ### 1.3 Listing Compliance & Legal
 
-- [ ] **Policy per categoria** — Restrizioni per categoria (elettronica, kosher, medicinali, etc.) su ogni marketplace
-- [ ] **Dichiarazioni normative** — Compliance con GDPR (dati cliente), REACH (chimici), CE marking (elettronica), material disclosure (tessili)
+- [x] **Policy per categoria** — Restrizioni per categoria (elettronica, kosher, medicinali, etc.) su ogni marketplace
+- [x] **Dichiarazioni normative** — Compliance con GDPR (dati cliente), REACH (chimici), CE marking (elettronica), material disclosure (tessili)
 - [ ] **Garanzie e resi** — Politiche resi per marketplace e paese. Impatto su ranking e customer satisfaction
 - [ ] **Prezzo e pricing transparency** — Regole per pricing, vietati i prezzi inflati per "sconti", gestione promozioni
-- [~] **Claim e superlative** — Cosa si può dichiarare vs cosa è vietato per FTC/ASA ("best", "only", "100%")
+- [x] **Claim e superlative** — Cosa si può dichiarare vs cosa è vietato per FTC/ASA ("best", "only", "100%")
 - [ ] **Certificazioni finte** — Come verificare genuinità certificazioni, quando specificarle in listing
 
 ### 1.4 Listing Performance Metrics
@@ -642,6 +705,7 @@
 Questa non è una lista di cose da fare casualmente. È una **mappa strategica** che guidata l'evoluzione della tua competenza tecnica:
 
 **Fase 1 — Foundation (Mesi 1-2):**
+- [x] Compliance & Legal Requirements (Dominio 0) ✓ **COMPLETATO**
 - [~] Listing Optimization (Dominio 1) — **IN CORSO**
 - [ ] Pricing & Buy Box (Dominio 2)
 
