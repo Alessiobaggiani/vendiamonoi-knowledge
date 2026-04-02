@@ -480,3 +480,72 @@ Le regole condizionali sovrascrivono la regola prezzo principale per sottoinsiem
 - Le modifiche NON si applicano fino alla successiva importazione del catalogo
 - Se non ci sono regole di inclusione definite (Filtri), nessun prodotto sarà pubblicato
 - I campi SKU, EAN e MARCA possono contenere più valori separati da "," (es: 123,124,125) o un solo filtro per parte di valore
+
+---
+
+## Regole di Spedizione Condizionali su SellRapido
+
+### Concetto
+Le regole di spedizione condizionali funzionano come le regole di prezzo condizionali: una regola base (Spedizione Principale) si applica a tutti i prodotti, e regole condizionali sovrascrivono la tariffa per sottoinsiemi filtrati per peso, prezzo, categoria, SKU o EAN.
+
+### Come Funzionano
+1. **Regola Base (Spedizione Principale)**: si applica a TUTTI i prodotti del listino su quel marketplace
+2. **Regole Condizionali**: filtrano per peso (weight_start/weight_end) e sovrascrivono la tariffa base
+
+### Campi Disponibili per Regola Spedizione
+| Campo | Descrizione |
+|-------|-------------|
+| shipping_fee | Tariffa spedizione (NETTO, senza IVA) |
+| include_vat | Checkbox "Aggiungi IVA" |
+| vat_perc | Percentuale IVA (es. 22) |
+| delivery_days | Tempi di preparazione ordine |
+| shipping_code | Metodo di spedizione (es. Bartolini, SDA, DHL) |
+| shipping_fee_additional | Tariffa aggiuntiva |
+| shipping_fee_in_product_price | Se il prezzo prodotto include la spedizione |
+| cod_cost | Costo contrassegno |
+
+### Filtri Condizionali Disponibili
+- **weight_start / weight_end**: filtra per peso prodotto (kg)
+- **price_start / price_end**: filtra per prezzo prodotto
+- **catalog_category1/2/3**: filtra per categoria
+- **brands**: filtra per marca
+- **skus / eans**: filtra per SKU o EAN specifici
+
+### Regole Operative Permanenti
+1. **SEMPRE** inserire prezzi NETTI (senza IVA) nel campo shipping_fee
+2. **SEMPRE** spuntare "Aggiungi IVA" e impostare vat_perc = 22
+3. SellRapido calcolerà automaticamente il lordo
+4. **MAI** pre-calcolare l'IVA nei prezzi di spedizione
+5. **SEMPRE** impostare il Metodo di spedizione (shipping_code) — campo obbligatorio
+6. La regola base copre la fascia di peso minima (≤3kg per BRT)
+7. Le regole condizionali coprono le fasce superiori con weight_start/weight_end
+
+### Esempio: Ferlegno → ManoMano ITA — Tariffe BRT Express Italia (Sconto 22%)
+
+**Regola Base (Spedizione Principale)**:
+- shipping_fee: €4.27 (netto, ≤3kg)
+- include_vat: ✅ (true)
+- vat_perc: 22
+- delivery_days: 3 giorni
+- shipping_code: Bartolini
+
+**Regole Condizionali per Fascia di Peso**:
+| # | Peso Min (kg) | Peso Max (kg) | Tariffa Netta (€) | IVA | Metodo |
+|---|--------------|--------------|-------------------|-----|--------|
+| 1 | 3.01 | 5 | 4.83 | 22% | Bartolini |
+| 2 | 5.01 | 10 | 6.97 | 22% | Bartolini |
+| 3 | 10.01 | 20 | 7.97 | 22% | Bartolini |
+| 4 | 20.01 | 30 | 9.47 | 22% | Bartolini |
+| 5 | 30.01 | 50 | 14.47 | 22% | Bartolini |
+| 6 | 50.01 | 75 | 17.47 | 22% | Bartolini |
+| 7 | 75.01 | 100 | 19.97 | 22% | Bartolini |
+| 8 | 100.01 | 150 | 34.97 | 22% | Bartolini |
+| 9 | 150.01 | 200 | 49.97 | 22% | Bartolini |
+
+### Note Tecniche
+- Le tariffe sono dalla colonna "Sconto 22%" del listino BRT Express Italia
+- I prezzi sono AL NETTO di IVA — SellRapido aggiunge l'IVA automaticamente con il flag include_vat
+- Il campo shipping_code è OBBLIGATORIO: senza di esso il salvataggio fallisce
+- Le regole condizionali ereditano i valori dalla regola base al momento della creazione
+- Per modificare la tariffa di una regola condizionale, usare il dialog impostazioni (gear icon) sulla riga
+- Grid ID tipico: `app-presales-catalog-shops-settings-grid-XXXX` (cambia ad ogni apertura)
