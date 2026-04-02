@@ -13,12 +13,22 @@
 vendiamonoi-knowledge/
 ├── README.md
 ├── api-docs/                          ← Documentazione tecnica software aziendali (14)
-├── architecture/                      ← Architettura piattaforme deep dive (7)
+├── architecture/                      ← Architettura piattaforme deep dive (8)
 │   ├── base44/
 │   ├── channable/
 │   ├── channelengine/
-│   ├── make/
+│   ├── make/                          ← 5 file: README + 4 parti expert-level
+│   │   ├── README.md                  (2.524 righe — overview originale)
+│   │   ├── part1-core-architecture.md (2.772 righe)
+│   │   ├── part2-connections-routers-logic.md (3.891 righe)
+│   │   ├── part3-iml-datastores-webhooks.md (4.378 righe)
+│   │   └── part4-errorhandling-performance-production.md (4.978 righe)
 │   ├── mirakl/
+│   ├── n8n/                           ← 4 parti expert-level (NUOVO)
+│   │   ├── part1-core-architecture.md (2.863 righe)
+│   │   ├── part2-credentials-routing-expressions.md (4.428 righe)
+│   │   ├── part3-errorhandling-subworkflows-webhooks.md (2.523 righe)
+│   │   └── part4-selfhosting-performance-production.md (4.616 righe)
 │   ├── shopify/
 │   └── supabase/
 ├── marketplace-specs/                 ← Specifiche tecniche marketplace (20)
@@ -50,17 +60,37 @@ vendiamonoi-knowledge/
 
 ---
 
-## architecture/ — Architettura Piattaforme (7)
+## architecture/ — Architettura Piattaforme (8)
+
+### Architetture Standard (1 file ciascuna)
 
 | Software | Righe | Contenuto | Data |
 |----------|-------|-----------|------|
 | Base44 | 1.138 | Stack React+Vite+Deno, Entity system, SDK, CLI, pricing | 01/04/2026 |
 | Channable | 2.214 | Feed management, rules engine, 2500+ channels, PPC, API | 01/04/2026 |
 | ChannelEngine | 1.498 | Merchant API v2, Channel API, webhooks, order lifecycle | 01/04/2026 |
-| Make.com | 2.524 | Scenario architecture, bundles/operations, IML, data stores | 01/04/2026 |
 | Mirakl | 2.987 | Shop API, Operator API, MCM, order state machine, invoicing | 01/04/2026 |
 | Shopify | 2.093 | Admin API REST+GraphQL, Storefront API, Markets, Plus | 01/04/2026 |
 | Supabase | 2.166 | PostgreSQL, PostgREST, GoTrue, Realtime, Edge Functions | 01/04/2026 |
+
+### Make.com — Deep Expert Documentation (18.543 righe totali)
+
+| Parte | Righe | Contenuto |
+|-------|-------|-----------|
+| README.md (overview) | 2.524 | Scenario architecture, bundles/operations, IML overview, data stores |
+| Part 1: Core Architecture | 2.772 | Execution engine, bundle model, operation counting, module taxonomy, design patterns |
+| Part 2: Connections & Routing | 3.891 | Connection types (OAuth2/API Key/JWT), router patterns, filter logic, iterator/aggregator |
+| Part 3: IML & Data Stores | 4.378 | IML complete reference (string/number/date/array/conditional), data stores CRUD, webhooks, CSV/XML/JSON |
+| Part 4: Error Handling & Production | 4.978 | 5 error directives, retry patterns, performance optimization, blueprint engineering, 10 production e-commerce patterns |
+
+### n8n — Deep Expert Documentation (14.430 righe totali) 🆕
+
+| Parte | Righe | Contenuto |
+|-------|-------|-----------|
+| Part 1: Core Architecture | 2.863 | Workflow engine, item model, node taxonomy, execution lifecycle, credential system, n8n vs Make comparison |
+| Part 2: Credentials & Routing | 4.428 | OAuth2/API Key/custom auth, IF/Switch nodes, expression system (JS), data transformation, Luxon dates |
+| Part 3: Error Handling & Webhooks | 2.523 | Error workflow, try/catch pattern, retry strategies, sub-workflows, webhook security, advanced nodes |
+| Part 4: Self-Hosting & Production | 4.616 | Docker/K8s deployment, queue mode, PostgreSQL, Redis, REST API, production patterns, Make vs n8n comparison |
 
 ## marketplace-specs/ — Specifiche Marketplace (20)
 
@@ -100,16 +130,17 @@ vendiamonoi-knowledge/
 
 | Metrica | Valore |
 |---------|--------|
-| **Totale documenti** | 42 |
-| **Totale righe** | ~65.000+ |
+| **Totale documenti** | 50 |
+| **Totale righe** | ~95.000+ |
 | **Marketplace documentati** | 20 |
 | **Marketplace Mirakl-powered** | 9 |
 | **Marketplace proprietari** | 11 |
-| **Architetture piattaforme** | 7 |
+| **Architetture piattaforme** | 8 |
+| **— di cui expert-level (multi-parte)** | 2 (Make.com, n8n) |
 | **Software aziendali** | 14 |
 | **Pattern universali** | 2 |
 | **Lingue** | Italiano |
-| **Ultimo aggiornamento** | 01/04/2026 |
+| **Ultimo aggiornamento** | 02/04/2026 |
 
 ---
 
@@ -120,12 +151,32 @@ vendiamonoi-knowledge/
 3. **Obsidian** è il mirror locale per accesso offline di Alessio
 4. **Notion** contiene versioni operative con contenuto sostanziale incorporato
 
+### Guida Rapida per Claude — Automazioni
+
+Quando lavori su **Make.com**, leggi prima:
+- `architecture/make/README.md` (overview)
+- `architecture/make/part1-core-architecture.md` (moduli, bundles, operations)
+- `architecture/make/part2-connections-routers-logic.md` (routing, filtri)
+- `architecture/make/part3-iml-datastores-webhooks.md` (IML, data stores)
+- `architecture/make/part4-errorhandling-performance-production.md` (errori, produzione)
+
+Quando lavori su **n8n**, leggi prima:
+- `architecture/n8n/part1-core-architecture.md` (nodi, items, engine)
+- `architecture/n8n/part2-credentials-routing-expressions.md` (routing, JS expressions)
+- `architecture/n8n/part3-errorhandling-subworkflows-webhooks.md` (errori, sub-workflow)
+- `architecture/n8n/part4-selfhosting-performance-production.md` (deploy, produzione)
+
+Quando lavori su un **marketplace specifico**, leggi:
+- `marketplace-specs/<nome>/README.md`
+
 ---
 
 ## Log Aggiornamenti
 
 | Data | Azione |
 |------|--------|
+| 02/04/2026 | ✅ Make.com: espansione a 4 parti expert-level (16.019 righe aggiunte) |
+| 02/04/2026 | ✅ n8n: nuova architettura completa 4 parti (14.430 righe) |
 | 01/04/2026 | ✅ Batch 6: Conrad Electronic, Shein, Temu (12.878 righe) |
 | 01/04/2026 | ✅ Batch 5: Rue du Commerce, ePrice, IBS.it, ManoMano, BricoBravo, Vente-Unique (6.709 righe) |
 | 01/04/2026 | ✅ Batch 4: Leroy Merlin, METRO Markets, METRO Italia, MediaWorld, Carrefour (7.576 righe) |
