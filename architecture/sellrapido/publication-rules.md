@@ -422,3 +422,61 @@ Dopo aver pubblicato, controllare il Report Inserzioni per:
 1. Vai su **Prevendita > Report Inserzioni**
 2. Seleziona il listino e i marketplace
 3. Clicca su **"Report su selezione corrente"**
+
+
+---
+
+## Regole di Prezzo Condizionali su SellRapido
+
+### Concetto
+Le regole condizionali sovrascrivono la regola prezzo principale per sottoinsiemi di prodotti che soddisfano determinati criteri. Ogni regola può filtrare per:
+- **Prezzo** (min/max)
+- **Categorie** (1, 2, 3)
+- **Marche**
+- **SKU / EAN**
+- **Quantità** (min/max)
+- **Peso** (min/max)
+- **Giorni consegna** (min/max)
+
+### Come funzionano
+1. La **regola base** (configurata nella sezione Prezzi principale) si applica a TUTTI i prodotti
+2. Le **regole condizionali** sovrascrivono la regola base SOLO per i prodotti che corrispondono ai filtri
+3. Cliccando **"+ Nuovo"** nella tabella regole si crea una nuova regola condizionale
+4. Il campo **"Prod. corrisp."** (calcolatrice) mostra quanti prodotti rientrano nella regola
+5. Il pulsante **"Impostazioni"** (ingranaggio) apre il pannello prezzi specifico della regola
+6. Le impostazioni della regola COPIANO automaticamente quelle della regola base, poi si modificano
+
+### Impostazioni disponibili per ogni regola
+- **Aggiungi IVA al Prezzo**: checkbox + % IVA
+- **Esenzione IVA**: checkbox
+- **Aggiungi Commissioni Marketplace**: checkbox + % extra commissioni
+- **Aggiungi IVA alle Commissioni Marketplace**: checkbox
+- **Arrotonda a**: unità / decimale
+- **Arrotonda all'unità meno 1 centesimo**: checkbox (SEMPRE selezionata)
+- **Ricarico Prezzi %**: percentuale di ricarico
+- **Ricarico Prezzi Fisso**: importo fisso aggiuntivo
+- **Commissioni pag %**: commissioni pagamento percentuali
+- **Commissioni pag. fisse**: commissioni pagamento fisse
+- **Aggiungi Commissioni Pagamento**: checkbox
+
+### Regola operativa permanente
+> **REGOLA**: "Arrotonda all'unità meno 1 centesimo" deve essere SEMPRE selezionata su ogni regola.
+
+### Esempio pratico: Ferlegno → ManoMano Italia
+**Regola base**: Ricarico 15%, IVA 22% (Esclusa), Commissioni Marketplace 0% (auto da Categorie)
+
+**Regola condizionale 1**: Prodotti da €0 a €100
+- Prezzo Min: 0 | Prezzo Max: 100
+- Ricarico: **30%**
+- Prodotti corrispondenti: ~2935
+
+**Regola condizionale 2**: Prodotti da €100 in su
+- Prezzo Min: 100 | Prezzo Max: 0 (nessun limite)
+- Ricarico: **18%**
+- Prodotti corrispondenti: ~4100
+
+### Note tecniche
+- Le regole condizionali vengono salvate con "Quick Save"
+- Le modifiche NON si applicano fino alla successiva importazione del catalogo
+- Se non ci sono regole di inclusione definite (Filtri), nessun prodotto sarà pubblicato
+- I campi SKU, EAN e MARCA possono contenere più valori separati da "," (es: 123,124,125) o un solo filtro per parte di valore
