@@ -549,3 +549,13 @@ Le regole di spedizione condizionali funzionano come le regole di prezzo condizi
 - Le regole condizionali ereditano i valori dalla regola base al momento della creazione
 - Per modificare la tariffa di una regola condizionale, usare il dialog impostazioni (gear icon) sulla riga
 - Grid ID tipico: `app-presales-catalog-shops-settings-grid-XXXX` (cambia ad ogni apertura)
+
+### ⚠️ ATTENZIONE: shipping_code nelle sottoregole (ERR-20260402-001)
+
+**REGOLA PERMANENTE**: Quando si creano regole condizionali di spedizione, il campo `shipping_code` (Metodo) **NON si eredita automaticamente** dalla regola base alle sottoregole.
+
+**Procedura corretta**:
+1. Impostare **TUTTI** i campi sulla regola base **PRIMA** di creare sottoregole (incluso shipping_code)
+2. Dopo la creazione, **VERIFICARE** che shipping_code sia valorizzato in ogni sottoregola
+3. Se vuoto → impostarlo esplicitamente via JS su ogni record del grid store
+4. **MAI** salvare senza aver verificato shipping_code su tutte le righe
