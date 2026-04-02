@@ -1,1 +1,1 @@
-placeholder_will_be_replaced
+file_content_to_load
