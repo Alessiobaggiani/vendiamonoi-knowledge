@@ -2,7 +2,7 @@
 
 ## Il Cervello Tecnico Definitivo per la Distribuzione Digitale su Marketplace Europei
 
-**Versione:** 1.7
+**Versione:** 1.8
 **Data:** Aprile 2026
 **Obiettivo:** Mappatura orizzontale completa + approfondimento verticale = superiorità assoluta
 **Metodo:** Per ogni punto → ricerca → documentazione → knowledge base → competenza operativa
@@ -73,12 +73,12 @@
 
 ## ✅ DOMINIO 6: CUSTOMER SERVICE EXCELLENCE — COMPLETATO (8,139 righe)
 
-- [x] **6.1 Communication & Response Management** → `customer-service/communication-management/` (1,622 righe — SLA per marketplace, templates 7 lingue, automation workflows)
-- [x] **6.2 Returns & Refund Processing** → `customer-service/returns-refund-processing/` (1,809 righe — EU Directive 2011/83, policies per marketplace, fraud prevention, automation)
-- [x] **6.3 Dispute Resolution & Claims** → `customer-service/dispute-resolution/` (1,351 righe — A-to-Z, eBay MBG, chargebacks, evidence, appeal templates)
-- [x] **6.4 Account Health & Protection** → `customer-service/account-health/` (975 righe — Amazon AHR, eBay standards, Bol.com, suspension POA, monitoring)
-- [x] **6.5 CS Automation & Helpdesk** → `customer-service/cs-automation/` (1,580 righe — Zendesk/Freshdesk/Gorgias, chatbots, Make.com, staffing, ROI)
-- [x] **6.6 Multi-Language & Localization** → `customer-service/multi-language-localization/` (802 righe — language matrix, DeepL, cultural adaptation, cost management)
+- [x] **6.1 Communication & Response Management** → `customer-service/communication-management/` (1,622 righe)
+- [x] **6.2 Returns & Refund Processing** → `customer-service/returns-refund-processing/` (1,809 righe)
+- [x] **6.3 Dispute Resolution & Claims** → `customer-service/dispute-resolution/` (1,351 righe)
+- [x] **6.4 Account Health & Protection** → `customer-service/account-health/` (975 righe)
+- [x] **6.5 CS Automation & Helpdesk** → `customer-service/cs-automation/` (1,580 righe)
+- [x] **6.6 Multi-Language & Localization** → `customer-service/multi-language-localization/` (802 righe)
 
 ---
 
@@ -104,6 +104,46 @@
 
 ---
 
+## AREA EXTRA: STACK TECNOLOGICO DEEP-DIVES
+
+### Area 1: Gap Critici Stack
+- [x] **1.1 Fatture in Cloud Deep-Dive** → `architecture/fatture-in-cloud/` (1,000+ righe — API v2 completa, 131 endpoint, OAuth, webhooks, SDK, autofatture TD17/18/19, OSS, riconciliazione, Make.com, Supabase sync) ✅ 2026-04-06
+- [ ] **1.2 eDesk Architecture Upgrade** → da api-docs a architecture deep-dive
+- [ ] **1.3 SellRapido API & Webhook Specifics**
+
+### Area 2: Integrazioni Stack
+- [ ] **2.1 SellRapido ↔ Make Integration Patterns**
+- [ ] **2.2 Make ↔ Supabase Data Pipeline**
+- [ ] **2.3 Make ↔ Fatture in Cloud Automation**
+- [ ] **2.4 SellRapido ↔ eDesk Flow**
+- [ ] **2.5 End-to-End Order Flow** (Marketplace → SellRapido → Make → Supabase → FiC → eDesk)
+
+### Area 3: Data Model Supabase
+- [ ] **3.1 Products Data Model**
+- [ ] **3.2 Orders Data Model**
+- [ ] **3.3 Suppliers Data Model**
+- [ ] **3.4 Analytics Data Model**
+
+### Area 4: Master Checklist Domains 7-10
+- [ ] (16 task come da domini sopra)
+
+### Area 5: Marketplace Specs
+- [ ] (20 marketplace specifici)
+
+### Area 6: Research Comparativi
+- [ ] **6.1 Channel Manager Comparison**
+- [ ] **6.2 Automation Platform Comparison**
+- [ ] **6.3 Customer Service Platform Comparison**
+- [ ] **6.4 Accounting Software Comparison**
+
+### Area 7: App Design
+- [ ] **7.1 Vendor Portal Design**
+- [ ] **7.2 Internal Dashboard Design**
+- [ ] **7.3 Marketplace Monitoring Design**
+- [ ] **7.4 Financial Reporting Design**
+
+---
+
 ## MAPPA STRATEGICA: SEQUENZA DI IMPLEMENTAZIONE
 
 **Fase 1 — Foundation (Completata):**
@@ -126,22 +166,33 @@
 - [ ] Marketplace Expansion (Dominio 9)
 - [ ] Shopify & DTC Excellence (Dominio 10)
 
+**Fase Extra — Stack Tecnologico:**
+- [x] Fatture in Cloud Deep-Dive (1.1) ✅
+- [ ] eDesk Architecture Upgrade (1.2)
+- [ ] SellRapido API & Webhook (1.3)
+- [ ] Integrazioni Stack (2.1-2.5)
+- [ ] Data Model Supabase (3.1-3.4)
+- [ ] Research Comparativi (6.1-6.4)
+- [ ] App Design (7.1-7.4)
+
 ---
 
 ## Statistiche di Completamento
 
 **Stato attuale:**
 - Domini completati: 6/10 ✅✅✅✅✅✅ (60% completato)
-- Sezioni completate: 34 deep-dive
-- Linee totali di knowledge dogmatica: ~70,136 righe
+- Stack Deep-Dives completati: 1/~56 task
+- Sezioni completate: 34 deep-dive + 1 stack deep-dive
+- Linee totali di knowledge dogmatica: ~71,136+ righe
   - Domain 1: 7,419 righe (4 sezioni)
   - Domain 2: 13,639 righe (6 sezioni)
   - Domain 3: 14,242 righe (6 sezioni)
   - Domain 4: 14,089 righe (6 sezioni)
   - Domain 5: 11,496 righe (6 sezioni)
   - Domain 6: 8,139 righe (6 sezioni)
+  - Stack: 1,000+ righe (1 deep-dive)
 - File pubblicati: 100+ file su GitHub + Master Checklist + Progress
 - Standard di qualità: Tutti i documenti 800+ righe (deep-dive level)
-- Triple publish: GitHub ✓ Obsidian ✓ Checklist ✓
+- Triple publish: GitHub ✓ Obsidian ✓ Notion ✓ Checklist ✓
 
-**Prossimo obiettivo: Domain 7 — AI & ML Applications**
+**Prossimo task: 1.2 — eDesk Architecture Upgrade**
