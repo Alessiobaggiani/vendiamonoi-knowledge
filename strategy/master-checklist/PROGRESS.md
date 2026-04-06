@@ -16,7 +16,7 @@
 | P1.1 | Make Part 3 — IML, Data Stores, Webhooks, HTTP | `architecture/make/part3-iml-datastores-webhooks.md` | ✅ COMPLETATO | 986 bytes | 45KB+ (1000+ righe) | 2026-04-06 |
 | P1.2 | Make Part 4 — Error Handling, Performance, Production | `architecture/make/part4-errorhandling-performance-production.md` | ✅ COMPLETATO | 24 bytes | 45KB+ (1000+ righe) | 2026-04-06 |
 | P1.3 | n8n Part 2 — Credentials, Routing, Expressions | `architecture/n8n/part2-credentials-routing-expressions.md` | ✅ COMPLETATO | 2 KB | 40KB+ (1000+ righe) | 2026-04-06 |
-| P1.4 | Data Model Product Information | `data-models/product-information/` | 📋 Pianificato | 32 bytes | — | — |
+| P1.4 | Data Model Product Information | `data-models/product-information/README.md` | ✅ COMPLETATO | 32 bytes | 45KB+ (1000+ righe) | 2026-04-06 |
 | P1.5 | Make Blueprints | `automation-flows/make-blueprints/` | 📋 Pianificato | 14 bytes | — | — |
 
 ### Priorità 2 — Marketplace Specs Vuoti (15 marketplace)
@@ -29,9 +29,10 @@ notion, supabase, qonto, clickup (prioritari) + bitrix24, chatgpt, claude, miro,
 
 ## Statistiche Aggiornate
 
-- Task completati: 5 (1.1, 1.2, P1.1, P1.2, P1.3)
-- Prossimo: P1.4 (Data Model Product Information)
+- Task completati: 6 (1.1, 1.2, P1.1, P1.2, P1.3, P1.4)
+- Prossimo: P1.5 (Make Blueprints)
 - Triple publish attivo: GitHub ✓ Obsidian ✓ Notion ✓
-- Righe totali aggiunte: ~7,000+
+- Righe totali aggiunte: ~8,000+
 - Make.com: COMPLETAMENTE documentato (4 parti, 200KB+)
 - n8n: Part 1 + Part 2 completati (80KB+), Part 3-4 da fare
+- Data Models: Product Information completo (45KB+)
