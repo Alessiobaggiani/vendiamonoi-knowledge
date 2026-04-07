@@ -29,7 +29,7 @@
 | P2.2 | Allegro Deep-Dive (#1 Polonia, PLN 70B GMV) | `marketplace-specs/allegro/README.md` | ✅ COMPLETATO | Inesistente | 40KB+ (1000+ righe) | 2026-04-07 |
 | P2.3 | eMAG Deep-Dive (#1 Romania/CEE, €1.3B+ GMV) | `marketplace-specs/emag/README.md` | ✅ COMPLETATO | Inesistente | 40KB+ (1000+ righe) | 2026-04-07 |
 | P2.4 | Conrad Deep-Dive (B2B electronics, Mirakl) | `marketplace-specs/conrad/README.md` | ✅ COMPLETATO | 28 bytes | 40KB+ (1000+ righe) | 2026-04-07 |
-| P2.5 | PCComponentes Deep-Dive | `marketplace-specs/pccomponentes/README.md` | 📋 Pianificato | Inesistente | — | — |
+| P2.5 | PCComponentes Deep-Dive (#1 tech Spagna, €760M, Mirakl) | `marketplace-specs/pccomponentes/README.md` | ✅ COMPLETATO | Inesistente | 64KB+ (1621 righe) | 2026-04-07 |
 | P2.6 | Worten Deep-Dive | `marketplace-specs/worten/README.md` | 📋 Pianificato | Inesistente | — | — |
 | P2.7 | Conforama Deep-Dive | `marketplace-specs/conforama/README.md` | 📋 Pianificato | Inesistente | — | — |
 | P2.8 | Costco Deep-Dive | `marketplace-specs/costco/README.md` | 📋 Pianificato | Inesistente | — | — |
@@ -44,10 +44,10 @@ notion, supabase, qonto, clickup (prioritari) + bitrix24, chatgpt, claude, miro,
 
 ## Statistiche Aggiornate
 
-- Task completati: 11 (1.1, 1.2, P1.1-P1.5, P2.1, P2.2, P2.3, P2.4)
+- Task completati: 12 (1.1, 1.2, P1.1-P1.5, P2.1, P2.2, P2.3, P2.4, P2.5)
 - PRIORITÀ 1: COMPLETATA AL 100% (5/5)
-- PRIORITÀ 2: 4/8 completati (50%)
-- Prossimo: P2.5 (PCComponentes — marketplace spagnolo elettronica)
+- PRIORITÀ 2: 5/8 completati (62.5%)
+- Prossimo: P2.6 (Worten — marketplace portoghese elettronica)
 - Triple publish attivo: GitHub ✓ Obsidian ✓ Notion ✓
-- Righe totali aggiunte: ~13,000+
-- Marketplace specs totali: 23 documentati (19 preesistenti + 4 nuovi: Otto, Allegro, eMAG, Conrad)
+- Righe totali aggiunte: ~14,600+
+- Marketplace specs totali: 24 documentati (19 preesistenti + 5 nuovi: Otto, Allegro, eMAG, Conrad, PCComponentes)
