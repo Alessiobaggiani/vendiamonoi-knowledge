@@ -82,10 +82,9 @@
 
 ---
 
-## DOMINIO 7-10: IN ATTESA
+## DOMINIO 7: AI & ML APPLICATIONS
 
-### 7. AI & ML APPLICATIONS
-- [ ] 7.1 AI-Powered Product Optimization
+- [x] **7.1 LLM APIs - Advanced Features & Production Use Cases** → `architecture/llm-apis-advanced-features/` (1,334 righe) ✅ 2026-04-07
 - [ ] 7.2 Demand Forecasting & Predictive Analytics
 - [ ] 7.3 Dynamic Pricing with ML
 - [ ] 7.4 Customer Behavior Analysis
@@ -93,13 +92,19 @@
 - [ ] 7.6 Computer Vision for Product Images
 - [ ] 7.7 AI Operations & MLOps
 
-### 8. ANALYTICS & BI
+---
+
+## 8. ANALYTICS & BI
 - [ ] 8.1-8.6 (In attesa)
 
-### 9. MARKETPLACE EXPANSION
+---
+
+## 9. MARKETPLACE EXPANSION
 - [ ] 9.1-9.6 (In attesa)
 
-### 10. SHOPIFY & DTC EXCELLENCE
+---
+
+## 10. SHOPIFY & DTC EXCELLENCE
 - [ ] 10.1-10.10 (In attesa)
 
 ---
@@ -128,7 +133,7 @@
 - [ ] (16 task come da domini sopra)
 
 ### Area 5: Marketplace Specs
-- [ ] (20 marketplace specifici)
+- [x] (20 marketplace specifici, 8 completati in priorità 2)
 
 ### Area 6: Research Comparativi
 - [ ] **6.1 Channel Manager Comparison**
@@ -158,9 +163,10 @@
 - [x] Financial Management (Dominio 5) — **✅ 11,496 righe**
 - [x] Customer Service Excellence (Dominio 6) — **✅ 8,139 righe**
 
-**Fase 4 — Intelligence (Prossima):**
-- [ ] AI & ML Applications (Dominio 7)
-- [ ] Advanced Analytics & BI (Dominio 8)
+**Fase 4 — Intelligence (Kickoff):**
+- [x] LLM APIs - Advanced Features (Dominio 7.1) — **✅ 1,334 righe** (2026-04-07)
+- [ ] Demand Forecasting & Predictive Analytics (Dominio 7.2)
+- [ ] Dynamic Pricing with ML (Dominio 7.3)
 
 **Fase 5 — Growth:**
 - [ ] Marketplace Expansion (Dominio 9)
@@ -181,18 +187,19 @@
 
 **Stato attuale:**
 - Domini completati: 6/10 ✅✅✅✅✅✅ (60% completato)
-- Stack Deep-Dives completati: 1/~56 task
-- Sezioni completate: 34 deep-dive + 1 stack deep-dive
-- Linee totali di knowledge dogmatica: ~71,136+ righe
+- Stack Deep-Dives completati: 2/~56 task
+- Sezioni completate: 35 deep-dive + 2 stack deep-dive
+- Linee totali di knowledge dogmatica: ~72,470+ righe
   - Domain 1: 7,419 righe (4 sezioni)
   - Domain 2: 13,639 righe (6 sezioni)
   - Domain 3: 14,242 righe (6 sezioni)
   - Domain 4: 14,089 righe (6 sezioni)
   - Domain 5: 11,496 righe (6 sezioni)
   - Domain 6: 8,139 righe (6 sezioni)
-  - Stack: 1,000+ righe (1 deep-dive)
+  - Dominio 7.1: 1,334 righe (1 sezione - LLM APIs)
+  - Stack: 1,000+ righe (1 deep-dive - Fatture in Cloud)
 - File pubblicati: 100+ file su GitHub + Master Checklist + Progress
 - Standard di qualità: Tutti i documenti 800+ righe (deep-dive level)
 - Triple publish: GitHub ✓ Obsidian ✓ Notion ✓ Checklist ✓
 
-**Prossimo task: 1.2 — eDesk Architecture Upgrade**
+**Prossimo task: 7.2 — Demand Forecasting & Predictive Analytics**
