@@ -29,3 +29,5 @@ Qonto è una piattaforma di business banking europea fondata nel 2017 a Parigi, 
 ---
 
 ## 2. Panoramica Piattaforma Qonto
+
+### 2.1 Storia e Posizionamento Aziendale
