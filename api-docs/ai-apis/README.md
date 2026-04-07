@@ -1,1 +1,1 @@
-This is a placeholder - the actual large file content will be provided
+PLACEHOLDER
