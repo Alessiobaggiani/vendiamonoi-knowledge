@@ -38,19 +38,19 @@
 **Marketplace già documentati (15-67KB, nessun intervento necessario):**
 amazon (50KB), temu (67KB), ibs (51KB), shein (40KB), leroy-merlin (36KB), ebay (31KB), cdiscount (30KB), rue-du-commerce (26KB), vente-unique (26KB), bricobravo (25KB), carrefour (25KB), mediaworld (24KB), eprice (23KB), metro-italia (22KB), manomano (21KB), mirakl-marketplaces (20KB), kaufland (20KB), bolcom (17KB), metro-markets (15KB)
 
-### Priorità 3 — API-Docs Tool in Uso ✅ IN PROGRESS (4/10 = 40%)
+### Priorità 3 — API-Docs Tool in Uso ✅ IN PROGRESS (5/10 = 50%)
 
 **Scope**: Notion, Supabase, Qonto, ClickUp (prioritari) + Bitrix24, ChatGPT/Claude API, Miro, NotebookLM, Obsidian, Superhuman (secondari)
 
-**Progress**: 4/4 prioritari (100% !!!!) ✅
+**Progress**: 4/4 prioritari (100% !!!!) ✅ + 1/6 secondari (17%)
 
 | # | Task | File | Stato | Dimensione | Data | Note |
 |---|---|---|---|---|---|---|
 | P3.1 | Notion API Deep-Dive | `api-docs/notion/README.md` | ✅ COMPLETATO | 88KB (3,874 righe) | 2026-04-07 | REST API v2022-06-28, 3 req/s rate limit, OAuth 2.0 + Internal tokens, @notionhq/client SDK, Make.com integration, Supabase sync patterns, 24 sezioni |
 | P3.2 | Supabase API Deep-Dive | `api-docs/supabase/README.md` | ✅ COMPLETATO | 80KB (3,067 righe) | 2026-04-07 | PostgreSQL + PostgREST + GoTrue + Realtime + Storage + Edge Functions, Pro plan $25/mo, Make.com integration, multi-marketplace schema, RLS policies, pg_cron, full-text search multi-language, Vendiamonoi use cases |
 | P3.3 | Qonto API Deep-Dive | `api-docs/qonto/README.md` | ✅ COMPLETATO | 158KB (4,376 righe) | 2026-04-07 | REST v2, base URL thirdparty.qonto.com/v2/, API Key + OAuth 2.0, rate limit 1000/10s, SEPA transfers, webhooks HMAC-SHA256, marketplace payout reconciliation patterns, Make.com integration, Fatture in Cloud reconciliation, Supabase sync, VAT/OSS management, supplier payment automation, cash flow forecasting, 24 sezioni |
-| P3.4 | ClickUp API Deep-Dive | `api-docs/clickup/README.md` | ✅ COMPLETATO | 112KB (3,509 righe) | 2026-04-07 | REST v2, base URL api.clickup.com/v2/, Personal Token + OAuth 2.0, rate limit 100 req/min, Workspace→Space→Folder→List→Task hierarchy, Custom Fields 15+ types, Webhooks HMAC-SHA256, ClickUp AI Brain, Make.com integration completa, Supabase sync, 7-Space workspace architecture per Vendiamonoi (Fornitori, Catalogo, Marketplace, Ordini, Customer Service, Amministrazione, Ops Centrali), 24 sezioni |
-| P3.5 | Bitrix24 API — Secondario | `api-docs/bitrix24/README.md` | ⏳ Pianificato | — | — | CRM, communication hub, third-party integrations |
+| P3.4 | ClickUp API Deep-Dive | `api-docs/clickup/README.md` | ✅ COMPLETATO | 112KB (3,509 righe) | 2026-04-07 | REST v2, base URL api.clickup.com/v2/, Personal Token + OAuth 2.0, rate limit 100 req/min, Workspace→Space→Folder→List→Task hierarchy, Custom Fields 15+ types, Webhooks HMAC-SHA256, ClickUp AI Brain, Make.com integration completa, Supabase sync, 7-Space workspace architecture per Vendiamonoi, 24 sezioni |
+| P3.5 | Bitrix24 API Deep-Dive — Secondario | `api-docs/bitrix24/README.md` | ✅ COMPLETATO | 179KB (5,184 righe) | 2026-04-07 | REST API, CRM completo (Leads/Deals/Contacts/Companies), Smart Processes, Bizproc workflow engine, supplier management architecture, 2 req/sec rate limit, OAuth 2.0 + webhook auth, Make.com integration completa, Supabase sync patterns, 24 sezioni |
 | P3.6 | ChatGPT/Claude API — Secondario | `api-docs/ai-apis/README.md` | ⏳ Pianificato | — | — | LLM integrations, prompt engineering, token costs |
 | P3.7 | Miro API — Secondario | `api-docs/miro/README.md` | ⏳ Pianificato | — | — | Whiteboarding, collaboration, REST API |
 | P3.8 | NotebookLM API — Secondario | `api-docs/notebooklm/README.md` | ⏳ Pianificato | — | — | Audio generation, source management, API access |
@@ -59,16 +59,78 @@ amazon (50KB), temu (67KB), ibs (51KB), shein (40KB), leroy-merlin (36KB), ebay 
 
 ## Statistiche Aggiornate (2026-04-07)
 
-- Task completati: 19 (1.1, 1.2, P1.1-P1.5, P2.1-P2.8, P3.1, P3.2, P3.3, P3.4)
+- Task completati: 20 (1.1, 1.2, P1.1-P1.5, P2.1-P2.8, P3.1, P3.2, P3.3, P3.4, P3.5)
 - PRIORITÀ 1: COMPLETATA AL 100% (5/5)
 - PRIORITÀ 2: COMPLETATA AL 100% (8/8)
-- PRIORITÀ 3: IN PROGRESS (4/10 = 40%) — 4/4 prioritari (100%)
+- PRIORITÀ 3: IN PROGRESS (5/10 = 50%) — 4/4 prioritari (100%) + 1/6 secondari (17%)
 - Totale Priorità 1+2: 13/13 completati (100%)
 - Triple publish attivo: GitHub ✓ Obsidian ✓ Notion ✓
-- Righe totali aggiunte: ~36,115+ (new: ClickUp +3,509 righe)
-- API docs totalizzati: 4 documentati (Notion, Supabase, Qonto, ClickUp), 6 pianificati
+- Righe totali aggiunte: ~41,299+ (new: Bitrix24 +5,184 righe)
+- API docs totalizzati: 5 documentati (Notion, Supabase, Qonto, ClickUp, Bitrix24), 5 pianificati
 
 ## Completion Notes
+
+### P3.5 Bitrix24 API ✅
+**Data**: 2026-04-07 | **Righe**: 5,184 | **Dimensione**: 179KB
+
+**Spec Key Data**:
+- Platform: SaaS CRM & Business Suite (1C-Bitrix, 15M+ organizzazioni)
+- API Version: REST API (current stable)
+- Base URL: `https://<portal>.bitrix24.com/rest/`
+- Authentication: OAuth 2.0 + Webhook Auth (inbound/outbound)
+- Rate Limit: 2 req/sec per app, burst pool 50 credits, adaptive backoff
+- Core CRM: Leads → Deals → Contacts → Companies (full pipeline)
+- Smart Processes: Custom entity types (Supplier Evaluation, Product Catalog, Marketplace Listing)
+- Bizproc: Visual workflow engine (supplier onboarding, deal automation, approval chains)
+- Automation Rules: 200+ triggers, robot actions, BPM4-based engine
+- Telephony: SIP integration, call tracking, auto-logging to CRM
+- Drive: File storage, document generator, versioning
+- Tasks: Kanban, Gantt, Scrum, dependency management
+- Make.com Integration: 40+ modules (CRM CRUD, task management, drive, webhooks)
+- Supabase Sync: CRM entity sync, supplier master data, deal pipeline analytics
+- Vendiamonoi Architecture: Supplier CRM pipeline (Lead → Qualification → Contract → Active Supplier), 15+ custom fields per entity, Smart Process per Product Catalog e Marketplace Listing
+- Pricing: Free (5 users, 5GB), Basic (€49/mo, unlimited users, 24GB), Standard (€99/mo, 100GB), Professional (€199/mo, 1TB)
+- Compliance: GDPR, data residency EU/US/LATAM
+
+**24 Sezioni Documentate**:
+1. API Overview & Architecture
+2. Authentication (OAuth 2.0 + Webhook Auth)
+3. CRM Core — Leads API (CRUD, custom fields, status management)
+4. CRM Core — Deals API (pipeline stages, multi-pipeline, products)
+5. CRM Core — Contacts & Companies API (hierarchy, requisites)
+6. CRM Activities & Timeline (calls, emails, meetings, tasks)
+7. Smart Processes — Custom Entity Types (SPA, dynamic fields)
+8. Bizproc Workflow Engine (visual BPM, robot actions, triggers)
+9. Automation Rules & Triggers (200+ actions, conditional logic)
+10. Tasks API (CRUD, Kanban, Gantt, Scrum, dependencies)
+11. Drive & Document Generator (file management, templates)
+12. Telephony Integration (SIP, call tracking, auto-CRM logging)
+13. Webhooks — Inbound & Outbound (event subscriptions, HMAC)
+14. Rate Limiting & Adaptive Backoff (2 req/s, burst pool, queue)
+15. Error Handling & Status Codes (REST errors, batch error recovery)
+16. Batch Operations & Performance (batch commands, 50-item batches)
+17. Make.com Module Mapping (40+ modules, CRM, tasks, drive, webhooks)
+18. Bitrix24 + Supabase Sync Patterns (CRM sync, supplier master data)
+19. Bitrix24 + ClickUp Integration (task sync, bidirectional status)
+20. Bitrix24 + Fatture in Cloud (invoice generation from deals)
+21. Supplier Management Architecture (pipeline design, scoring, onboarding)
+22. Security Best Practices (token rotation, scope limiting, IP whitelisting)
+23. Performance Optimization (batch operations, field selection, caching)
+24. Vendiamonoi CRM Architecture (supplier lifecycle, multi-marketplace deal tracking, Smart Process design)
+
+**Usecases Vendiamonoi**:
+- Supplier CRM pipeline (Lead → Qualification → Contract Negotiation → Active Supplier → Renewal)
+- Supplier scoring & evaluation (custom fields: reliability, catalog size, delivery SLA, margin)
+- Smart Process: Product Catalog (product-level entity tracking, supplier linkage)
+- Smart Process: Marketplace Listing (per-marketplace product status, pricing, compliance)
+- Bizproc: Automated supplier onboarding (document collection → compliance check → contract signing)
+- Bizproc: Deal escalation (stale deal alerts, auto-reassignment, management notification)
+- Telephony: Supplier call tracking (auto-logged to CRM, call recordings linked to deals)
+- Make.com: CRM → Supabase sync (new supplier → insert, deal stage change → update)
+- Make.com: Marketplace order → CRM activity (order received → timeline entry on supplier deal)
+- ClickUp integration: Task creation from CRM events (new supplier → onboarding tasks)
+- Fatture in Cloud: Invoice generation from closed deals (supplier commission calculation)
+- Dashboard: Supplier performance analytics (deal conversion, catalog growth, order volume)
 
 ### P3.4 ClickUp API ✅
 **Data**: 2026-04-07 | **Righe**: 3,509 | **Dimensione**: 112KB
@@ -349,4 +411,6 @@ P3.1 Notion API (88KB, 3,874 righe) + P3.2 Supabase API (80KB, 3,067 righe) + P3
 
 Tutti gli API-Docs prioritari (Notion, Supabase, Qonto, ClickUp) sono completati. 4/10 tasks launched (40%), 4/4 prioritari (100%!!!). Completato: ClickUp API Deep-Dive (112KB, 3,509 righe) con integrazione Make.com completa, Supabase sync, e architettura 7-Space per Vendiamonoi.
 
-Rimanenti P3 tasks sono secondari: Bitrix24, ChatGPT/Claude, Miro, NotebookLM, Obsidian, Superhuman.
+📊 **P3.5 BITRIX24 — PRIMO SECONDARIO COMPLETATO** - 2026-04-07
+
+P3.5 Bitrix24 API Deep-Dive (179KB, 5,184 righe) completato — il documento più grande dell'intera knowledge base. CRM completo (Leads/Deals/Contacts/Companies), Smart Processes per entity custom, Bizproc workflow engine, supplier management architecture, Make.com integration (40+ modules), Supabase sync patterns. 5/10 tasks (50%), 4/4 prioritari (100%) + 1/6 secondari (17%). Next: P3.6 ChatGPT/Claude API.
