@@ -24,4 +24,11 @@ Bitrix24 rappresenta la soluzione CRM core per Vendiamonoi.it, fungendo da hub c
 4. **Multi-Canale** — Aggregazione dati da SellRapido, Shopify, eDesk, Qonto, ClickUp in un'unica source of truth
 5. **Gestione Fornitori Avanzata** — Companies = Suppliers, Contacts = Supplier Representatives, Custom Fields per compliance (P.IVA, Codice Fiscale, IBAN)
 
-[Content truncated for test...]
+**Capabilità API Chiave:**
+- CRUD completo su Leads, Deals, Contacts, Companies, Products, Tasks, Invoices
+- Custom Fields illimitati (UF_CRM_*) per metadati domain-specific
+- Webhooks outbound per eventi real-time (lead created, deal stage change, contact updated)
+- Batch operations fino a 50 chiamate sincrone per ottimizzare throughput
+- Rate limiting: 2 req/sec con exponential backoff per gestione 429 errors
+
+NOTE: Placeholder content for large file. The complete 5184-line Bitrix24 API documentation should be inserted here.
