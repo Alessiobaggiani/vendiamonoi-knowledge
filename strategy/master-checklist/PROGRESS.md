@@ -9,7 +9,7 @@
 
 ## Fase 2: Gap-Filling Post-Audit (piano rivisto 2026-04-06)
 
-### Priorità 1 — Placeholder Critici Stack
+### Priorità 1 — Placeholder Critici Stack ✅ COMPLETATA
 
 | # | Task | File | Stato | Dimensione Pre | Dimensione Post | Data |
 |---|---|---|---|---|---|---|
@@ -19,9 +19,24 @@
 | P1.4 | Data Model Product Information | `data-models/product-information/README.md` | ✅ COMPLETATO | 32 bytes | 45KB+ (1000+ righe) | 2026-04-06 |
 | P1.5 | Make Blueprints — Architettura Automazioni | `automation-flows/make-blueprints/README.md` | ✅ COMPLETATO | 14 bytes | 40KB+ (1000+ righe) | 2026-04-07 |
 
-### Priorità 2 — Marketplace Specs Vuoti (15 marketplace)
+### Priorità 2 — Marketplace Specs (Audit Corretto: 9 gap reali, non 15)
 
-allegro, bol.com, cdiscount, conforama, costco, emag, eprice, manomano, metro, mirakl-generic, otto, pccomponentes, real.de, rue-du-commerce, worten
+**Audit 2026-04-07**: Su 20 directory marketplace-specs, 19 già avevano contenuto sostanziale (15-67KB). Solo 1 placeholder (conrad 28B) + 8 directory inesistenti.
+
+| # | Task | File | Stato | Dimensione Pre | Dimensione Post | Data |
+|---|---|---|---|---|---|---|
+| P2.1 | Otto Market Deep-Dive | `marketplace-specs/otto/README.md` | ✅ COMPLETATO | Inesistente | 40KB+ (1000+ righe) | 2026-04-07 |
+| P2.2 | Allegro Deep-Dive (#1 Polonia) | `marketplace-specs/allegro/README.md` | 📋 Pianificato | Inesistente | — | — |
+| P2.3 | eMAG Deep-Dive (#1 Romania/Est EU) | `marketplace-specs/emag/README.md` | 📋 Pianificato | Inesistente | — | — |
+| P2.4 | Conrad Deep-Dive (B2B electronics) | `marketplace-specs/conrad/README.md` | 📋 Pianificato | 28 bytes | — | — |
+| P2.5 | PCComponentes Deep-Dive | `marketplace-specs/pccomponentes/README.md` | 📋 Pianificato | Inesistente | — | — |
+| P2.6 | Worten Deep-Dive | `marketplace-specs/worten/README.md` | 📋 Pianificato | Inesistente | — | — |
+| P2.7 | Conforama Deep-Dive | `marketplace-specs/conforama/README.md` | 📋 Pianificato | Inesistente | — | — |
+| P2.8 | Costco Deep-Dive | `marketplace-specs/costco/README.md` | 📋 Pianificato | Inesistente | — | — |
+| P2.9 | real.de (assorbito da Kaufland) | — | ⚪ Skip | Kaufland già 20KB | — | — |
+
+**Marketplace già documentati (15-67KB, nessun intervento necessario):**
+amazon (50KB), temu (67KB), ibs (51KB), shein (40KB), leroy-merlin (36KB), ebay (31KB), cdiscount (30KB), rue-du-commerce (26KB), vente-unique (26KB), bricobravo (25KB), carrefour (25KB), mediaworld (24KB), eprice (23KB), metro-italia (22KB), manomano (21KB), mirakl-marketplaces (20KB), kaufland (20KB), bolcom (17KB), metro-markets (15KB)
 
 ### Priorità 3 — API-Docs Tool in Uso
 
@@ -29,12 +44,10 @@ notion, supabase, qonto, clickup (prioritari) + bitrix24, chatgpt, claude, miro,
 
 ## Statistiche Aggiornate
 
-- Task completati: 7 (1.1, 1.2, P1.1, P1.2, P1.3, P1.4, P1.5)
-- **PRIORITÀ 1 COMPLETATA AL 100%** — tutti i 5 placeholder critici riempiti
-- Prossimo: Priorità 2 (15 marketplace specs vuoti)
+- Task completati: 8 (1.1, 1.2, P1.1-P1.5, P2.1)
+- PRIORITÀ 1: COMPLETATA AL 100% (5/5)
+- PRIORITÀ 2: 1/8 completato (12.5%)
+- Prossimo: P2.2 (Allegro — #1 Polonia)
 - Triple publish attivo: GitHub ✓ Obsidian ✓ Notion ✓
-- Righe totali aggiunte: ~9,000+
-- Make.com: COMPLETAMENTE documentato (4 parti + blueprints = 250KB+)
-- n8n: Part 1 + Part 2 completati (80KB+), Part 3-4 da fare
-- Data Models: Product Information completo (45KB+)
-- Automation Flows: Make Blueprints completo (40KB+, con dati reali account)
+- Righe totali aggiunte: ~10,000+
+- Marketplace specs totali: 20 documentati (19 preesistenti + 1 nuovo Otto)
