@@ -38,21 +38,87 @@
 **Marketplace già documentati (15-67KB, nessun intervento necessario):**
 amazon (50KB), temu (67KB), ibs (51KB), shein (40KB), leroy-merlin (36KB), ebay (31KB), cdiscount (30KB), rue-du-commerce (26KB), vente-unique (26KB), bricobravo (25KB), carrefour (25KB), mediaworld (24KB), eprice (23KB), metro-italia (22KB), manomano (21KB), mirakl-marketplaces (20KB), kaufland (20KB), bolcom (17KB), metro-markets (15KB)
 
-### Priorità 3 — API-Docs Tool in Uso
+### Priorità 3 — API-Docs Tool in Uso ✅ IN PROGRESS (1/10 = 10%)
 
-notion, supabase, qonto, clickup (prioritari) + bitrix24, chatgpt, claude, miro, notebooklm, obsidian, superhuman (secondari)
+**Scope**: Notion, Supabase, Qonto, ClickUp (prioritari) + Bitrix24, ChatGPT/Claude API, Miro, NotebookLM, Obsidian, Superhuman (secondari)
+
+**Progress**: 1/4 prioritari (25%)
+
+| # | Task | File | Stato | Dimensione | Data | Note |
+|---|---|---|---|---|---|---|
+| P3.1 | Notion API Deep-Dive | `api-docs/notion/README.md` | ✅ COMPLETATO | 88KB (3,874 righe) | 2026-04-07 | REST API v2022-06-28, 3 req/s rate limit, OAuth 2.0 + Internal tokens, @notionhq/client SDK, Make.com integration, Supabase sync patterns, 24 sezioni |
+| P3.2 | Supabase API Deep-Dive | `api-docs/supabase/README.md` | ⏳ Pianificato | — | — | REST/GraphQL APIs, realtime subscriptions, Auth module, RLS policies |
+| P3.3 | Qonto API Deep-Dive | `api-docs/qonto/README.md` | ⏳ Pianificato | — | — | Business banking API, transactions, reconciliation, webhooks |
+| P3.4 | ClickUp API Deep-Dive | `api-docs/clickup/README.md` | ⏳ Pianificato | — | — | Task management, custom fields, webhooks, automations |
+| P3.5 | Bitrix24 API — Secondario | `api-docs/bitrix24/README.md` | ⏳ Pianificato | — | — | CRM, communication hub, third-party integrations |
+| P3.6 | ChatGPT/Claude API — Secondario | `api-docs/ai-apis/README.md` | ⏳ Pianificato | — | — | LLM integrations, prompt engineering, token costs |
+| P3.7 | Miro API — Secondario | `api-docs/miro/README.md` | ⏳ Pianificato | — | — | Whiteboarding, collaboration, REST API |
+| P3.8 | NotebookLM API — Secondario | `api-docs/notebooklm/README.md` | ⏳ Pianificato | — | — | Audio generation, source management, API access |
+| P3.9 | Obsidian API — Secondario | `api-docs/obsidian/README.md` | ⏳ Pianificato | — | — | Note management, plugin API, sync patterns |
+| P3.10 | Superhuman API — Secondario | `api-docs/superhuman/README.md` | ⏳ Pianificato | — | — | Email automation, scheduling, keyboard shortcuts |
 
 ## Statistiche Aggiornate (2026-04-07)
 
-- Task completati: 15 (1.1, 1.2, P1.1-P1.5, P2.1-P2.8)
+- Task completati: 16 (1.1, 1.2, P1.1-P1.5, P2.1-P2.8, P3.1)
 - PRIORITÀ 1: COMPLETATA AL 100% (5/5)
-- PRIORITÀ 2: COMPLETATA AL 100% (8/8) 🎉
+- PRIORITÀ 2: COMPLETATA AL 100% (8/8)
+- PRIORITÀ 3: IN PROGRESS (1/10 = 10%) — 1/4 prioritari (25%)
 - Totale Priorità 1+2: 13/13 completati (100%)
 - Triple publish attivo: GitHub ✓ Obsidian ✓ Notion ✓
-- Righe totali aggiunte: ~21,289+ (new: Costco +1,678 righe)
-- Marketplace specs totali: 27 documentati (19 preesistenti + 8 nuovi: Otto, Allegro, eMAG, Conrad, PCComponentes, Worten, Conforama, Costco)
+- Righe totali aggiunte: ~25,163+ (new: Notion +3,874 righe)
+- API docs totalizzati: 1 documentato (Notion), 9 pianificati
 
 ## Completion Notes
+
+### P3.1 Notion API ✅
+**Data**: 2026-04-07 | **Righe**: 3,874 | **Dimensione**: 88KB
+
+**Spec Key Data**:
+- Platform: SaaS (Notion Inc.)
+- API Version: REST API v2022-06-28 (latest)
+- Base URL: `https://api.notion.com/v1`
+- Rate Limit: 3 req/s per integration
+- Authentication: OAuth 2.0 (user-facing apps) + Internal tokens (workspace automations)
+- SDK: @notionhq/client (official npm package, fully typed)
+- Core Resources: Databases, Pages, Blocks, Users, Comments
+- Query Capabilities: Database queries with filtering/sorting, full-text search, relation traversal
+- Webhook Support: None (polling required for real-time; alternative: Make.com webhooks)
+- Data Sync: Bidirectional sync with Supabase via PostgreSQL Full Text Search patterns
+- Make.com Integration: Complete — 40+ modules for automations (create pages, update databases, queries)
+- Pricing: Free tier with API access (1,000 requests/min)
+- Compliance: SOC 2, GDPR, HIPAA-ready
+- 24 Sezioni Documentate:
+  1. API Overview & Architecture
+  2. Authentication (OAuth 2.0 + Internal Tokens)
+  3. Databases API (CRUD, queries, filters, sorts)
+  4. Pages API (create, update, archive, retrieve)
+  5. Blocks API (paragraph, heading, list, code, table blocks)
+  6. Users API (workspace users, integrations)
+  7. Comments API (thread management)
+  8. Search API (full-text, database search)
+  9. Rate Limiting & Backoff Strategies
+  10. Error Handling (400, 401, 403, 404, 429, 500+)
+  11. Make.com Module Mapping (all modules, parameters, outputs)
+  12. Real-time Sync Patterns (polling loops, change tracking)
+  13. Supabase Integration (sync strategies, bidirectional update patterns)
+  14. Rich Text & Formula Expressions
+  15. Batch Operations (bulk create/update)
+  16. Webhook Workarounds (Make.com, Supabase triggers)
+  17. Data Modeling (property types, templates, rollups)
+  18. Relations & Rollups (cross-database queries)
+  19. Security Best Practices (token rotation, scope limiting)
+  20. Performance Optimization (caching, query planning)
+  21. Migration Patterns (CSV import, API-based migration)
+  22. Testing & Sandbox Environments
+  23. Debugging & Logging
+  24. Vendiamonoi Use Cases (product database sync, supplier management, workflow automation)
+
+**Usecases Vendiamonoi**:
+- Supplier master data management (sync with Supabase `suppliers` table)
+- Product catalog enrichment (bulk updates via API)
+- Marketplace spec documentation (auto-sync with GitHub)
+- Workflow automation (Make.com integrations)
+- Knowledge base federation (Notion + GitHub + Obsidian sync)
 
 ### P2.8 Costco ✅
 **Data**: 2026-04-07 | **Righe**: 1,678 | **Dimensione**: 65KB
@@ -95,3 +161,7 @@ notion, supabase, qonto, clickup (prioritari) + bitrix24, chatgpt, claude, miro,
 🎉 **PRIORITÀ 2 COMPLETATA AL 100% (8/8)** - 2026-04-07
 
 Tutti i gap critici della Priorità 2 sono stati colmati. Prossima fase: Priorità 3 (API-Docs tool integration).
+
+📊 **PRIORITÀ 3 KICKOFF** - 2026-04-07
+
+P3.1 Notion API completato (88KB, 3,874 righe). 1/10 tasks launched, 1/4 prioritari (25%).
