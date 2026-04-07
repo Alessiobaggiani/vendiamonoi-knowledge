@@ -2,7 +2,7 @@
 
 ## Il Cervello Tecnico Definitivo per la Distribuzione Digitale su Marketplace Europei
 
-**Versione:** 1.9
+**Versione:** 2.0
 **Data:** Aprile 2026
 **Obiettivo:** Mappatura orizzontale completa + approfondimento verticale = superiorità assoluta
 **Metodo:** Per ogni punto → ricerca → documentazione → knowledge base → competenza operativa
@@ -120,8 +120,9 @@
 
 ### Area 1: Gap Critici Stack
 - [x] **1.1 Fatture in Cloud Deep-Dive** → `architecture/fatture-in-cloud/` (1,000+ righe — API v2 completa, 131 endpoint, OAuth, webhooks, SDK, autofatture TD17/18/19, OSS, riconciliazione, Make.com, Supabase sync) ✅ 2026-04-06
-- [ ] **1.2 eDesk Architecture Upgrade** → da api-docs a architecture deep-dive
-- [ ] **1.3 SellRapido API & Webhook Specifics**
+- [x] **1.2 Miro API Deep-Dive** → `architecture/miro/README.md` (1,966 righe — OAuth 2.0, rate limiting (100k credits/min), webhooks, Make.com modules, Notion/Jira/ClickUp sync, Supabase patterns, templates, bulk operations, image/document handling, enterprise features, AI capabilities, export API, real-time collaboration, WebSocket, error handling, Web SDK, BPMN mapping, GDPR/compliance, Vendiamonoi use cases) ✅ 2026-04-07
+- [ ] **1.3 eDesk Architecture Upgrade** → da api-docs a architecture deep-dive
+- [ ] **1.4 SellRapido API & Webhook Specifics**
 
 ### Area 2: Integrazioni Stack
 - [ ] **2.1 SellRapido ↔ Make Integration Patterns**
@@ -180,9 +181,10 @@
 - [ ] Shopify & DTC Excellence (Dominio 10)
 
 **Fase Extra — Stack Tecnologico:**
-- [x] Fatture in Cloud Deep-Dive (1.1) ✅
-- [ ] eDesk Architecture Upgrade (1.2)
-- [ ] SellRapido API & Webhook (1.3)
+- [x] Fatture in Cloud Deep-Dive (1.1) ✅ 2026-04-06
+- [x] Miro API Deep-Dive (1.2) ✅ 2026-04-07
+- [ ] eDesk Architecture Upgrade (1.3)
+- [ ] SellRapido API & Webhook (1.4)
 - [ ] Integrazioni Stack (2.1-2.5)
 - [ ] Data Model Supabase (3.1-3.4)
 - [ ] Research Comparativi (6.1-6.4)
@@ -194,9 +196,9 @@
 
 **Stato attuale (2026-04-07):**
 - Domini completati: 6/10 ✅✅✅✅✅✅ (60% completato)
-- Stack Deep-Dives completati: 2/~56 task
-- Sezioni completate: 35 deep-dive + 3 stack deep-dive
-- Linee totali di knowledge dogmatica: **~73,510+ righe**
+- Stack Deep-Dives completati: 3/~56 task
+- Sezioni completate: 35 deep-dive + 4 stack deep-dive
+- Linee totali di knowledge dogmatica: **~77,476+ righe**
   - Domain 1: 7,419 righe (4 sezioni)
   - Domain 2: 13,639 righe (6 sezioni)
   - Domain 3: 14,242 righe (6 sezioni)
@@ -204,9 +206,10 @@
   - Domain 5: 11,496 righe (6 sezioni)
   - Domain 6: 8,139 righe (6 sezioni)
   - **Dominio 7.1: 1,570 righe (LLM APIs - OpenAI & Claude Architecture & Pricing) ✅ NEW**
-  - Stack: 1,000+ righe (Fatture in Cloud Deep-Dive)
+  - **Stack 1.1: 1,000+ righe (Fatture in Cloud Deep-Dive) ✅**
+  - **Stack 1.2: 1,966 righe (Miro API Deep-Dive - Make integration, Notion/Jira/ClickUp sync, Supabase patterns, enterprise features, compliance) ✅ NEW**
 - File pubblicati: 100+ file su GitHub + Master Checklist + Progress
 - Standard di qualità: Tutti i documenti 800+ righe (deep-dive level)
 - Triple publish: GitHub ✓ Obsidian ✓ Notion ✓ Checklist ✓
 
-**Prossimo task: 7.2 — Demand Forecasting & Predictive Analytics**
+**Prossimo task: 1.3 — eDesk Architecture Upgrade**
