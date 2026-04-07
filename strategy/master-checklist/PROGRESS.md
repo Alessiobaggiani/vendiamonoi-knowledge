@@ -38,16 +38,16 @@
 **Marketplace già documentati (15-67KB, nessun intervento necessario):**
 amazon (50KB), temu (67KB), ibs (51KB), shein (40KB), leroy-merlin (36KB), ebay (31KB), cdiscount (30KB), rue-du-commerce (26KB), vente-unique (26KB), bricobravo (25KB), carrefour (25KB), mediaworld (24KB), eprice (23KB), metro-italia (22KB), manomano (21KB), mirakl-marketplaces (20KB), kaufland (20KB), bolcom (17KB), metro-markets (15KB)
 
-### Priorità 3 — API-Docs Tool in Uso ✅ IN PROGRESS (1/10 = 10%)
+### Priorità 3 — API-Docs Tool in Uso ✅ IN PROGRESS (2/10 = 20%)
 
 **Scope**: Notion, Supabase, Qonto, ClickUp (prioritari) + Bitrix24, ChatGPT/Claude API, Miro, NotebookLM, Obsidian, Superhuman (secondari)
 
-**Progress**: 1/4 prioritari (25%)
+**Progress**: 2/4 prioritari (50%)
 
 | # | Task | File | Stato | Dimensione | Data | Note |
 |---|---|---|---|---|---|---|
 | P3.1 | Notion API Deep-Dive | `api-docs/notion/README.md` | ✅ COMPLETATO | 88KB (3,874 righe) | 2026-04-07 | REST API v2022-06-28, 3 req/s rate limit, OAuth 2.0 + Internal tokens, @notionhq/client SDK, Make.com integration, Supabase sync patterns, 24 sezioni |
-| P3.2 | Supabase API Deep-Dive | `api-docs/supabase/README.md` | ⏳ Pianificato | — | — | REST/GraphQL APIs, realtime subscriptions, Auth module, RLS policies |
+| P3.2 | Supabase API Deep-Dive | `api-docs/supabase/README.md` | ✅ COMPLETATO | 80KB (3,067 righe) | 2026-04-07 | PostgreSQL + PostgREST + GoTrue + Realtime + Storage + Edge Functions, Pro plan $25/mo, Make.com integration, multi-marketplace schema, RLS policies, pg_cron, full-text search multi-language, Vendiamonoi use cases |
 | P3.3 | Qonto API Deep-Dive | `api-docs/qonto/README.md` | ⏳ Pianificato | — | — | Business banking API, transactions, reconciliation, webhooks |
 | P3.4 | ClickUp API Deep-Dive | `api-docs/clickup/README.md` | ⏳ Pianificato | — | — | Task management, custom fields, webhooks, automations |
 | P3.5 | Bitrix24 API — Secondario | `api-docs/bitrix24/README.md` | ⏳ Pianificato | — | — | CRM, communication hub, third-party integrations |
@@ -59,16 +59,70 @@ amazon (50KB), temu (67KB), ibs (51KB), shein (40KB), leroy-merlin (36KB), ebay 
 
 ## Statistiche Aggiornate (2026-04-07)
 
-- Task completati: 16 (1.1, 1.2, P1.1-P1.5, P2.1-P2.8, P3.1)
+- Task completati: 17 (1.1, 1.2, P1.1-P1.5, P2.1-P2.8, P3.1, P3.2)
 - PRIORITÀ 1: COMPLETATA AL 100% (5/5)
 - PRIORITÀ 2: COMPLETATA AL 100% (8/8)
-- PRIORITÀ 3: IN PROGRESS (1/10 = 10%) — 1/4 prioritari (25%)
+- PRIORITÀ 3: IN PROGRESS (2/10 = 20%) — 2/4 prioritari (50%)
 - Totale Priorità 1+2: 13/13 completati (100%)
 - Triple publish attivo: GitHub ✓ Obsidian ✓ Notion ✓
-- Righe totali aggiunte: ~25,163+ (new: Notion +3,874 righe)
-- API docs totalizzati: 1 documentato (Notion), 9 pianificati
+- Righe totali aggiunte: ~28,230+ (new: Supabase +3,067 righe)
+- API docs totalizzati: 2 documentati (Notion, Supabase), 8 pianificati
 
 ## Completion Notes
+
+### P3.2 Supabase API ✅
+**Data**: 2026-04-07 | **Righe**: 3,067 | **Dimensione**: 80KB
+
+**Spec Key Data**:
+- Platform: Backend-as-a-Service (Supabase Inc., open-source PostgreSQL wrapper)
+- Core Stack: PostgreSQL 15+, PostgREST, GoTrue (Auth), Realtime, Storage, Edge Functions
+- API Version: REST API (PostgREST-based), GraphQL support (beta)
+- Base URL: `https://<project>.supabase.co/rest/v1`
+- Rate Limit: 350 req/s (Pro plan), autoscaling
+- Authentication: JWT tokens, session cookies, OAuth providers
+- Database: PostgreSQL 15+ with Row-Level Security (RLS)
+- Real-time: WebSocket subscriptions (insert/update/delete events)
+- File Storage: S3-compatible bucket API
+- Edge Functions: Deno runtime, auto-scaling
+- Pricing: Free (5MB DB, 500MB storage), Pro ($25/mo, 50GB DB, 100GB storage)
+- Compliance: SOC 2, GDPR, HIPAA-ready
+- Make.com Integration: Complete — 30+ modules (create, read, update, delete, call function)
+- Notion Reorganization: 16 pagine spostate da OpenClaw a Struttura Completa Digitale & Automation (📚 Documentazione Tecnica, 🔌 Integrazioni, 🔄 Scenari Make, 🗄️ Database). Parent corretto per tutti i futuri publish.
+
+**24 Sezioni Documentate**:
+1. API Overview & Architecture
+2. Authentication (JWT, sessions, OAuth)
+3. PostgreSQL & PostgREST Basics
+4. REST API CRUD (insert, select, update, delete)
+5. Query Filtering & Pagination
+6. Joins & Relations
+7. Real-time Subscriptions (WebSocket)
+8. Row-Level Security (RLS) Policies
+9. Storage API (S3-compatible)
+10. Edge Functions (Deno runtime)
+11. GoTrue Auth Module (signup, login, MFA)
+12. Database Migrations & Schema Management
+13. Triggers & Functions (pg_cron, pg_net)
+14. Full-Text Search (tsvector, multi-language)
+15. Vectors & Embeddings (pgvector)
+16. Rate Limiting & Backoff Strategies
+17. Error Handling & Status Codes
+18. Make.com Module Mapping
+19. Supabase + Notion Sync Patterns
+20. Supabase + Obsidian Sync Patterns
+21. Performance Optimization (indexes, materialized views)
+22. Multi-Marketplace Schema Examples
+23. Vendiamonoi Use Cases
+24. Testing & Local Development
+
+**Usecases Vendiamonoi**:
+- Order management (ordini table with RLS per supplier)
+- Product catalog (catalogo with full-text search + categories)
+- Supplier master data (fornitori with hierarchical RLS)
+- Analytics & reporting (custom views, aggregations)
+- Real-time inventory sync (via Realtime subscriptions)
+- Make.com automation triggers (webhooks → Edge Functions)
+- Multi-marketplace schema (unified product/order sync)
 
 ### P3.1 Notion API ✅
 **Data**: 2026-04-07 | **Righe**: 3,874 | **Dimensione**: 88KB
@@ -162,6 +216,6 @@ amazon (50KB), temu (67KB), ibs (51KB), shein (40KB), leroy-merlin (36KB), ebay 
 
 Tutti i gap critici della Priorità 2 sono stati colmati. Prossima fase: Priorità 3 (API-Docs tool integration).
 
-📊 **PRIORITÀ 3 KICKOFF** - 2026-04-07
+📊 **PRIORITÀ 3 KICKOFF — P3.2 COMPLETATO** - 2026-04-07
 
-P3.1 Notion API completato (88KB, 3,874 righe). 1/10 tasks launched, 1/4 prioritari (25%).
+P3.1 Notion API (88KB, 3,874 righe) + P3.2 Supabase API (80KB, 3,067 righe) completati. 2/10 tasks launched, 2/4 prioritari (50%). Notion pages reorganized: 16 pagine spostate da OpenClaw a Struttura Completa Digitale & Automation. Next: P3.3 Qonto API.
