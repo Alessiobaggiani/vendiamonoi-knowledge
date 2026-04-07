@@ -2,7 +2,7 @@
 
 ## Il Cervello Tecnico Definitivo per la Distribuzione Digitale su Marketplace Europei
 
-**Versione:** 1.8
+**Versione:** 1.9
 **Data:** Aprile 2026
 **Obiettivo:** Mappatura orizzontale completa + approfondimento verticale = superiorità assoluta
 **Metodo:** Per ogni punto → ricerca → documentazione → knowledge base → competenza operativa
@@ -84,7 +84,14 @@
 
 ## DOMINIO 7: AI & ML APPLICATIONS
 
-- [x] **7.1 LLM APIs - Advanced Features & Production Use Cases** → `architecture/llm-apis-advanced-features/` (1,334 righe) ✅ 2026-04-07
+- [x] **7.1 LLM APIs - OpenAI & Claude Advanced Architecture** → `architecture/llm-api-platforms/openai-claude-2026.md` (1,570 righe) ✅ 2026-04-07
+  - OpenAI API Architecture: Chat Completions, Function Calling Strict Mode, Structured Outputs, Vision, Realtime API, Batch (50% discount)
+  - Claude API Architecture: Messages API, Tool Use, Structured Outputs, Vision/PDF Support, Prompt Caching (90% cost reduction), Adaptive Thinking, Computer Use
+  - Comprehensive comparison: Performance benchmarks, Feature parity, Pricing analysis ($0.75 to $50 per 1M tokens range)
+  - Vendiamonoi-specific: 100K SKUs/month cost breakdown ($409/month), implementation checklist, migration strategy
+  - Authentication, Rate Limits (Tier 1-4+), Data privacy (Claude preferibile per GDPR)
+  - Token counting, Cost optimization strategies, Batch translation implementation
+
 - [ ] 7.2 Demand Forecasting & Predictive Analytics
 - [ ] 7.3 Dynamic Pricing with ML
 - [ ] 7.4 Customer Behavior Analysis
@@ -163,8 +170,8 @@
 - [x] Financial Management (Dominio 5) — **✅ 11,496 righe**
 - [x] Customer Service Excellence (Dominio 6) — **✅ 8,139 righe**
 
-**Fase 4 — Intelligence (Kickoff):**
-- [x] LLM APIs - Advanced Features (Dominio 7.1) — **✅ 1,334 righe** (2026-04-07)
+**Fase 4 — Intelligence (In Progress):**
+- [x] LLM APIs - OpenAI & Claude (Dominio 7.1) — **✅ 1,570 righe** (2026-04-07)
 - [ ] Demand Forecasting & Predictive Analytics (Dominio 7.2)
 - [ ] Dynamic Pricing with ML (Dominio 7.3)
 
@@ -185,19 +192,19 @@
 
 ## Statistiche di Completamento
 
-**Stato attuale:**
+**Stato attuale (2026-04-07):**
 - Domini completati: 6/10 ✅✅✅✅✅✅ (60% completato)
 - Stack Deep-Dives completati: 2/~56 task
-- Sezioni completate: 35 deep-dive + 2 stack deep-dive
-- Linee totali di knowledge dogmatica: ~72,470+ righe
+- Sezioni completate: 35 deep-dive + 3 stack deep-dive
+- Linee totali di knowledge dogmatica: **~73,510+ righe**
   - Domain 1: 7,419 righe (4 sezioni)
   - Domain 2: 13,639 righe (6 sezioni)
   - Domain 3: 14,242 righe (6 sezioni)
   - Domain 4: 14,089 righe (6 sezioni)
   - Domain 5: 11,496 righe (6 sezioni)
   - Domain 6: 8,139 righe (6 sezioni)
-  - Dominio 7.1: 1,334 righe (1 sezione - LLM APIs)
-  - Stack: 1,000+ righe (1 deep-dive - Fatture in Cloud)
+  - **Dominio 7.1: 1,570 righe (LLM APIs - OpenAI & Claude Architecture & Pricing) ✅ NEW**
+  - Stack: 1,000+ righe (Fatture in Cloud Deep-Dive)
 - File pubblicati: 100+ file su GitHub + Master Checklist + Progress
 - Standard di qualità: Tutti i documenti 800+ righe (deep-dive level)
 - Triple publish: GitHub ✓ Obsidian ✓ Notion ✓ Checklist ✓
