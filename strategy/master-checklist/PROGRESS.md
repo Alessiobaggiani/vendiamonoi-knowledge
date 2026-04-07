@@ -38,17 +38,17 @@
 **Marketplace già documentati (15-67KB, nessun intervento necessario):**
 amazon (50KB), temu (67KB), ibs (51KB), shein (40KB), leroy-merlin (36KB), ebay (31KB), cdiscount (30KB), rue-du-commerce (26KB), vente-unique (26KB), bricobravo (25KB), carrefour (25KB), mediaworld (24KB), eprice (23KB), metro-italia (22KB), manomano (21KB), mirakl-marketplaces (20KB), kaufland (20KB), bolcom (17KB), metro-markets (15KB)
 
-### Priorità 3 — API-Docs Tool in Uso ✅ IN PROGRESS (2/10 = 20%)
+### Priorità 3 — API-Docs Tool in Uso ✅ IN PROGRESS (3/10 = 30%)
 
 **Scope**: Notion, Supabase, Qonto, ClickUp (prioritari) + Bitrix24, ChatGPT/Claude API, Miro, NotebookLM, Obsidian, Superhuman (secondari)
 
-**Progress**: 2/4 prioritari (50%)
+**Progress**: 3/4 prioritari (75%)
 
 | # | Task | File | Stato | Dimensione | Data | Note |
 |---|---|---|---|---|---|---|
 | P3.1 | Notion API Deep-Dive | `api-docs/notion/README.md` | ✅ COMPLETATO | 88KB (3,874 righe) | 2026-04-07 | REST API v2022-06-28, 3 req/s rate limit, OAuth 2.0 + Internal tokens, @notionhq/client SDK, Make.com integration, Supabase sync patterns, 24 sezioni |
 | P3.2 | Supabase API Deep-Dive | `api-docs/supabase/README.md` | ✅ COMPLETATO | 80KB (3,067 righe) | 2026-04-07 | PostgreSQL + PostgREST + GoTrue + Realtime + Storage + Edge Functions, Pro plan $25/mo, Make.com integration, multi-marketplace schema, RLS policies, pg_cron, full-text search multi-language, Vendiamonoi use cases |
-| P3.3 | Qonto API Deep-Dive | `api-docs/qonto/README.md` | ⏳ Pianificato | — | — | Business banking API, transactions, reconciliation, webhooks |
+| P3.3 | Qonto API Deep-Dive | `api-docs/qonto/README.md` | ✅ COMPLETATO | 158KB (4,376 righe) | 2026-04-07 | REST v2, base URL thirdparty.qonto.com/v2/, API Key + OAuth 2.0, rate limit 1000/10s, SEPA transfers, webhooks HMAC-SHA256, marketplace payout reconciliation patterns, Make.com integration, Fatture in Cloud reconciliation, Supabase sync, VAT/OSS management, supplier payment automation, cash flow forecasting, 24 sezioni |
 | P3.4 | ClickUp API Deep-Dive | `api-docs/clickup/README.md` | ⏳ Pianificato | — | — | Task management, custom fields, webhooks, automations |
 | P3.5 | Bitrix24 API — Secondario | `api-docs/bitrix24/README.md` | ⏳ Pianificato | — | — | CRM, communication hub, third-party integrations |
 | P3.6 | ChatGPT/Claude API — Secondario | `api-docs/ai-apis/README.md` | ⏳ Pianificato | — | — | LLM integrations, prompt engineering, token costs |
@@ -59,16 +59,75 @@ amazon (50KB), temu (67KB), ibs (51KB), shein (40KB), leroy-merlin (36KB), ebay 
 
 ## Statistiche Aggiornate (2026-04-07)
 
-- Task completati: 17 (1.1, 1.2, P1.1-P1.5, P2.1-P2.8, P3.1, P3.2)
+- Task completati: 18 (1.1, 1.2, P1.1-P1.5, P2.1-P2.8, P3.1, P3.2, P3.3)
 - PRIORITÀ 1: COMPLETATA AL 100% (5/5)
 - PRIORITÀ 2: COMPLETATA AL 100% (8/8)
-- PRIORITÀ 3: IN PROGRESS (2/10 = 20%) — 2/4 prioritari (50%)
+- PRIORITÀ 3: IN PROGRESS (3/10 = 30%) — 3/4 prioritari (75%)
 - Totale Priorità 1+2: 13/13 completati (100%)
 - Triple publish attivo: GitHub ✓ Obsidian ✓ Notion ✓
-- Righe totali aggiunte: ~28,230+ (new: Supabase +3,067 righe)
-- API docs totalizzati: 2 documentati (Notion, Supabase), 8 pianificati
+- Righe totali aggiunte: ~32,606+ (new: Qonto +4,376 righe)
+- API docs totalizzati: 3 documentati (Notion, Supabase, Qonto), 7 pianificati
 
 ## Completion Notes
+
+### P3.3 Qonto API ✅
+**Data**: 2026-04-07 | **Righe**: 4,376 | **Dimensione**: 158KB
+
+**Spec Key Data**:
+- Platform: Business Banking API (Qonto Inc., fintech)
+- API Version: REST v2 (current stable)
+- Base URL: `https://thirdparty.qonto.com/v2/`
+- Authentication: API Key + OAuth 2.0
+- Rate Limit: 1000 requests per 10 seconds
+- Core Resources: Transactions, Accounts, Transfers, Webhooks, Memberships, Documents
+- Payment Methods: SEPA transfers (internal + external), direct debit, card transactions
+- Reconciliation: Webhook notifications (HMAC-SHA256), manual export to CSV/JSON
+- Marketplace Payout Patterns: Supplier payment automation, batch SEPA transfers, reconciliation with Supabase
+- Make.com Integration: Complete — 25+ modules (list transactions, create transfers, manage webhooks, fetch accounts)
+- Fatture in Cloud Integration: Automated invoice matching, VAT/OSS reconciliation, supplier payment triggers
+- Supabase Sync: Real-time transaction sync, payout tracking, cash flow forecasting
+- VAT/OSS Management: Multi-currency support, SEPA compliance, VAT reverse charge handling
+- Supplier Payment Automation: Bulk transfer scheduling, payment confirmation workflows, reconciliation loops
+- Cash Flow Forecasting: Transaction analytics, rolling forecast patterns
+- Pricing: Free tier (1 account, 200 transactions/month), Premium (€99/mo, unlimited transactions)
+- Compliance: PSD2, GDPR, fraud prevention (3D Secure), IP whitelisting
+- Make.com Integration: 25+ modules covering all major operations
+- Notion Reorganization: Complete — sections optimized for API integration workflows
+
+**24 Sezioni Documentate**:
+1. API Overview & Architecture
+2. Authentication (API Key + OAuth 2.0)
+3. Account Management & Hierarchy
+4. Transactions API (list, filter, export)
+5. Transfers API (SEPA, scheduling, cancellation)
+6. Direct Debit & Payment Methods
+7. Webhooks (setup, HMAC-SHA256 verification, event types)
+8. Membership & User Management
+9. Documents API (invoices, receipts, statements)
+10. Rate Limiting & Backoff Strategies
+11. Error Handling & Status Codes
+12. Make.com Module Mapping (25+ modules, parameters, outputs)
+13. Qonto + Fatture in Cloud Integration (invoice matching, VAT reconciliation)
+14. Qonto + Supabase Sync Patterns (real-time transactions, payout tracking)
+15. Marketplace Payout Automation (supplier payment workflows, bulk transfers)
+16. SEPA Transfer Routing (internal vs external, compliance, IBAN validation)
+17. VAT/OSS Management (reverse charge, multi-currency)
+18. Cash Flow Forecasting (analytics, rolling forecasts)
+19. Reconciliation Patterns (webhook-driven, manual export, discrepancy handling)
+20. Security Best Practices (IP whitelisting, webhook signing, token rotation)
+21. Performance Optimization (batch operations, transaction filtering)
+22. Testing & Sandbox Environments
+23. Debugging & Logging (webhook replay, transaction history)
+24. Vendiamonoi Use Cases (supplier payment automation, multi-marketplace reconciliation, VAT/OSS workflows)
+
+**Usecases Vendiamonoi**:
+- Supplier payment automation (bulk SEPA transfers, payment scheduling)
+- Marketplace payout reconciliation (per-marketplace earnings tracking)
+- VAT/OSS management (reverse charge automation, multi-currency handling)
+- Cash flow forecasting (transaction analytics, rolling forecasts)
+- Invoice matching with Fatture in Cloud (automated reconciliation, discrepancy alerts)
+- Real-time transaction sync with Supabase (payout tracking, supplier settlement reports)
+- Make.com automation triggers (payment confirmation, compliance reporting)
 
 ### P3.2 Supabase API ✅
 **Data**: 2026-04-07 | **Righe**: 3,067 | **Dimensione**: 80KB
@@ -216,6 +275,6 @@ amazon (50KB), temu (67KB), ibs (51KB), shein (40KB), leroy-merlin (36KB), ebay 
 
 Tutti i gap critici della Priorità 2 sono stati colmati. Prossima fase: Priorità 3 (API-Docs tool integration).
 
-📊 **PRIORITÀ 3 KICKOFF — P3.2 COMPLETATO** - 2026-04-07
+📊 **PRIORITÀ 3 KICKOFF — P3.3 COMPLETATO** - 2026-04-07
 
-P3.1 Notion API (88KB, 3,874 righe) + P3.2 Supabase API (80KB, 3,067 righe) completati. 2/10 tasks launched, 2/4 prioritari (50%). Notion pages reorganized: 16 pagine spostate da OpenClaw a Struttura Completa Digitale & Automation. Next: P3.3 Qonto API.
+P3.1 Notion API (88KB, 3,874 righe) + P3.2 Supabase API (80KB, 3,067 righe) + P3.3 Qonto API (158KB, 4,376 righe) completati. 3/10 tasks launched, 3/4 prioritari (75%). Notion pages reorganized: 16 pagine spostate da OpenClaw a Struttura Completa Digitale & Automation. Next: P3.4 ClickUp API.
