@@ -27,7 +27,7 @@
 |---|---|---|---|---|---|---|
 | P2.1 | Otto Market Deep-Dive | `marketplace-specs/otto/README.md` | ✅ COMPLETATO | Inesistente | 40KB+ (1000+ righe) | 2026-04-07 |
 | P2.2 | Allegro Deep-Dive (#1 Polonia, PLN 70B GMV) | `marketplace-specs/allegro/README.md` | ✅ COMPLETATO | Inesistente | 40KB+ (1000+ righe) | 2026-04-07 |
-| P2.3 | eMAG Deep-Dive (#1 Romania/Est EU) | `marketplace-specs/emag/README.md` | 📋 Pianificato | Inesistente | — | — |
+| P2.3 | eMAG Deep-Dive (#1 Romania/CEE, €1.3B+ GMV) | `marketplace-specs/emag/README.md` | ✅ COMPLETATO | Inesistente | 40KB+ (1000+ righe) | 2026-04-07 |
 | P2.4 | Conrad Deep-Dive (B2B electronics) | `marketplace-specs/conrad/README.md` | 📋 Pianificato | 28 bytes | — | — |
 | P2.5 | PCComponentes Deep-Dive | `marketplace-specs/pccomponentes/README.md` | 📋 Pianificato | Inesistente | — | — |
 | P2.6 | Worten Deep-Dive | `marketplace-specs/worten/README.md` | 📋 Pianificato | Inesistente | — | — |
@@ -44,10 +44,10 @@ notion, supabase, qonto, clickup (prioritari) + bitrix24, chatgpt, claude, miro,
 
 ## Statistiche Aggiornate
 
-- Task completati: 9 (1.1, 1.2, P1.1-P1.5, P2.1, P2.2)
+- Task completati: 10 (1.1, 1.2, P1.1-P1.5, P2.1, P2.2, P2.3)
 - PRIORITÀ 1: COMPLETATA AL 100% (5/5)
-- PRIORITÀ 2: 2/8 completati (25%)
-- Prossimo: P2.3 (eMAG — #1 Romania/Est Europa)
+- PRIORITÀ 2: 3/8 completati (37.5%)
+- Prossimo: P2.4 (Conrad — B2B electronics marketplace)
 - Triple publish attivo: GitHub ✓ Obsidian ✓ Notion ✓
-- Righe totali aggiunte: ~11,000+
-- Marketplace specs totali: 21 documentati (19 preesistenti + 2 nuovi: Otto, Allegro)
+- Righe totali aggiunte: ~12,000+
+- Marketplace specs totali: 22 documentati (19 preesistenti + 3 nuovi: Otto, Allegro, eMAG)
