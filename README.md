@@ -35,7 +35,9 @@ vendiamonoi-knowledge/
 │   ├── requirements/
 │   └── architecture/
 ├── marketplace-specs/                 ← Specifiche tecniche marketplace (20)
-├── integrations/                      ← Pattern di integrazione universali (1)
+├── integrations/                      ← Pattern di integrazione universali (2)
+│   ├── api-design-patterns/
+│   └── mcp-security/                  ← Standard sicurezza MCP server (OBBLIGATORIO) 🆕
 └── data-models/                       ← Standard dati prodotto (1)
 ```
 
@@ -156,6 +158,7 @@ vendiamonoi-knowledge/
 | Documento | Righe | Contenuto |
 |-----------|-------|-----------|
 | API Design Patterns | 2.899 | REST, OAuth2, rate limiting, retry/backoff, pagination, webhooks |
+| MCP Security Standard | ~200 | Checklist audit sicurezza, registro server approvati, blacklist, procedura aggiunta 🆕 |
 | Product Information | 2.886 | GS1/GTIN, SKU management, taxonomy, PIM, compliance EU |
 
 ---
@@ -164,7 +167,7 @@ vendiamonoi-knowledge/
 
 | Metrica | Valore |
 |---------|--------|
-| **Totale documenti** | 58 |
+| **Totale documenti** | 59 |
 | **Totale righe** | ~116.000+ |
 | **Directory principali** | 9 |
 | **Marketplace documentati** | 20 |
@@ -175,7 +178,7 @@ vendiamonoi-knowledge/
 | **Documenti strategici** | 1 (Master Checklist) |
 | **Punti competenza mappati** | 1.000+ |
 | **Domini strategici** | 10 |
-| **Ultimo aggiornamento** | 02/04/2026 |
+| **Ultimo aggiornamento** | 08/04/2026 |
 
 ---
 
@@ -210,12 +213,16 @@ Quando progetti la **piattaforma**, leggi:
 - `app-design/requirements/README.md`
 - `app-design/architecture/README.md`
 
+Quando aggiungi/modifichi **server MCP** o integrazioni esterne, leggi **PRIMA**:
+- `integrations/mcp-security/README.md` (checklist obbligatoria, registro approvati, blacklist)
+
 ---
 
 ## Log Aggiornamenti
 
 | Data | Azione |
 |------|--------|
+| 08/04/2026 | 🔒 Standard Sicurezza MCP Server: checklist audit, registro approvati, blacklist, procedura obbligatoria |
 | 02/04/2026 | 🆕 Master Checklist strategica: 1.000+ punti competenza, 10 domini, mappa completa |
 | 02/04/2026 | ✅ Phase 1 completata: automation-flows, research, app-design |
 | 02/04/2026 | ✅ Make.com: 4 parti expert-level (16.019 righe) |
