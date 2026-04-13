@@ -8,7 +8,7 @@ last_updated: 2026-04-08
 last_session_focus: knowledge-base-gap-filling-completion
 open_threads: 0
 next_priority: user-decision-pending
-staleness_days: 0
+staleness_days: 5
 -->
 
 ## Stato Attuale del Progetto
